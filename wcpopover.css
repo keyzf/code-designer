@@ -1,0 +1,115 @@
+wc-popover,wc-popup{
+    position: absolute;
+    z-index: 998;
+    height: auto;
+    display: none;
+    opacity: 0;
+    max-width: 530px;
+    outline: none;
+    border-radius: 2px;
+    border: 1px solid #babec5;
+    background: #FFFFFF;
+    font-size: 14px;
+    box-shadow: 0 2px 0 0 #eceef1;
+  
+
+  }
+  wc-popover.connector,wc-popup.connector{
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    position: absolute;
+    border-color: #babec5 transparent transparent #babec5;
+    background: inherit;
+  }
+  
+  wc-popover.alignment-bottom .connector , wc-popup.alignment-bottom .connector{
+    bottom: 10px;
+  
+  }
+  
+  
+  
+  wc-popover.alignment-left .connector ,wc-popup.alignment-left .connector {
+    left: 16px; 
+  }
+  
+  
+  wc-popover.alignment-right .connector ,wc-popup.alignment-right .connector{
+    right: 16px; 
+  }
+  
+  wc-popover.alignment-top .connector ,wc-popup.alignment-top .connector{
+    top: 10px; 
+  }
+  
+  wc-popover.position-bottom .connector,wc-popup.position-bottom .connector {
+    top: -6px;
+    transform: rotate(45deg);
+  }
+  wc-popover.position-left .connector,wc-popup.position-left .connector{
+    right: -6px;
+    transform: rotate(135deg);
+  }
+  wc-popover.position-right .connector,wc-popup.position-right .connector {
+    left: -6px;
+    transform: rotate(-45deg);
+  }
+  
+  
+  wc-popover.position-top .connector,wc-popup.position-top .connector{
+    bottom: -6px;
+    transform: rotate(225deg);
+  }
+  
+  
+
+  
+  @media screen and (max-width: 320px) {
+    wc-popover ,wc-popup{
+      width: calc(100% - 30px); 
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    wc-popover,wc-popup {
+      width: calc(100% - 30px);
+    }
+    wc-popover .wc-button, wc-popup .wc-button {
+      width: 100%;
+      margin-bottom: 14px;
+      text-align: center; }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    wc-popover ,wc-popup{
+      max-width: 530px; 
+    }
+  }
+  wc-popover.mobile-menu ,wc-popup.mobile-menu{
+    width: 130px;
+  }
+  wc-popover.visible, wc-popup.visible {
+    display: inline-block;
+    opacity: 1;
+  }
+  
+  wc-popover.enter,wc-popup.enter {
+    animation: 250ms wc-fade-in; 
+  }
+  
+  wc-popover.leave , wc-popup.leave{
+    animation: 250ms wc-fade-out;
+  }
+  
+  wc-popover ::-webkit-scrollbar,wc-popup ::-webkit-scrollbar {
+    width: 7px;
+    background-color: #E3EAF3;
+    opacity: 0.55;
+  }
+  
+  wc-popover ::-webkit-scrollbar-thumb , wc-popup ::-webkit-scrollbar-thumb{
+    background-color: #DADADA;
+  }
