@@ -6421,7 +6421,6 @@ Object.assign(pcui, (function () {
             this._container.append(this._containerTags);
 
             if (args.multiSelect) {
-                debugger
                 this.class.add(CLASS_MULTI_SELECT);
                 this._containerTags.hidden = false;
             }
