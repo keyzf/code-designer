@@ -71,6 +71,7 @@ editor.on('load',function(){
                        styleSheets: {},
                        textureAsset: null,
                        type: "group"
+                    }
                 },
                 rotation: [0, 0, 0],
                 tags: [],
