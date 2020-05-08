@@ -63,7 +63,15 @@ editor.on('load',function(){
                 name: "Root",
                 parent: null,
                 resource_id: "2f5414c3-6c34-11ea-97ae-026349a27a7c",
-                components: {},
+                components: {
+                    css:{
+                       cssText: "color:red;",
+                       enabled: true,
+                       innerText: "hello" ,                                    
+                       styleSheets: {},
+                       textureAsset: null,
+                       type: "group"
+                },
                 rotation: [0, 0, 0],
                 tags: [],
                 enabled: true,
