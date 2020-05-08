@@ -23,7 +23,7 @@ editor.once('load', function() {
     };
 
     var createEntity = function (obj) {
-        var entity = new pc.Entity();
+        var entity = new pc2d.Entity();
 
         entitiesIndex[obj.get('resource_id')] = entity;
 
@@ -50,7 +50,7 @@ editor.once('load', function() {
         // try to insert the node at the right index
         for (var i = 0, len = parent._children.length; i < len; i++) {
             var child = parent._children[i];
-            if (child instanceof pc.Entity && childIndex[child.getGuid()]) {
+            if (child instanceof pc2d.Entity && childIndex[child.getGuid()]) {
                 // if our index is less than this child's index
                 // then put the item here
                 if (index < childIndex[child.getGuid()].index) {

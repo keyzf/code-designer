@@ -89,4 +89,8 @@ editor.on('load',function(){
 
     editor.emit('entities:load');
 
+    
+    editor.emit('selector:add',editor.call("entities:get","2f5414c3-6c34-11ea-97ae-026349a27a7c"),'entity');
+
+
 });

@@ -4,7 +4,7 @@ editor.once('load', function() {
 
 
     editor.on('entities:add', function (obj) {
-        debugger
+        
         // subscribe to changes
         obj.on('*:set', function(path, value) {
             var entity = obj.entity;
@@ -108,7 +108,7 @@ editor.once('load', function() {
                 if (index > 0) {
                     var children = obj.entity.children;
                     for (var i = 0, len = children.length; i < len && index > 0; i++) {
-                        if (children[i] instanceof pc.Entity) {
+                        if (children[i] instanceof pc2d.Entity) {
                             index--;
                         }
                     }
