@@ -559,7 +559,7 @@ editor.once('load', function() {
 
     var launchApp = function () {
 
-        // var url = window.location.origin + "/lauch.html";
+        // var url = window.location.href + "/lauch.html";
 
         // var query = [ ];
         // query.push('projectId=' + config.project.id);
@@ -572,7 +572,7 @@ editor.once('load', function() {
         // launcher.location = url;
 
 
-        var url = window.location.origin + "/lauch_pcmp.html";
+        var url = window.location.href + "/lauch_pcmp.html";
 
         var query = [ ];
         query.push('projectId=' + config.project.id);
