@@ -20,7 +20,7 @@ editor.once('load', function() {
 
 
     editor.on('project:ready',function(){
-      
+        
         if(config.project.type === "cube"){
 
 
@@ -355,6 +355,16 @@ editor.once('load', function() {
         .flex-items-between {
           justify-content: space-between;
         }
+
+        ::-webkit-scrollbar {
+          display:none;
+        }
+        
+
+        ::-webkit-scrollbar-thumb {
+          display:none;
+        }
+        
         </style>
         
         

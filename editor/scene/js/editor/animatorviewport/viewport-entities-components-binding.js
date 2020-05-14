@@ -83,8 +83,7 @@ editor.once('load', function() {
                     if (property === 'enabled') {
                         value = false;
                     }
-                } 
-
+                }
 
                 if (callSetter) {
                     entity[component][property] = editor.call('components:convertValue', component, property, value);

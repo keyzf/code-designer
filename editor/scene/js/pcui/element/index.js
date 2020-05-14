@@ -6821,13 +6821,11 @@ Object.assign(pcui, (function () {
                 evt.preventDefault();
 
                 // on enter
-                let value;
-
-                if (this._labelHighlighted && this._labelHighlighted._optionValue !== undefined) {
+                let value = this._input.value;
+                
+                if (!value && this._labelHighlighted && this._labelHighlighted._optionValue !== undefined) {
                     value = this._labelHighlighted._optionValue;
-                } else {
-                    value = this._input.value;
-                }
+                } 
 
                 if (value !== undefined) {
                     this.focus();
@@ -6836,6 +6834,7 @@ Object.assign(pcui, (function () {
                     if (this._optionsIndex[value]) {
                         this._onSelectValue(value);
                     } else if (this._allowCreate) {
+                        
                         if (this._createFn) {
                             this._createFn(value);
                         } else {

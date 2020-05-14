@@ -1,270 +1,302 @@
 <!DOCTYPE html>
 <html>
+
 <head>
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
- <link href='./editor/scene/css/ui.css' rel='stylesheet' />
- <link href='./editor/scene/css/pcui/pcui.css' rel='stylesheet' />
- <link href='./editor/scene/css/editor.css' rel='stylesheet' />
- <link href='./editor/scene/css/editor/editor.css' rel='stylesheet' />
- <link href='./editor/scene/css/theme-dark.css' rel='stylesheet' />
- <style>
-
-  #canvas-3d {
-   width:375px;
-   height:667px;
-  }
-  #canvas-3d div:empty {
-   margin: auto;
-   width: 100%;
-   height: 200px; /* change height to see repeat-y behavior */
-
-   background-image: linear-gradient( lightgray 200px, transparent 0 );
-   background-repeat: repeat-y;
-   background-size: 100% 200px;
-   background-position: 0 0;
-
-  }
-  .iphone6-6s-7 {
-   position: relative;
-   margin: 0px auto;
-   background-color: #040605;
-   transform-origin: 50% 0%;
-   top:50px;
-  }
-
-  .css-component-inspector .pcui-text-area-input {
-   height:148px;
-  }
-
-  .timeline-editor.center>.content {
-    width: 90%;
-    height: 400px;
-    left: 5%;
-    top: calc(100% - 425px);
-    transition: none;
-}
-
-.timeline-editor .ui-overlay>.overlay{
-    opacity:0;
-}
-
-.picker-code.center>.content {
-    width: 800px;
-    height: 720px;
-    left: calc(50% - 400px);
-    top: 120px;
-    padding: 16px;
-    transition: none;
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
- </style>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/core/pc2d-core.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/core/pc2d-eventhandle.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/core/pc2d-tags.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/math.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/curve.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/curve-set.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/curve-evaluator.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/vec2.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/vec3.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/vec4.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/quat.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/mat3.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/math/mat4.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/utils/sorted-loop-array.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/data.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/component.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/system.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/register.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/script/data.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/script/component.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/script/system.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/css/data.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/css/component.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/css/system.js"></script>
-
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/animation/data.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/animation/component.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/components/animation/system.js"></script>
-
-
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/pc2d-graphnode.js"></script>
- <script src="./editor/scene/js/editor/animatorviewport/pc2d/net/http.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/script/script.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/script/script-type.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/script/script-attributes.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/script/script-registry.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/script/script.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/asset/asset-list-loader.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/asset/asset-variant.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/asset/asset.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/asset/asset-registry.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/loader.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/script.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/parser/scene.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/scene.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/css.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/json.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/resources/template.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/graphics/device.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/template/template-utils.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/template/template.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/pc2d-entity.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/pc2d-script.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/pc2d-scene-registry.js"></script>
-
-<script src="./editor/scene/js/editor/animatorviewport/pc2d/framework/pc2d-application.js"></script>
-
-
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>flv.js demo</title>
+    <link rel="stylesheet" type="text/css" href="https://s4.ssl.qhres.com/static/07d25a7ff9eb302d.css" />
 </head>
 
-
 <body>
+    <div class="videoMainBox">
+        <div class="videoBox">
+            <video name="videoElement" style="width:100%; height:100%" autoplay>
+                Your browser is too old which doesn't support HTML5 video.
+            </video>
+        </div>
+    </div>
 
-<script src="UIComponent.js"></script>
-<script src="webcomponent.js"></script>
-<script src="wcpopover.js"></script>
-<link href='wcpopover.css' rel='stylesheet' />
-<script src="wcpopup.js"></script>
-<link href='wcpopup.css' rel='stylesheet' />
+    <div class="mainContainer">
+        <div>
+            <div id="streamURL">
+                <div class="url-input">
+                    <label for="sURL">Stream URL:</label>
+                    <input id="sURL" type="text"
+                        value="http://qh2-flv.live.huajiao.com/live_huajiao_v2/_LC_QH2_non_h265_SD_21388907515867607471313531_OX.flv" />
+                </div>
+                <div class="options" style="display: none;">
+                    <input type="checkbox" id="isLive" onchange="saveSettings()" />
+                    <label for="isLive">isLive</label>
+                    <input type="checkbox" id="withCredentials" onchange="saveSettings()" />
+                    <label for="withCredentials">withCredentials</label>
+                    <input type="checkbox" id="hasAudio" onchange="saveSettings()" checked />
+                    <label for="hasAudio">hasAudio</label>
+                    <input type="checkbox" id="hasVideo" onchange="saveSettings()" checked />
+                    <label for="hasVideo">hasVideo</label>
+                </div>
+            </div>
+            <div id="mediaSourceURL" class="hidden">
+                <div class="url-input">
+                    <label for="msURL">MediaDataSource JsonURL:</label>
+                    <input id="msURL" type="text" value="http://127.0.0.1/flv/7182741.json" />
+                    <button onclick="switch_url()">Switch to URL</button>
+                </div>
+            </div>
+        </div>
 
-<script src='./editor/scene/js/events.js'></script>
-<script src="./workers/kvStorage.js"></script>
-<script src="./workers/localForageAdaptor.js"></script>
+        <div style="padding-left: 10px;">
+            <p class="tiy" onclick="flv_load()">加载</p>
+            <p class="tiy" onclick="flv_destroy()">销毁</p>
+            <p class="tiy" onclick="saveSettings()">保存设置</p>
+            <p class="tiy" onclick="clear_log()">清除输出</p>
+            <!-- <p class="tiy" onclick="flv_start()">开始</p> -->
+            <!-- <p class="tiy" onclick="flv_pause()">暂停</p> -->
+            <!-- <input style="width:100px" type="text" name="seekpoint"/> -->
+            <!-- <button onclick="flv_seekto()">SeekTo</button> -->
+            <!-- <button onclick="flv_videostate_moitor()">VideoStateMonitor</button> -->
+        </div>
+        <textarea id="logcatbox" name="logcatbox" class="logcatBox" rows="20" readonly></textarea>
+    </div>
 
+    <script src="https://s.ssl.qhimg.com/pkg/serviceplatform/FLVJS_v1.0.1.js?t=3"></script>
 
-<!-- main -->
+    <script>
+        var checkBoxFields = ['isLive', 'withCredentials', 'hasAudio', 'hasVideo'];
+        var streamURL, mediaSourceURL;
+        var video_state_monitor_enabled = true;
 
-<script src="./editor/scene/js/constants.js"></script>
-<script src="./editor/scene/js/array.js"></script>
-<script src="./editor/scene/js/utils.js"></script>
-<script src="./editor/scene/js/color.js"></script>
-<script src="./editor/scene/js/ajax.js"></script>
-<script src="./editor/scene/js/observer.js"></script>
-<script src="./editor/scene/js/observer-list.js"></script>
-<script src="./editor/scene/js/observer-sync.js"></script>
-<script src="./editor/scene/js/observer-history.js"></script>
-<script src="./editor/scene/js/ui.js"></script>
-<script src="./editor/scene/js/ui/element.js"></script>
-<script src="./editor/scene/js/ui/container-element.js"></script>
-<script src="./editor/scene/js/ui/div-element.js"></script>
-<script src="./editor/scene/js/ui/button.js"></script>
-<script src="./editor/scene/js/ui/checkbox.js"></script>
-<script src="./editor/scene/js/ui/code.js"></script>
-<script src="./editor/scene/js/ui/label.js"></script>
-<script src="./editor/scene/js/ui/number-field.js"></script>
-<script src="./editor/scene/js/ui/overlay.js"></script>
-<script src="./editor/scene/js/ui/panel.js"></script>
-<script src="./editor/scene/js/ui/select-field.js"></script>
-<script src="./editor/scene/js/ui/text-field.js"></script>
-<script src="./editor/scene/js/ui/textarea-field.js"></script>
-<script src="./editor/scene/js/ui/color-field.js"></script>
-<script src="./editor/scene/js/ui/image-field.js"></script>
-<script src="./editor/scene/js/ui/slider.js"></script>
-<script src="./editor/scene/js/ui/progress.js"></script>
-<script src="./editor/scene/js/ui/list.js"></script>
-<script src="./editor/scene/js/ui/list-item.js"></script>
-<script src="./editor/scene/js/ui/grid.js"></script>
-<script src="./editor/scene/js/ui/grid-item.js"></script>
-<script src="./editor/scene/js/ui/tree.js"></script>
-<script src="./editor/scene/js/ui/tree-item.js"></script>
-<script src="./editor/scene/js/ui/tooltip.js"></script>
-<script src="./editor/scene/js/ui/menu.js"></script>
-<script src="./editor/scene/js/ui/menu-item.js"></script>
-<script src="./editor/scene/js/ui/canvas.js"></script>
-<script src="./editor/scene/js/ui/curve-field.js"></script>
-<script src="./editor/scene/js/ui/autocomplete-element.js"></script>
-<script src="./editor/scene/js/ui/bubble.js"></script>
-<script src="./editor/scene/js/pcui/pcui.js"></script>
-<script src="./editor/scene/js/pcui/interface/index.js"></script>
-<script src="./editor/scene/js/pcui/element/index.js"></script>
-<script src="./editor/scene/js/pcui/element/timeline.js"></script>
+        function flv_load() {
+            var i;
+            var mediaDataSource = {
+                type: 'flv'
+            };
+            for (i = 0; i < checkBoxFields.length; i++) {
+                var field = checkBoxFields[i];
+                /** @type {HTMLInputElement} */
+                var checkbox = document.getElementById(field);
+                mediaDataSource[field] = checkbox.checked;
+            }
+            mediaDataSource['url'] = document.getElementById('sURL').value;
+            console.log('MediaDataSource', mediaDataSource);
+            flv_load_mds(mediaDataSource);
+        }
+        // http://pl3.live.huajiao.com/live_huajiao_v2/_LC_ps3_non_18488662315422627451610556_OX.flv //网宿
+        // http://al2-flv.live.huajiao.com/live_huajiao_v2/_LC_AL2_non_11261250515422567761873559_OX.flv //阿里
+        // http://qh2-flv.live.huajiao.com/live_huajiao_v2/_LC_QH2_non_h265_SD_2837200715867735951356267_OX.flv //自建360
 
+        function flv_videostate_moitor() {
+            player.enableVideoStateMonitor(!video_state_monitor_enabled);
+            video_state_monitor_enabled = !video_state_monitor_enabled;
+        }
 
-<script src="./editor/scene/js/pcui/history/history.js"></script>
-<script src="./editor/scene/js/pcui/binding/binding-base.js"></script>
-<script src="./editor/scene/js/pcui/binding/binding-element-observers.js"></script>
-<script src="./editor/scene/js/pcui/binding/binding-observers-element.js"></script>
-<script src="./editor/scene/js/pcui/binding/binding-two-way.js"></script>
+        function flv_load_mds(mediaDataSource) {
+            var element = document.getElementsByName('videoElement')[0];
+            if (typeof player !== "undefined") {
+                if (player != null) {
+                    player.unload();
+                    player.detachMediaElement();
+                    player.destroy();
+                    player = null;
+                }
+            }
+            player = flvjs.createPlayer(mediaDataSource, {
+                isLive: true,
+                autoplay: true,
+                enableWorker: true,
+                lazyLoadMaxDuration: 1,
+                seekType: 'range',
+                fixAudioTimestampGap: false,
+                enableStashBuffer: false,
+                autoCleanupMaxBackwardDuration: 60,
+                autoCleanupMinBackwardDuration: 30,
+                statisticsInfoReportInterval: 2000,
+                stashInitialSize: 128,
 
+                // 如果是Android浏览器，建议enableDurationMonitor设置为false
+                enableDurationMonitor: true,    // true表示监测当前直播流延时，当发现延时过大时，主动追赶
+                enableVideoFrozenMonitor: true, // 监测视频解码是否停滞（画面卡停），当因为某些原因导致无法解码时，将上报VIDEO_FROZEN事件，收到后建议重拉流
+                videoStateMonitorInterval: 1000, // 多长时间（毫秒）检查一次视频状态（延时、停滞）
 
-<script src="./editor/scene/js/editor/editor.js"></script>
-<script src="./editor/scene/js/editor/first-load.js"></script>
-<script src="./editor/scene/js/editor/storage/localstorage.js"></script>
-<script src="./editor/scene/js/editor/hotkeys.js"></script>
-<script src="./editor/scene/js/editor/layout.js"></script>
-<!-- <script src="./editor/scene/js/editor/messenger.js"></script> -->
-<script src="./editor/scene/js/editor/history/history.js"></script>
-<script src="./editor/scene/js/editor/history/history-hotkeys.js"></script>
-<script src="./editor/scene/js/editor/history/history-status-text.js"></script>
-<script src="./editor/scene/js/editor/status.js"></script>
-<script src="./editor/scene/js/editor/error.js"></script>
-<script src="./editor/scene/js/editor/contextmenu.js"></script>
-<script src="./editor/scene/js/editor/drop.js"></script>
-<script src="./editor/scene/js/editor/cursor.js"></script>
-<script src="./editor/scene/js/editor/datetime.js"></script>
-<script src="./editor/scene/js/editor/search.js"></script>
-<!-- <script src="./editor/scene/js/editor/notifications.js"></script> -->
-<script src="./editor/scene/js/editor/refocus.js"></script>
-<script src="./editor/scene/js/editor/inspector/components/component.js"></script>
-<script src="./editor/scene/js/editor/components/components-logos.js"></script>
+                // 针对手机浏览器上对MSE以及网络连接更加容易不稳定，建议将maxDurationGap设置高一点，比如2.5、3、3.5，否则可能会频繁追赶延时导致画面卡顿
+                maxDurationGap: 0.5,         // 当前播放位置与缓冲区末尾的距离（秒）如果超过这个值，就触发一次追赶，不易过短
+                decreaseDurationStep: 0.4,   // 每次追赶至缓冲区末尾之前的多少秒
+                frozenTimesThreshold: 5,        // 解码停滞次数达到此阈值，上报VIDEO_FROZEN事件。注意如果设置过小的阈值，当推流端关闭摄像头后可能会频繁触发VIDEO_FROZEN事件
 
-<script src="./editor/scene/js/editor/permissions.js"></script>
-<script src="./editor/scene/js/editor/entities/entities.js"></script>
-<script src="./editor/scene/js/editor/selector/index.js"></script>
+                // webrtc合流未能给cdn推送正确的视频分辨率信息，导致从MetaData/AVCDecoderConfigurationRecord中无法拿到正确的视频分辨率
+                // 在内核低于Chromium 70的浏览器（如360浏览器、搜狗浏览器、PC微信内嵌浏览器等）中
+                // 如果传递不对的视频分辨率，将会导致画面放大显示异常，因此，强行设置一个最大的视频宽高信息，来避免此问题
+                // 如果是Safari浏览器，enableConstVideoViewSize建议设置为false
+                enableConstVideoViewSize: true,
+                // constVideoViewWidth: 1920,
+                // constVideoViewHeight: 1080,
+            });
 
-<script src="./editor/scene/js/editor/schema/index.js"></script>
+            player.on(flvjs.Events.METADATA_ARRIVED, () => {
+                console.log('--== meta data arrived ==--');
+            });
 
-<script src="./editor/scene/js/editor/entities/entities-selection.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-edit.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-addComponent.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-create.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-delete.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-duplicate.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-copy.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-paste.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-reparent.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-panel.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-treeview.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-menu.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-control.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-fuzzy-search.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-fuzzy-search-ui.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-load.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-layout-utils.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-history.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-sync.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-migrations.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-scripts.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-hotkeys.js"></script>
-<script src="./editor/scene/js/editor/entities/entities-context-menu.js"></script>
-<script src="./editor/scene/js/editor/entities/index.js"></script>
+            // player.enableVideoStateMonitor(true or false);   // 如果需要，可以动态开关{视频延时 + 解码停滞}监测
 
-<script src="./editor/scene/js/editor/animatorviewport/gizimo/index.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/viewport-application.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/viewport.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/index.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/viewport-assets.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/viewport-entities-observer-binding.js"></script>
-<script src="./editor/scene/js/editor/animatorviewport/viewport-entities-components-binding.js"></script>
+            // 当收到以下事件时：
+            // MEDIA_SOURCE_ENDED [流结束]
+            // MEDIA_SOURCE_CLOSE [流关闭]
+            // VIDEO_FROZEN [视频解码停滞]
+            // VIDEO_RESOLUTION_CHANGED [视频分辨率变化]
+            // ERROR [网络或媒体流错误]
+            // 建议结合业务信令来判断应该如何处理
+            // 如果已知推流主动停止，则不必处理，否则建议重拉流
 
-<script src="./editor/scene/js/editor/attributes/index.js"></script>
-<script src="./editor/scene/js/editor/attributes/attributes-entity.js"></script>
+            //receive different video resolution from AVCSpecificConfig
+            player.on(flvjs.Events.VIDEO_RESOLUTION_CHANGED, () => {
+                console.log('--== video resolution changed, reload ==--');
+                saveSettings();
+                flv_destroy();
+                flv_load_mds(mediaDataSource);
+            });
+            player.on(flvjs.Events.MEDIA_SOURCE_ENDED, () => {
+                console.log('--== media source ended, normally means server stop push stream ==--');
+                flv_destroy();
+                flv_load_mds(mediaDataSource);
+            });
+            player.on(flvjs.Events.MEDIA_SOURCE_CLOSE, () => {
+                console.log('--== media source close, show no source view ==--');
+            });
+            player.on(flvjs.Events.VIDEO_FROZEN, () => {
+                // console.log('--== video frozen ==--');
+                // flv_load();
+            });
+            // see flv.js {api.md}, for example:
+            // ErrorType: NetworkError
+            // ErrorDetail: Exception, HttpStatusCodeInvalid, ConnectingTimeout, EarlyEof, UnrecoverableEarlyEof
+            // ErrorType: MediaError
+            // ErrorDetail : MediaMSEError
+            player.on(flvjs.Events.ERROR, (errType, errDetail) => {
+                console.log('--== flvjs error, type:' + errType + ', detail:' + errDetail + ' ==--');
+                console.log('--== should set a timer(for example, 3 seconds) to reload current flv ==--');
+                flv_destroy();
+                flv_load_mds(mediaDataSource);
+            });
 
-<script src="./editor/scene/js/editor/inspector/attributes.js"></script>
-<script src="./editor/scene/js/editor/inspector/components/index.js"></script>
-<script src="./editor/scene/js/editor/inspector/components/css.js"></script>
-<script src="./editor/scene/js/editor/inspector/entity.js"></script>
-<script src="./editor/scene/js/editor/toolbar/index.js"></script>
-<script src="./editor/scene/js/editor/toolbar/toolbar-logo.js"></script>
+            // show statistics information if need
+            player.on(flvjs.Events.STATISTICS_INFO, (statInfo) => {
+                // console.log('current speed: ' + 8 * (parseInt(statInfo.speed * 10) / 10) + 'kbps');
+                // console.log('video bps: ' + statInfo.bps_video.toFixed(2) + ' kbps, audio bitrate: ' + statInfo.bps_audio.toFixed(2) + ' kbps');
+                // console.log('dropped frames:' + statInfo.droppedFrames);
+                // console.log('--== decoded frames:' + statInfo.decodedFrames + ' ==--');
+                // console.log('loader type:' + statInfo.loaderType);
+                // console.log('total segment count:' + statInfo.totalSegmentCount + ', current segment index:' + statInfo.currentSegmentIndex);
+            });
 
+            player.attachMediaElement(element);
+            player.load();
+        }
 
-<script src="./start.js"></script>
+        function flv_start() {
+            player.play();
+        }
 
+        function flv_pause() {
+            player.pause();
+        }
+
+        function flv_destroy() {
+            if (!player) {
+                return;
+            }
+            // player.pause();
+            // player.unload();
+            // player.detachMediaElement();
+            player.destroy();
+            player = null;
+        }
+
+        function flv_seekto() {
+            var input = document.getElementsByName('seekpoint')[0];
+            player.currentTime = parseFloat(input.value);
+        }
+
+        function switch_url() {
+            saveSettings();
+        }
+
+        function ls_get(key, def) {
+            try {
+                var ret = localStorage.getItem('flvjs_demo.' + key);
+                if (ret === null) {
+                    ret = def;
+                }
+                return ret;
+            } catch (e) { }
+            return def;
+        }
+
+        function ls_set(key, value) {
+            try {
+                localStorage.setItem('flvjs_demo.' + key, value);
+            } catch (e) { }
+        }
+
+        function saveSettings() {
+            ls_set('inputMode', 'StreamURL');
+            var i;
+            for (i = 0; i < checkBoxFields.length; i++) {
+                var field = checkBoxFields[i];
+                /** @type {HTMLInputElement} */
+                var checkbox = document.getElementById(field);
+                ls_set(field, checkbox.checked ? '1' : '0');
+            }
+            var sURL = document.getElementById('sURL');
+            ls_set('sURL', sURL.value);
+            console.log('save');
+        }
+
+        function loadSettings() {
+            var i;
+            for (i = 0; i < checkBoxFields.length; i++) {
+                var field = checkBoxFields[i];
+                /** @type {HTMLInputElement} */
+                var checkbox = document.getElementById(field);
+                var c = ls_get(field, checkbox.checked ? '1' : '0');
+                checkbox.checked = c === '1' ? true : false;
+            }
+
+            var sURL = document.getElementById('sURL');
+            sURL.value = ls_get('sURL', sURL.value);
+            switch_url();
+        }
+
+        function showVersion() {
+            var version = flvjs.version;
+            document.title = document.title + " (v" + version + ")";
+        }
+
+        function clear_log() {
+            document.getElementById('logcatbox').value = "";
+        }
+
+        var logcatbox = document.getElementsByName('logcatbox')[0];
+        flvjs.LoggingControl.addLogListener(function (type, str) {
+            logcatbox.value = logcatbox.value + str + '\n';
+            logcatbox.scrollTop = logcatbox.scrollHeight;
+        });
+
+        if (document.addEventListener) {
+            document.addEventListener('webkitvisibilitychange', () => {
+                console.log('webkitvisibilitychange to ' + document.webkitVisibilityState);
+                if (document.webkitVisibilityState === 'visible') {
+                    //reload flvjs player ?
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            streamURL = document.getElementById('streamURL');
+            loadSettings();
+            showVersion();
+            flv_load();
+        });
+    </script>
 
 </body>
 
 </html>
-

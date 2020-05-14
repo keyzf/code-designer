@@ -32,20 +32,6 @@ editor.once('load', function() {
         }
     };
 
-    var hasLegacyScript = function (entity, url) {
-        var scriptComponent = entity.get('components.script');
-        if (scriptComponent) {
-            for (var i = 0; i < scriptComponent.scripts.length; i++) {
-                if (scriptComponent.scripts[i].url === url) {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    };
-
-
     var setField = function(field, value) {
         var records = [ ];
 
@@ -227,7 +213,11 @@ editor.once('load', function() {
         menu = ui.Menu.fromData(menuData, { clickableSubmenus: clickableSubmenus });
         root.append(menu);
 
+
         menu.on('open', function() {
+    
+            root.append(menu);
+
             var selection = getSelection();
 
             for(var i = 0; i < customMenuItems.length; i++) {
@@ -237,6 +227,25 @@ editor.once('load', function() {
                 customMenuItems[i].hidden = ! customMenuItems[i].filter(selection);
             }
         });
+    });
+
+
+    editor.method('plugins:entitiesmenu:add',function(data){
+        if(!menu) return ;
+        var addComponentMenu = menu.findByPath('add-component');
+
+
+        var listItems = function(data, parent) {
+            for (var key in data) {
+                var item = menu.createItem(key, data[key]);
+                parent.append(item);
+    
+                if (data[key].items)
+                    listItems(data[key].items, item);
+            }
+        };
+    
+        listItems(pluginData, addComponentMenu);
     });
 
     editor.method('entities:contextmenu:add', function(data) {

@@ -279,9 +279,10 @@ Object.assign(pcui, (function () {
                 .filter(asset => {
                     if (!asset) return false;
                     const type = asset.get('type');
-                    return type === 'template' || type === 'sprite' || type === 'model';
+                    return type === 'template' || type === 'anim' || type === 'sprite' || type === 'model';
                 });
             } else if (dropType === 'asset.template' ||
+                       dropType === 'anim'  ||
                        dropType === 'asset.sprite' ||
                        dropType === 'asset.model') {
 

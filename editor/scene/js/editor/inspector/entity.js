@@ -58,6 +58,8 @@ Object.assign(pcui, (function () {
         args: {
             type: 'string',
             placeholder: 'Add Tags',
+            allowInput:true,
+            allowCreate:true,
             options:TAGS_OPTIONS
         }
     }, {
@@ -158,6 +160,7 @@ Object.assign(pcui, (function () {
             this._componentInspectors = {};
             const components = editor.call('components:list');
             components.forEach(component => {
+                if (component === 'script' && args.projectSettings.get('useLegacyScripts')) return;
 
                 // check if class exists
                 const cls = `${component[0].toUpperCase()}${component.substring(1)}ComponentInspector`;

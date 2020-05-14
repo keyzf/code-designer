@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" href="./monaco-editor.af97264b.css">
+    <link href='../editor/scene/css/ui.css' rel='stylesheet' />
+    <link href='../editor/scene/css/pcui/pcui.css' rel='stylesheet' />
+    <link href='../editor/scene/css/editor.css' rel='stylesheet' />
+    <link href='../editor/scene/css/editor/editor.css' rel='stylesheet' />
+    <link href='../editor/scene/css/theme-dark.css' rel='stylesheet'/>
+    <link href='../editor/scene/css/code-editor-v2/code-editor.css' rel='stylesheet'/>
+</head>
+
+<body>
+    <script src="./monaco-editor.23659705.js"></script>
+
+
+<script src="../editor/scene/js/events.js"></script>
+<script src="../editor/scene/js/array.js"></script>
+<script src="../editor/scene/js/utils.js"></script>
+<script src="../editor/scene/js/color.js"></script>
+<script src="../editor/scene/js/ajax.js"></script>
+<script src="../editor/scene/js/observer.js"></script>
+<script src="../editor/scene/js/observer-list.js"></script>
+<script src="../editor/scene/js/observer-sync.js"></script>
+<script src="../editor/scene/js/observer-history.js"></script>
+<script src="../editor/scene/js/ui.js"></script>
+<script src="../editor/scene/js/ui/element.js"></script>
+<script src="../editor/scene/js/ui/container-element.js"></script>
+<script src="../editor/scene/js/ui/div-element.js"></script>
+<script src="../editor/scene/js/ui/button.js"></script>
+<script src="../editor/scene/js/ui/checkbox.js"></script>
+<script src="../editor/scene/js/ui/code.js"></script>
+<script src="../editor/scene/js/ui/label.js"></script>
+<script src="../editor/scene/js/ui/number-field.js"></script>
+<script src="../editor/scene/js/ui/overlay.js"></script>
+<script src="../editor/scene/js/ui/panel.js"></script>
+<script src="../editor/scene/js/ui/select-field.js"></script>
+<script src="../editor/scene/js/ui/text-field.js"></script>
+<script src="../editor/scene/js/ui/textarea-field.js"></script>
+<script src="../editor/scene/js/ui/color-field.js"></script>
+<script src="../editor/scene/js/ui/image-field.js"></script>
+<script src="../editor/scene/js/ui/slider.js"></script>
+<script src="../editor/scene/js/ui/progress.js"></script>
+<script src="../editor/scene/js/ui/list.js"></script>
+<script src="../editor/scene/js/ui/list-item.js"></script>
+<script src="../editor/scene/js/ui/grid.js"></script>
+<script src="../editor/scene/js/ui/grid-item.js"></script>
+<script src="../editor/scene/js/ui/tree.js"></script>
+<script src="../editor/scene/js/ui/tree-item.js"></script>
+<script src="../editor/scene/js/ui/tooltip.js"></script>
+<script src="../editor/scene/js/ui/menu.js"></script>
+<script src="../editor/scene/js/ui/menu-item.js"></script>
+<script src="../editor/scene/js/ui/canvas.js"></script>
+<script src="../editor/scene/js/ui/curve-field.js"></script>
+<script src="../editor/scene/js/ui/autocomplete-element.js"></script>
+<script src="../editor/scene/js/ui/bubble.js"></script>
+<script src="../editor/scene/js/pcui/pcui.js"></script>
+<script src="../editor/scene/js/pcui/interface/index.js"></script>
+<script src="../editor/scene/js/pcui/element/index.js"></script>
+<script src="../editor/scene/js/pcui/history/history.js"></script>
+<script src="../editor/scene/js/pcui/binding/binding-base.js"></script>
+<script src="../editor/scene/js/pcui/binding/binding-element-observers.js"></script>
+<script src="../editor/scene/js/pcui/binding/binding-observers-element.js"></script>
+<script src="../editor/scene/js/pcui/binding/binding-two-way.js"></script>
+
+<script src="../code-editor-v2/app.js"></script>
+<script src="../code-editor-v2/layout.js"></script>
+
+
+
+<script src="../workers/kvStorage.js"></script>
+<script src="../workers/localForageAdaptor.js"></script>
+<script src="../FS.js"></script>
+
+
+<script src="../editor/scene/js/editor/assets/assets.js"></script>
+<script src="../editor/scene/js/editor/assets/assets-registry.js"></script>
+<script src="../editor/scene/js/editor/assets/assets-sync.js"></script>
+<script src="../editor/scene/js/editor/assets/assets-fs.js"></script>
+<!--<script src="../editor/scene/js/editor/assets/index.js"></script>-->
+
+
+<script>
+
+    editor.once("load",function(){
+
+        var query = location.href.getQuery();
+        window.config = {project:{
+            id:query.projectid
+        }};
+
+
+
+        var languageTypemap = {
+            "script":"javascript",
+            "css":"css"
+        };
+
+
+
+
+
+        editor.on('assets:load',function(){
+
+            if(query.tabs && query.projectid){
+                var FS = editor.call('FS:offline-system');
+                var filepath = "TWCacheFiles/" + query.projectid + "/" + query.tabs;
+                return FS.getFileByPath(filepath).then(file => {               
+                    if(!file) return;
+                    var reader = new FileReader();
+
+                    reader.addEventListener('load', function () {
+
+
+                        var monacoInstance = monaco.editor.create(editor.call('layout.code').innerElement, {
+                            value: reader.result,
+                            language: languageTypemap[file.type]
+                        });
+
+
+//                        monaco.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.KEY_S, function () {
+//
+//                        });
+
+                        monacoInstance.onDidChangeModelContent((event) => {
+                            const newValue = monacoInstance.getValue();
+
+                            if(file.type === "script"){
+                                file.file = new Blob([ newValue || '' ], { type: 'text/javascript' });
+
+                            }else if(file.type === "css"){
+                                file.file = new Blob([ newValue || '' ], { type: 'text/css' });
+                            }else if(file.type === "json"){
+                                file.file = new Blob([ newValue || '' ], { type: 'application/json' });
+                            }else if(file.type === "html"){
+                                file.file = new Blob([ newValue || '' ], { type: 'text/html' });
+                            }
+
+
+                            
+
+
+                            var assetRaw = window.opener.window.editor.call("assets:get",query.tabs);
+
+                            var reader = new FileReader();
+                            reader.addEventListener("load", function () {
+
+                                assetRaw.set("file.url",reader.result);
+                                reader = null;
+                            });
+                            reader.readAsDataURL(file.file);
+
+
+                            return localforage.setItem(filepath,file);
+                        })
+
+
+
+                    }, false);
+
+                    reader.readAsText(file.file);
+
+                   
+
+                });
+
+
+
+            }
+        });
+
+
+
+        editor.emit('fsoffline:assets');
+
+
+
+    });
+
+</script>
+</body>
+
+</html>

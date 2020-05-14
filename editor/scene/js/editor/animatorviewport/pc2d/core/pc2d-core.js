@@ -125,7 +125,7 @@ var pc2d = {
     }
 };
 
-var pc = pc2d;
+
 
 pc2d.guid = function () {
     return {

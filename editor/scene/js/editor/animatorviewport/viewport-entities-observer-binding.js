@@ -4,7 +4,6 @@ editor.once('load', function() {
 
 
     editor.on('entities:add', function (obj) {
-        
         // subscribe to changes
         obj.on('*:set', function(path, value) {
             var entity = obj.entity;
@@ -30,7 +29,7 @@ editor.once('load', function() {
                 var parent = editor.call('entities:get', obj.get('parent'));
                 if (parent && parent.entity && entity.parent !== parent.entity)
                     entity.reparent(parent.entity);
-            } else if (path === 'components.model.type' && value === 'asset') {
+            }else if (path === 'components.model.type' && value === 'asset') {
                 // WORKAROUND
                 // entity deletes asset when switching to primitive, restore it
                 // do this in a timeout to allow the model type to change first
@@ -120,9 +119,30 @@ editor.once('load', function() {
                 obj.entity.insertChild(childEntity.entity, index);
 
                 //dom insert
-                childEntity.entity.dom && obj.entity.dom.insertBefore(childEntity.entity.dom,obj.entity.dom.childNodes[index]);
+
+                //obj.entity.children[index];
 
 
+                if(!obj.entity.dom) {
+                    obj.entity.dom = document.createElement("div");
+                }
+                if(!childEntity.entity.dom) {
+                    childEntity.entity.dom = document.createElement("div");
+                }
+                
+                if(!obj.entity.dom.childNodes[index]){
+                    childEntity.entity.dom && obj.entity.dom.appendChild(childEntity.entity.dom);
+                }else{
+                    childEntity.entity.dom && obj.entity.dom.insertBefore(childEntity.entity.dom,obj.entity.dom.childNodes[index]);
+                }
+                
+                
+                childEntity.entity.css && (childEntity.entity.css.enabled =  childEntity.entity.css.enabled);
+                childEntity.entity.enabled =  childEntity.entity._enabled;
+
+                if(!childEntity.entity.enabled){      
+                    childEntity.entity.dom && (childEntity.entity.dom.style.display = "none");
+                }
 
                 // persist the positions and sizes of elements if they were previously
                 // under control of a layout group but have now been reparented

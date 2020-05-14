@@ -1,5 +1,7 @@
 editor.once('load', function() {
     var time;
+    var rect = new pc2d.Vec4(0, 0, 1, 1);
+
 
     function dataURLtoBlob(dataurl,callback) {
         var arr = dataurl.split(','), mime = arr[0].match(/:(.*?);/)[1],
@@ -40,9 +42,9 @@ editor.once('load', function() {
             
             this.dom = this.dom || document.createElement("div");
 
-
             if(!this.dom.attachedEvent){
-                function clickgizimo(event){   
+                function clickgizimo(event){
+                    
                     // this.dom.removeEventListner("click",clickgizimo);
                     // this.dom.attachedEvent = false;
                     if(editor.call("entities:get",this.getGuid()) !== selectedEntity){
@@ -82,6 +84,10 @@ editor.once('load', function() {
             if(!this.dom.parentNode && (this.dom.parentNode !== this.parent.dom)){
                 this.parent.dom.appendChild(this.dom);
             }  
+
+            if(!this.enabled && !this.css){
+                this.dom && (this.dom.style.display = "none");
+            }
             
         }
 

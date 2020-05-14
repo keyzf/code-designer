@@ -57,10 +57,18 @@ Object.assign(pcui, (function () {
         reference: 'asset:script:loadingType',
         args: {
             type: 'number',
-            options: [
-                { v: LOAD_SCRIPT_AS_ASSET, t: 'Asset' },
-                { v: LOAD_SCRIPT_BEFORE_ENGINE, t: 'Before Engine' },
-                { v: LOAD_SCRIPT_AFTER_ENGINE, t: 'After Engine' }
+            options: [{
+                    v: LOAD_SCRIPT_AS_ASSET,
+                    t: 'Asset'
+                },
+                {
+                    v: LOAD_SCRIPT_BEFORE_ENGINE,
+                    t: 'Before Engine'
+                },
+                {
+                    v: LOAD_SCRIPT_AFTER_ENGINE,
+                    t: 'After Engine'
+                }
             ]
         }
     }, {
@@ -129,7 +137,7 @@ Object.assign(pcui, (function () {
             this.class.add(CLASS_ROOT);
 
             this._projectSettings = args.projectSettings;
-            
+
             this._editableTypes = args.editableTypes;
 
             this._assetTypes = editor.call('schema:assets:list');
@@ -156,7 +164,7 @@ Object.assign(pcui, (function () {
 
             this._btnDownloadAsset.hidden = !editor.call('permissions:read');
             const evtBtnDownloadPermissions = editor.on('permissions:set:' + config.self.id, () => {
-                this._btnDownloadAsset.hidden = ! editor.call('permissions:read');
+                this._btnDownloadAsset.hidden = !editor.call('permissions:read');
             });
             this._btnDownloadAsset.once('destroy', () => {
                 evtBtnDownloadPermissions.unbind();
@@ -267,38 +275,68 @@ Object.assign(pcui, (function () {
 
         _onClickDownloadAsset(evt) {
             /**下载 */
+            debugger
             // const legacyScripts = this._projectSettings.get('useLegacyScripts');
             if (this._assets[0].get('type') !== 'folder' && this._assets[0].get('type') !== 'sprite') {
 
                 if (this._assets[0].get('source') || this._assets[0].get('type') === 'texture' || this._assets[0].get('type') === 'audio') {
 
-                    if(this._assets[0].get('type') === 'template'){
+                    if (this._assets[0].get('type') === 'template') {
 
-                        
+
                         var _self = this;
                         let a = new FileReader();
-                        a.onload = function (e) { 
+                        a.onload = function (e) {
                             var link = document.createElement('A');
                             var downloadname = _self._assets[0].get('name')
-                            if(!downloadname.endsWith(".template")){
+                            if (!downloadname.endsWith(".template")) {
                                 downloadname += ".template";
                             }
                             link.download = downloadname;
                             link.href = e.target.result;
                             link.click();
                         };
-                        a.readAsDataURL(new Blob([ JSON.stringify(this._assets[0].get('data')) ], { type: 'application/json' }));
+                        a.readAsDataURL(new Blob([JSON.stringify(this._assets[0].get('data'))], {
+                            type: 'application/json'
+                        }));
+
+                        return;
+                    }
+
+debugger
+                    if (this._assets[0].get('type') === 'animation') {
+                        var _self = this;
+                        var link = document.createElement('A');
+                        var downloadname = _self._assets[0].get('name')
+                        if (!downloadname.endsWith(".anim")) {
+                            downloadname += ".anim";
+                        }
+                        link.download = downloadname;
+                        link.href = this._assets[0].get('file.url');
+                        link.click();
 
                         return;
                     }
                     window.open(this._assets[0].get('file.url'));
                 } else {
+
                     var a = document.createElement('A');
-                    a.download = this._assets[0].get('name');
+                    var downloadname = this._assets[0].get('name');
+                    if (this._assets[0].get('type') === 'animation') {                   
+                       
+                        if (!downloadname.endsWith(".anim")) {
+                            downloadname += ".anim";
+                        }
+                        a.download = downloadname;
+                      
+                    }else{
+                       
+                        a.download = downloadname;
+                      
+                    }
+                   
                     a.href = this._assets[0].get('file.url');
                     a.click();
-
-                    //window.open('/api/assets/' + this._assets[0].get('id') + '/download?branchId=' + config.self.branch.id);
                 }
             }
         }
@@ -312,7 +350,7 @@ Object.assign(pcui, (function () {
         }
 
         _onClickEditTimeline(evt) {
-            
+
             editor.call('picker:timeline', this._assets[0]);
         }
 
@@ -323,15 +361,15 @@ Object.assign(pcui, (function () {
 
             const asset = editor.call('assets:get', sourceId);
 
-            if (! asset)
+            if (!asset)
                 return;
 
             editor.call('selector:set', 'asset', [asset]);
         }
 
         _onClickLoadingOrder() {
-            editor.call('selector:set', 'editorSettings', [ editor.call('settings:projectUser') ]);
-            setTimeout(function() {
+            editor.call('selector:set', 'editorSettings', [editor.call('settings:projectUser')]);
+            setTimeout(function () {
                 editor.call('editorSettings:panel:unfold', 'scripts-order');
             }, 0);
         }
