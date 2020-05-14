@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>flv.js demo</title>
+    <link rel="stylesheet" type="text/css" href="https://s4.ssl.qhres.com/static/07d25a7ff9eb302d.css" />
+</head>
+
+<body>
+    <div class="videoMainBox">
+        <div class="videoBox">
+            <video name="videoElement" style="width:100%; height:100%" autoplay>
+                Your browser is too old which doesn't support HTML5 video.
+            </video>
+        </div>
+    </div>
+
+    <div class="mainContainer">
+        <div>
+            <div id="streamURL">
+                <div class="url-input">
+                    <label for="sURL">Stream URL:</label>
+                    <input id="sURL" type="text"
+                        value="http://qh2-flv.live.huajiao.com/live_huajiao_v2/_LC_QH2_non_h265_SD_21388907515867607471313531_OX.flv" />
+                </div>
+                <div class="options" style="display: none;">
+                    <input type="checkbox" id="isLive" onchange="saveSettings()" />
+                    <label for="isLive">isLive</label>
+                    <input type="checkbox" id="withCredentials" onchange="saveSettings()" />
+                    <label for="withCredentials">withCredentials</label>
+                    <input type="checkbox" id="hasAudio" onchange="saveSettings()" checked />
+                    <label for="hasAudio">hasAudio</label>
+                    <input type="checkbox" id="hasVideo" onchange="saveSettings()" checked />
+                    <label for="hasVideo">hasVideo</label>
+                </div>
+            </div>
+            <div id="mediaSourceURL" class="hidden">
+                <div class="url-input">
+                    <label for="msURL">MediaDataSource JsonURL:</label>
+                    <input id="msURL" type="text" value="http://127.0.0.1/flv/7182741.json" />
+                    <button onclick="switch_url()">Switch to URL</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding-left: 10px;">
+            <p class="tiy" onclick="flv_load()">加载</p>
+            <p class="tiy" onclick="flv_destroy()">销毁</p>
+            <p class="tiy" onclick="saveSettings()">保存设置</p>
+            <p class="tiy" onclick="clear_log()">清除输出</p>
+            <!-- <p class="tiy" onclick="flv_start()">开始</p> -->
+            <!-- <p class="tiy" onclick="flv_pause()">暂停</p> -->
+            <!-- <input style="width:100px" type="text" name="seekpoint"/> -->
+            <!-- <button onclick="flv_seekto()">SeekTo</button> -->
+            <!-- <button onclick="flv_videostate_moitor()">VideoStateMonitor</button> -->
+        </div>
+        <textarea id="logcatbox" name="logcatbox" class="logcatBox" rows="20" readonly></textarea>
+    </div>
+
+    <script src="https://s.ssl.qhimg.com/pkg/serviceplatform/FLVJS_v1.0.1.js?t=3"></script>
+
+    <script>
+        var checkBoxFields = ['isLive', 'withCredentials', 'hasAudio', 'hasVideo'];
+        var streamURL, mediaSourceURL;
+        var video_state_monitor_enabled = true;
+
+        function flv_load() {
+            var i;
+            var mediaDataSource = {
+                type: 'flv'
+            };
+            for (i = 0; i < checkBoxFields.length; i++) {
+                var field = checkBoxFields[i];
+                /** @type {HTMLInputElement} */
+                var checkbox = document.getElementById(field);
+                mediaDataSource[field] = checkbox.checked;
+            }
+            mediaDataSource['url'] = document.getElementById('sURL').value;
+            console.log('MediaDataSource', mediaDataSource);
+            flv_load_mds(mediaDataSource);
+        }
+        // http://pl3.live.huajiao.com/live_huajiao_v2/_LC_ps3_non_18488662315422627451610556_OX.flv //网宿
+        // http://al2-flv.live.huajiao.com/live_huajiao_v2/_LC_AL2_non_11261250515422567761873559_OX.flv //阿里
+        // http://qh2-flv.live.huajiao.com/live_huajiao_v2/_LC_QH2_non_h265_SD_2837200715867735951356267_OX.flv //自建360
+
+        function flv_videostate_moitor() {
+            player.enableVideoStateMonitor(!video_state_monitor_enabled);
+            video_state_monitor_enabled = !video_state_monitor_enabled;
+        }
+
+        function flv_load_mds(mediaDataSource) {
+            var element = document.getElementsByName('videoElement')[0];
+            if (typeof player !== "undefined") {
+                if (player != null) {
+                    player.unload();
+                    player.detachMediaElement();
+                    player.destroy();
+                    player = null;
+                }
+            }
+            player = flvjs.createPlayer(mediaDataSource, {
+                isLive: true,
+                autoplay: true,
+                enableWorker: true,
+                lazyLoadMaxDuration: 1,
+                seekType: 'range',
+                fixAudioTimestampGap: false,
+                enableStashBuffer: false,
+                autoCleanupMaxBackwardDuration: 60,
+                autoCleanupMinBackwardDuration: 30,
+                statisticsInfoReportInterval: 2000,
+                stashInitialSize: 128,
+
+                // 如果是Android浏览器，建议enableDurationMonitor设置为false
+                enableDurationMonitor: true,    // true表示监测当前直播流延时，当发现延时过大时，主动追赶
+                enableVideoFrozenMonitor: true, // 监测视频解码是否停滞（画面卡停），当因为某些原因导致无法解码时，将上报VIDEO_FROZEN事件，收到后建议重拉流
+                videoStateMonitorInterval: 1000, // 多长时间（毫秒）检查一次视频状态（延时、停滞）
+
+                // 针对手机浏览器上对MSE以及网络连接更加容易不稳定，建议将maxDurationGap设置高一点，比如2.5、3、3.5，否则可能会频繁追赶延时导致画面卡顿
+                maxDurationGap: 0.5,         // 当前播放位置与缓冲区末尾的距离（秒）如果超过这个值，就触发一次追赶，不易过短
+                decreaseDurationStep: 0.4,   // 每次追赶至缓冲区末尾之前的多少秒
+                frozenTimesThreshold: 5,        // 解码停滞次数达到此阈值，上报VIDEO_FROZEN事件。注意如果设置过小的阈值，当推流端关闭摄像头后可能会频繁触发VIDEO_FROZEN事件
+
+                // webrtc合流未能给cdn推送正确的视频分辨率信息，导致从MetaData/AVCDecoderConfigurationRecord中无法拿到正确的视频分辨率
+                // 在内核低于Chromium 70的浏览器（如360浏览器、搜狗浏览器、PC微信内嵌浏览器等）中
+                // 如果传递不对的视频分辨率，将会导致画面放大显示异常，因此，强行设置一个最大的视频宽高信息，来避免此问题
+                // 如果是Safari浏览器，enableConstVideoViewSize建议设置为false
+                enableConstVideoViewSize: true,
+                // constVideoViewWidth: 1920,
+                // constVideoViewHeight: 1080,
+            });
+
+            player.on(flvjs.Events.METADATA_ARRIVED, () => {
+                console.log('--== meta data arrived ==--');
+            });
+
+            // player.enableVideoStateMonitor(true or false);   // 如果需要，可以动态开关{视频延时 + 解码停滞}监测
+
+            // 当收到以下事件时：
+            // MEDIA_SOURCE_ENDED [流结束]
+            // MEDIA_SOURCE_CLOSE [流关闭]
+            // VIDEO_FROZEN [视频解码停滞]
+            // VIDEO_RESOLUTION_CHANGED [视频分辨率变化]
+            // ERROR [网络或媒体流错误]
+            // 建议结合业务信令来判断应该如何处理
+            // 如果已知推流主动停止，则不必处理，否则建议重拉流
+
+            //receive different video resolution from AVCSpecificConfig
+            player.on(flvjs.Events.VIDEO_RESOLUTION_CHANGED, () => {
+                console.log('--== video resolution changed, reload ==--');
+                saveSettings();
+                flv_destroy();
+                flv_load_mds(mediaDataSource);
+            });
+            player.on(flvjs.Events.MEDIA_SOURCE_ENDED, () => {
+                console.log('--== media source ended, normally means server stop push stream ==--');
+                flv_destroy();
+                flv_load_mds(mediaDataSource);
+            });
+            player.on(flvjs.Events.MEDIA_SOURCE_CLOSE, () => {
+                console.log('--== media source close, show no source view ==--');
+            });
+            player.on(flvjs.Events.VIDEO_FROZEN, () => {
+                // console.log('--== video frozen ==--');
+                // flv_load();
+            });
+            // see flv.js {api.md}, for example:
+            // ErrorType: NetworkError
+            // ErrorDetail: Exception, HttpStatusCodeInvalid, ConnectingTimeout, EarlyEof, UnrecoverableEarlyEof
+            // ErrorType: MediaError
+            // ErrorDetail : MediaMSEError
+            player.on(flvjs.Events.ERROR, (errType, errDetail) => {
+                console.log('--== flvjs error, type:' + errType + ', detail:' + errDetail + ' ==--');
+                console.log('--== should set a timer(for example, 3 seconds) to reload current flv ==--');
+                flv_destroy();
+                flv_load_mds(mediaDataSource);
+            });
+
+            // show statistics information if need
+            player.on(flvjs.Events.STATISTICS_INFO, (statInfo) => {
+                // console.log('current speed: ' + 8 * (parseInt(statInfo.speed * 10) / 10) + 'kbps');
+                // console.log('video bps: ' + statInfo.bps_video.toFixed(2) + ' kbps, audio bitrate: ' + statInfo.bps_audio.toFixed(2) + ' kbps');
+                // console.log('dropped frames:' + statInfo.droppedFrames);
+                // console.log('--== decoded frames:' + statInfo.decodedFrames + ' ==--');
+                // console.log('loader type:' + statInfo.loaderType);
+                // console.log('total segment count:' + statInfo.totalSegmentCount + ', current segment index:' + statInfo.currentSegmentIndex);
+            });
+
+            player.attachMediaElement(element);
+            player.load();
+        }
+
+        function flv_start() {
+            player.play();
+        }
+
+        function flv_pause() {
+            player.pause();
+        }
+
+        function flv_destroy() {
+            if (!player) {
+                return;
+            }
+            // player.pause();
+            // player.unload();
+            // player.detachMediaElement();
+            player.destroy();
+            player = null;
+        }
+
+        function flv_seekto() {
+            var input = document.getElementsByName('seekpoint')[0];
+            player.currentTime = parseFloat(input.value);
+        }
+
+        function switch_url() {
+            saveSettings();
+        }
+
+        function ls_get(key, def) {
+            try {
+                var ret = localStorage.getItem('flvjs_demo.' + key);
+                if (ret === null) {
+                    ret = def;
+                }
+                return ret;
+            } catch (e) { }
+            return def;
+        }
+
+        function ls_set(key, value) {
+            try {
+                localStorage.setItem('flvjs_demo.' + key, value);
+            } catch (e) { }
+        }
+
+        function saveSettings() {
+            ls_set('inputMode', 'StreamURL');
+            var i;
+            for (i = 0; i < checkBoxFields.length; i++) {
+                var field = checkBoxFields[i];
+                /** @type {HTMLInputElement} */
+                var checkbox = document.getElementById(field);
+                ls_set(field, checkbox.checked ? '1' : '0');
+            }
+            var sURL = document.getElementById('sURL');
+            ls_set('sURL', sURL.value);
+            console.log('save');
+        }
+
+        function loadSettings() {
+            var i;
+            for (i = 0; i < checkBoxFields.length; i++) {
+                var field = checkBoxFields[i];
+                /** @type {HTMLInputElement} */
+                var checkbox = document.getElementById(field);
+                var c = ls_get(field, checkbox.checked ? '1' : '0');
+                checkbox.checked = c === '1' ? true : false;
+            }
+
+            var sURL = document.getElementById('sURL');
+            sURL.value = ls_get('sURL', sURL.value);
+            switch_url();
+        }
+
+        function showVersion() {
+            var version = flvjs.version;
+            document.title = document.title + " (v" + version + ")";
+        }
+
+        function clear_log() {
+            document.getElementById('logcatbox').value = "";
+        }
+
+        var logcatbox = document.getElementsByName('logcatbox')[0];
+        flvjs.LoggingControl.addLogListener(function (type, str) {
+            logcatbox.value = logcatbox.value + str + '\n';
+            logcatbox.scrollTop = logcatbox.scrollHeight;
+        });
+
+        if (document.addEventListener) {
+            document.addEventListener('webkitvisibilitychange', () => {
+                console.log('webkitvisibilitychange to ' + document.webkitVisibilityState);
+                if (document.webkitVisibilityState === 'visible') {
+                    //reload flvjs player ?
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            streamURL = document.getElementById('streamURL');
+            loadSettings();
+            showVersion();
+            flv_load();
+        });
+    </script>
+
+</body>
+
+</html>
