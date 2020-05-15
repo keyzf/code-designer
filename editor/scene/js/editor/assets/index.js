@@ -2692,7 +2692,7 @@ editor.once('load', function() {
 
     editor.method('scripts:parse', function(asset, fn) {
 
-        var worker = new Worker('/editor/scene/js/editor/assets/assets-script-parse-worker.js');
+        var worker = new Worker('./editor/scene/js/editor/assets/assets-script-parse-worker.js');
         worker.asset = asset;
         worker.progress = 0;
 
