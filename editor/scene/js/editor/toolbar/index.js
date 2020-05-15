@@ -354,7 +354,7 @@ editor.once('load', function() {
         // open the new code editor - try to focus existing tab if it exists
         // (only works in Chrome and only if the Code Editor has been opened by the Editor)
 
-        var url = '/code-editor-v3/index.html' + '?projectid=' + config.project.id;
+        var url = './code-editor-v3/index.html' + '?projectid=' + config.project.id;
         if (asset) {
             url += '&tabs=' + asset.get('id');
         }
