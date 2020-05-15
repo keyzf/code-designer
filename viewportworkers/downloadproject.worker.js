@@ -11,7 +11,7 @@ self.addEventListener("message", e =>
 		importScripts("./via/controller/object.js",
 					  "./via/controller/property.js",
 					  "./via/controller/controller.js");
-		importScripts("/workers/kvStorage.js", "/workers/localForageAdaptor.js","/jszip.js");
+		importScripts("./workers/kvStorage.js", "./workers/localForageAdaptor.js","./jszip.js");
 		Via.postMessage = (data => self.postMessage(data));
 		Download(e.data.projectId);
 	}

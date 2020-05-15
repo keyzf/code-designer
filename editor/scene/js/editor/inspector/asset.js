@@ -275,7 +275,7 @@ Object.assign(pcui, (function () {
 
         _onClickDownloadAsset(evt) {
             /**下载 */
-            debugger
+            
             // const legacyScripts = this._projectSettings.get('useLegacyScripts');
             if (this._assets[0].get('type') !== 'folder' && this._assets[0].get('type') !== 'sprite') {
 
@@ -303,7 +303,7 @@ Object.assign(pcui, (function () {
                         return;
                     }
 
-debugger
+
                     if (this._assets[0].get('type') === 'animation') {
                         var _self = this;
                         var link = document.createElement('A');

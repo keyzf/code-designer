@@ -419,7 +419,7 @@ editor.once('load', function () {
             return;
         }
 
-        var worker = new Worker("/editor/scene/js/editor/sourcefiles/sourcefiles-attributes-parser.js");
+        var worker = new Worker("./editor/scene/js/editor/sourcefiles/sourcefiles-attributes-parser.js");
         worker.postMessage({
             url: url
         });

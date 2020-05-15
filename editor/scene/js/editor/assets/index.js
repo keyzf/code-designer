@@ -1925,7 +1925,7 @@ editor.once('load', function() {
         args = args || { };
 
         var filename = asset.get('file.filename');
-        var worker = new Worker('/editor/scene/js/editor/assets/assets-unwrap-worker.js');
+        var worker = new Worker('./editor/scene/js/editor/assets/assets-unwrap-worker.js');
         worker.asset = asset;
         worker.progress = 0;
 
@@ -2020,7 +2020,7 @@ editor.once('load', function() {
             return;
 
         var filename = asset.get('file.filename');
-        var worker = new Worker('/editor/scene/js/editor/assets/assets-unwrap-worker.js');
+        var worker = new Worker('./editor/scene/js/editor/assets/assets-unwrap-worker.js');
 
         worker.onmessage = function(evt) {
             if (evt.data.name && evt.data.name === 'finish') {

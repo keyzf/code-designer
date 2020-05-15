@@ -249,10 +249,7 @@ editor.once('load',function(){
                 console.trace();
                 console.log('out: [ ' + Object.keys(op).filter(function(i) { return i !== 'p' }).join(', ') + ' ]', op.p.join('.'));
                 console.log(op)
-        
-                if(op.p[1] == "04fd56f4-5357-4161-9d9a-459535ad6e0d"){
-                    debugger
-                }
+
                 console.log(editor.call('entities:raw'))
                 console.log(editor.call('entities:list'))
 
@@ -320,7 +317,7 @@ editor.once('load',function(){
                          
                         }
                     }catch(e){
-                        debugger
+                        
                     }
 
                     return Promise.resolve();

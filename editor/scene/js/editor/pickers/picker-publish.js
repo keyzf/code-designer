@@ -92,7 +92,7 @@ editor.once('load', function () {
         /**下载项目 */
 
 
-        // var worker = new Worker("/viewportworkers/downloadproject.worker.js");
+        // var worker = new Worker("./viewportworkers/downloadproject.worker.js");
         // worker.postMessage({
         //     name: "download",
         //     projectId:config.project.id

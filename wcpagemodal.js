@@ -142,9 +142,7 @@
                     }
                 });
 
-                utils.removeAllChildrenFrom(this);
-
-                debugger
+                utils.removeAllChildrenFrom(this);              
 
                 div =
                     el('div', {

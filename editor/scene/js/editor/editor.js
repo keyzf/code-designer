@@ -66,7 +66,7 @@ window.config = {
     },
     "scene":{"id":"","uniqueId":""},
     "url":{
-        "engine": window.location.href + "/pc2d/output/pc2d-entry.js",
+        "engine": window.location.origin + "/pc2d/output/pc2d-entry.js",
     },
     "schema": {
         "scene": {

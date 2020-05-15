@@ -11,7 +11,7 @@
 		return;		// no SW support, ignore call
 	
 	try {
-		navigator.serviceWorker.register("/root-sw.js", { scope: location.origin })
+		navigator.serviceWorker.register("./root-sw.js", { scope: location.origin })
 		.then(function (reg)
 		{
 			console.log("Registered root service worker on " + reg.scope);

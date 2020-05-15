@@ -25,22 +25,22 @@ editor.once('load', function () {
         return hash;
     }
 
-
-
+   var count = 0;
+  
     editor.method('loadAsset', function (filePath, callback) {
         var FS = editor.call('FS:offline-system');
         FS.getFileByPath(filePath).then(assetData => {
-        
+            var _promise = Promise.resolve();
+           
+
             if (! assetData) {
                 console.error('Could not load asset: ' + filePath);
                 editor.call('status:error', 'Could not load asset: ' + filePath);
                 return callback && callback();
             }
             delete assetData.item_id;
-            delete assetData.branch_id;
-    
-            var _promise = Promise.resolve();
-    
+            delete assetData.branch_id;   
+            
             if (assetData.file) {  
                 if(assetData.type === "texture"){
                     _promise = new Promise((resolve) => {
@@ -104,10 +104,12 @@ editor.once('load', function () {
 
 
                         }, false);
+                        reader.addEventListener("error", function () {
+                            resolve();                    
+                        }, false);
                         reader.readAsText(assetData.file);
                     })
                 }
-    
     
                // assetData.file.url = getFileUrl(assetData.id, assetData.revision, assetData.file.filename);
     
@@ -117,7 +119,8 @@ editor.once('load', function () {
                 //     }
                 // }
             }
-    
+            
+            
             // allow duplicate values in data.frameKeys of sprite asset
     
             _promise.then(_ => {
@@ -149,10 +152,6 @@ editor.once('load', function () {
 
 
                 var asset = new Observer(assetData, options);
-
-               
-                
-
 
                 editor.call('assets:add', asset);
         
@@ -216,6 +215,7 @@ editor.once('load', function () {
             editor.call('loadAsset', uniqueId, function () {
                 count++;
                 editor.call('assets:progress', (count / data.length) * 0.5 + 0.5);
+               
                 if (count >= data.length) {
                     editor.call('assets:progress', 1);
                     editor.emit('assets:load');
