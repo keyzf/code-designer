@@ -54,7 +54,7 @@ editor.once('load', function() {
             if (fn) fn(null);
         };
 
-        element.src = '/plugins/' + name + '.js';
+        element.src = './plugins/' + name + '.js';
 
         document.head.appendChild(element);
 
