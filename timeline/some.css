@@ -1,0 +1,9984 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    touch-action: none;
+    cursor: default;
+    overflow-anchor: none;
+    -ms-content-zooming: none
+}
+
+body,button,html,input,select,select option {
+    font-family: system-ui,-apple-system,"Segoe UI",".SFNSText-Regular","San Francisco",Roboto,"Noto Sans UI","Helvetica Neue","Lucida Grande",sans-serif
+}
+
+body,button,html,input,select {
+    font-size: .901387rem
+}
+
+body {
+    --default-icon-color:#000000;--project-item-icon-color:#398C00;--effect-icon-color:#590094;--family-overlay-icon-color:#F05300;--invert-icon-color:#FF0000;--default-layer-color:#FFFFFF;--c3logo-type:light}
+
+ui-pane#main {
+    contain: strict;
+    min-width: 100%!important;
+    width: 100%!important;
+    max-width: 100%!important;
+    min-height: 100%!important;
+    height: 100%!important;
+    max-height: 100%!important;
+    overflow: hidden
+}
+
+input {
+    min-width: 0
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 1.4em;
+    margin-bottom: .3em
+}
+
+p {
+    margin-top: 0
+}
+
+ul li {
+    margin-bottom: .5em
+}
+
+html[mobile],html[mobile] input,html[mobile] option,html[mobile] select,html[mobile]>body {
+    font-size: 1rem
+}
+
+html[mobile] [mobile-hidden] {
+    display: none
+}
+
+html[desktop] [desktop-hidden] {
+    display: none
+}
+
+div,ui-body,ui-caption,ui-pane {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+dialog,div:not([contenteditable=true]):not([selectable]),ui-body,ui-caption,ui-menu,ui-menuitem,ui-pane {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+canvas,div,label,span {
+    cursor: inherit
+}
+
+html[desktop] abbr {
+    cursor: help
+}
+
+input[type=search] {
+    background-image: url(ui-icons/search-icon.svg);
+    background-position: 3px 4px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    padding: 3px 0 3px 21px;
+    border: 1px solid #ccc
+}
+
+.bbCodeH1 {
+    font-size: 2rem;
+    font-weight: 700
+}
+
+.bbCodeH2 {
+    font-size: 1.5rem;
+    font-weight: 700
+}
+
+.bbCodeH3 {
+    font-size: 1.25rem;
+    font-weight: 700
+}
+
+.bbCodeH4 {
+    font-size: 1.1rem;
+    font-weight: 700
+}
+
+.bbCodeItem::before {
+    content: " â€¢ "
+}
+
+.bbCodeBad {
+    color: #fff;
+    background-color: red
+}
+
+.bbCodeGood {
+    color: #fff;
+    background-color: green
+}
+
+.bbCodeInfo {
+    color: #fff;
+    background-color: #3e76d8
+}
+
+.width100em {
+    width: 100em
+}
+
+[row1] {
+    grid-row-start: 1;
+    grid-row-end: auto
+}
+
+[row2] {
+    grid-row-start: 2;
+    grid-row-end: auto
+}
+
+[row3] {
+    grid-row-start: 3;
+    grid-row-end: auto
+}
+
+[row4] {
+    grid-row-start: 4;
+    grid-row-end: auto
+}
+
+[row5] {
+    grid-row-start: 5;
+    grid-row-end: auto
+}
+
+[row6] {
+    grid-row-start: 6;
+    grid-row-end: auto
+}
+
+[row7] {
+    grid-row-start: 7;
+    grid-row-end: auto
+}
+
+[row8] {
+    grid-row-start: 8;
+    grid-row-end: auto
+}
+
+[row9] {
+    grid-row-start: 9;
+    grid-row-end: auto
+}
+
+[row10] {
+    grid-row-start: 10;
+    grid-row-end: auto
+}
+
+[row11] {
+    grid-row-start: 11;
+    grid-row-end: auto
+}
+
+[row12] {
+    grid-row-start: 12;
+    grid-row-end: auto
+}
+
+[row13] {
+    grid-row-start: 13;
+    grid-row-end: auto
+}
+
+[row14] {
+    grid-row-start: 14;
+    grid-row-end: auto
+}
+
+[row15] {
+    grid-row-start: 15;
+    grid-row-end: auto
+}
+
+[row16] {
+    grid-row-start: 16;
+    grid-row-end: auto
+}
+
+[row17] {
+    grid-row-start: 17;
+    grid-row-end: auto
+}
+
+[row18] {
+    grid-row-start: 18;
+    grid-row-end: auto
+}
+
+[row19] {
+    grid-row-start: 19;
+    grid-row-end: auto
+}
+
+[row20] {
+    grid-row-start: 20;
+    grid-row-end: auto
+}
+
+[col1] {
+    grid-column-start: 1;
+    grid-column-end: auto
+}
+
+[col2] {
+    grid-column-start: 2;
+    grid-column-end: auto
+}
+
+[col3] {
+    grid-column-start: 3;
+    grid-column-end: auto
+}
+
+[col4] {
+    grid-column-start: 4;
+    grid-column-end: auto
+}
+
+[col5] {
+    grid-column-start: 5;
+    grid-column-end: auto
+}
+
+[col6] {
+    grid-column-start: 6;
+    grid-column-end: auto
+}
+
+[col7] {
+    grid-column-start: 7;
+    grid-column-end: auto
+}
+
+[col8] {
+    grid-column-start: 8;
+    grid-column-end: auto
+}
+
+[col9] {
+    grid-column-start: 9;
+    grid-column-end: auto
+}
+
+[col10] {
+    grid-column-start: 10;
+    grid-column-end: auto
+}
+
+[col11] {
+    grid-column-start: 11;
+    grid-column-end: auto
+}
+
+[col12] {
+    grid-column-start: 12;
+    grid-column-end: auto
+}
+
+[col13] {
+    grid-column-start: 13;
+    grid-column-end: auto
+}
+
+[col14] {
+    grid-column-start: 14;
+    grid-column-end: auto
+}
+
+[col15] {
+    grid-column-start: 15;
+    grid-column-end: auto
+}
+
+[col16] {
+    grid-column-start: 16;
+    grid-column-end: auto
+}
+
+[col17] {
+    grid-column-start: 17;
+    grid-column-end: auto
+}
+
+[col18] {
+    grid-column-start: 18;
+    grid-column-end: auto
+}
+
+[col19] {
+    grid-column-start: 19;
+    grid-column-end: auto
+}
+
+[col20] {
+    grid-column-start: 20;
+    grid-column-end: auto
+}
+
+.docCursorOverlayElem {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    will-change: transform;
+    left: 0;
+    top: 0;
+    contain: strict;
+    z-index: 20000
+}
+
+.cursorBackgroundWait {
+    cursor: progress!important
+}
+
+.cursorWait {
+    cursor: wait!important
+}
+
+.cursorCrosshair {
+    cursor: crosshair!important
+}
+
+.cursorMove {
+    cursor: move!important
+}
+
+.cursorNotAllowed {
+    cursor: not-allowed!important
+}
+
+.cursorResizeCol {
+    cursor: col-resize!important
+}
+
+.cursorResizeRow {
+    cursor: row-resize!important
+}
+
+.cursorResizeNS {
+    cursor: ns-resize!important
+}
+
+.cursorResizeEW {
+    cursor: ew-resize!important
+}
+
+.cursorResizeNWSE {
+    cursor: nwse-resize!important
+}
+
+.cursorResizeNESW {
+    cursor: nesw-resize!important
+}
+
+.cursorGrab {
+    cursor: grab!important
+}
+
+.cursorGrabbing {
+    cursor: grabbing!important
+}
+
+.cursorRotateTL {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-tl-1x.png) 7 7,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-tl-1x.png) 1x,url(ui-icons/rotate-tl-2x.png) 2x,url(ui-icons/rotate-tl-3x.png) 3x) 7 7,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-tl-1x.png) 1x,url(ui-icons/rotate-tl-2x.png) 2x,url(ui-icons/rotate-tl-3x.png) 3x) 7 7,crosshair!important
+}
+
+.cursorRotateTop {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-top-1x.png) 15 3,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-top-1x.png) 1x,url(ui-icons/rotate-top-2x.png) 2x,url(ui-icons/rotate-top-3x.png) 3x) 15 3,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-top-1x.png) 1x,url(ui-icons/rotate-top-2x.png) 2x,url(ui-icons/rotate-top-3x.png) 3x) 15 3,crosshair!important
+}
+
+.cursorRotateTR {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-tr-1x.png) 24 7,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-tr-1x.png) 1x,url(ui-icons/rotate-tr-2x.png) 2x,url(ui-icons/rotate-tr-3x.png) 3x) 24 7,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-tr-1x.png) 1x,url(ui-icons/rotate-tr-2x.png) 2x,url(ui-icons/rotate-tr-3x.png) 3x) 24 7,crosshair!important
+}
+
+.cursorRotateRight {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-right-1x.png) 28 15,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-right-1x.png) 1x,url(ui-icons/rotate-right-2x.png) 2x,url(ui-icons/rotate-right-3x.png) 3x) 28 15,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-right-1x.png) 1x,url(ui-icons/rotate-right-2x.png) 2x,url(ui-icons/rotate-right-3x.png) 3x) 28 15,crosshair!important
+}
+
+.cursorRotateBR {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-br-1x.png) 24 24,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-br-1x.png) 1x,url(ui-icons/rotate-br-2x.png) 2x,url(ui-icons/rotate-br-3x.png) 3x) 24 24,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-br-1x.png) 1x,url(ui-icons/rotate-br-2x.png) 2x,url(ui-icons/rotate-br-3x.png) 3x) 24 24,crosshair!important
+}
+
+.cursorRotateBottom {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-bottom-1x.png) 15 28,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-bottom-1x.png) 1x,url(ui-icons/rotate-bottom-2x.png) 2x,url(ui-icons/rotate-bottom-3x.png) 3x) 15 28,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-bottom-1x.png) 1x,url(ui-icons/rotate-bottom-2x.png) 2x,url(ui-icons/rotate-bottom-3x.png) 3x) 15 28,crosshair!important
+}
+
+.cursorRotateBL {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-bl-1x.png) 7 24,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-bl-1x.png) 1x,url(ui-icons/rotate-bl-2x.png) 2x,url(ui-icons/rotate-bl-3x.png) 3x) 7 24,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-bl-1x.png) 1x,url(ui-icons/rotate-bl-2x.png) 2x,url(ui-icons/rotate-bl-3x.png) 3x) 7 24,crosshair!important
+}
+
+.cursorRotateLeft {
+    cursor: crosshair!important;
+    cursor: url(ui-icons/rotate-left-1x.png) 3 15,crosshair!important;
+    cursor: -webkit-image-set(url(ui-icons/rotate-left-1x.png) 1x,url(ui-icons/rotate-left-2x.png) 2x,url(ui-icons/rotate-left-3x.png) 3x) 3 15,crosshair!important;
+    cursor: image-set(url(ui-icons/rotate-left-1x.png) 1x,url(ui-icons/rotate-left-2x.png) 2x,url(ui-icons/rotate-left-3x.png) 3x) 3 15,crosshair!important
+}
+
+a:not([href]) {
+    color: #00f;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+a:not([href]):active {
+    color: red
+}
+
+[unselectable] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default
+}
+
+[selectable] {
+    -webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: auto
+}
+
+[disabled] {
+    color: #8d8d8d
+}
+
+.nowrap {
+    white-space: nowrap
+}
+
+.bold {
+    font-weight: 700
+}
+
+.flexValign {
+    display: flex;
+    align-items: center;
+    height: 100%
+}
+
+.flexVstretch {
+    display: flex;
+    align-items: stretch;
+    height: 100%
+}
+
+[flex-row] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap
+}
+
+[flex-column] {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap
+}
+
+[flex-filler] {
+    flex: 2
+}
+
+[scrollY] {
+    overflow-y: auto
+}
+
+.originLeft {
+    transform-origin: 0 50%
+}
+
+.originTop {
+    transform-origin: 50% 0
+}
+
+.originRight {
+    transform-origin: 100% 50%
+}
+
+.originBottom {
+    transform-origin: 50% 100%
+}
+
+.originMiddle {
+    transform-origin: 50% 50%
+}
+
+table.inputGrid {
+    width: 100%
+}
+
+table.inputGrid td {
+    padding-top: .3em;
+    padding-bottom: .3em
+}
+
+table.inputGrid td:first-child {
+    width: 25%;
+    min-width: 75px;
+    max-width: 200px;
+    text-align: right;
+    padding-right: .4em
+}
+
+table.inputGrid[half-width-labels] td:first-child {
+    width: 50%
+}
+
+table.inputGrid td:first-child>label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+table.inputGrid td:last-child {
+    text-align: left
+}
+
+table.inputGrid td:last-child>* {
+    box-sizing: border-box;
+    width: 100%;
+    height: 2em
+}
+
+table.inputGrid td:last-child>input:not([type=checkbox]) {
+    padding-left: 3px
+}
+
+table.inputGrid td:last-child>input[type=checkbox] {
+    width: 1.4em;
+    margin: 0
+}
+
+td.inputGridFiller {
+    height: 100%
+}
+
+table.inputGrid .checkboxCell {
+    display: flex;
+    align-items: center
+}
+
+table.inputGrid .checkboxCell input[type=checkbox] {
+    width: 1.4em;
+    height: 1.4em;
+    flex-shrink: 0
+}
+
+.hiddenColorPicker {
+    position: absolute;
+    left: -9999px;
+    top: -9999px
+}
+
+.columnResizeIndicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    contain: strict;
+    will-change: transform;
+    pointer-events: none;
+    background-color: rgba(0,0,0,.7)
+}
+
+.transparent-checkerboard-pattern {
+    background-image: linear-gradient(45deg,#dbdbdb 25%,transparent 25%),linear-gradient(-45deg,#dbdbdb 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#dbdbdb 75%),linear-gradient(-45deg,transparent 75%,#dbdbdb 75%),linear-gradient(0deg,#fff 0,#fff 100%);
+    background-size: 16px 16px;
+    background-position: 0 0,0 8px,8px -8px,-8px 0
+}
+
+body {
+    --window-caption-active-color:#2980CC;--window-caption-inactive-color:#226AA5;--window-border-size:7px;--window-thin-border-size:1px}
+
+ui-caption,ui-dialog-caption {
+    background-color: var(--window-caption-inactive-color)
+}
+
+html[mobile] ui-caption {
+    transition: background-color .2s linear
+}
+
+dialog[active]>ui-dialog-caption,dialog[always-active]>ui-dialog-caption,ui-pane[active]>ui-caption {
+    background-color: var(--window-caption-active-color)
+}
+
+html[highgfxmode] dialog[non-modal],html[highgfxmode] ui-pane[floating] {
+    box-shadow: 0 7px 56px 0 rgba(0,0,0,.26)
+}
+
+html[highgfxmode] dialog[non-modal][active],html[highgfxmode] ui-pane[floating][active] {
+    box-shadow: 0 7px 56px 4px rgba(0,0,0,.3)
+}
+
+dialog {
+    contain: layout;
+    padding: 0;
+    border: var(--window-thin-border-size) solid #ccc;
+    border-radius: var(--window-border-size);
+    min-width: 125px;
+    will-change: transform,opacity,width,height;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap
+}
+
+html[highgfxmode] dialog[modal] {
+    box-shadow: 0 7px 56px 14px rgba(0,0,0,.2)
+}
+
+dialog ui-menu {
+    font-size: .901387rem
+}
+
+dialog::backdrop {
+    background-color: transparent
+}
+
+html[desktop] dialog[resizable]:not([inPopupWindow]) {
+    border: var(--window-border-size) solid #ccc;
+    min-width: 300px;
+    min-height: 200px
+}
+
+html[mobile] dialog:not([inPopupWindow]) {
+    max-width: 95vw;
+    max-height: 90vh
+}
+
+@media screen and (orientation: portrait) {
+    html[mobile] dialog[resizable]:not([inPopupWindow]) {
+        width:95vw!important;
+        height: 85vh!important
+    }
+}
+
+@media screen and (orientation: landscape) {
+    html[mobile] dialog[resizable]:not([inPopupWindow]) {
+        width:95vw!important;
+        height: 80vh!important
+    }
+}
+
+dialog[inPopupWindow] {
+    width: 100vw!important;
+    height: 100vh!important;
+    max-width: 100vw!important;
+    max-height: 100vh!important;
+    min-width: 100vw!important;
+    min-height: 100vh!important;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    will-change: auto
+}
+
+dialog button {
+    padding: .3em 1.5em .3em 1.5em
+}
+
+dialog button[main] {
+    font-weight: 700
+}
+
+ui-dialog-contents span {
+    margin: .2em 0
+}
+
+ui-dialog-caption {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-shrink: 0;
+    align-items: center;
+    color: #fff;
+    border-top-left-radius: var(--window-border-size);
+    border-top-right-radius: var(--window-border-size)
+}
+
+.dialog-caption-text {
+    display: block;
+    flex-grow: 1;
+    padding: .3em;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+html[desktop] dialog[resizable]>ui-dialog-caption {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+dialog[inPopupWindow] ui-dialog-caption {
+    display: none
+}
+
+ui-dialog-contents {
+    display: block;
+    padding: 1em 2em .2em 2em;
+    text-align: center;
+    contain: content
+}
+
+html[mobile] ui-dialog-contents:not([no-padding]) {
+    padding: 1em
+}
+
+dialog[resizable]>ui-dialog-contents {
+    flex: 2;
+    overflow-y: auto;
+    contain: strict
+}
+
+dialog[resizable]>ui-dialog-contents[no-scroll] {
+    overflow: hidden
+}
+
+ui-dialog-contents[alignLeft] {
+    text-align: left
+}
+
+ui-dialog-contents[no-padding] {
+    padding: 0
+}
+
+ui-dialog-footer {
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: .5em;
+    align-items: center;
+    justify-content: center;
+    padding: .5em 2em 1em 2em
+}
+
+ui-dialog-footer[no-padding] {
+    padding: 0
+}
+
+ui-dialog-footer[no-scroll] {
+    overflow: hidden
+}
+
+[button-spacer] {
+    width: 1em
+}
+
+.c3-dimmer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.25);
+    z-index: 9999;
+    will-change: transform,opacity;
+    contain: strict
+}
+
+.c3-dimmer[polyfill] {
+    z-index: auto
+}
+
+#okDialog {
+    max-width: 500px
+}
+
+.okDialogFooter {
+    padding-top: .5em
+}
+
+#confirmDialog {
+    max-width: 550px
+}
+
+#confirmDialog>ui-dialog-contents {
+    padding: 1em 2em .8em 2em
+}
+
+#confirmCheckDialog {
+    max-width: 550px
+}
+
+#confirmCheckDialog>ui-dialog-contents {
+    padding: 1em 2em .8em 2em
+}
+
+#confirmCheckDialog ui-dialog-footer {
+    padding-top: .5em
+}
+
+#confirmCheckDialog .confirmCheckWrap {
+    display: inline-flex;
+    align-items: center
+}
+
+#confirmMultipleDialog {
+    max-width: 550px
+}
+
+#confirmMultipleDialog>ui-dialog-contents {
+    padding: 1em 2em .8em 2em
+}
+
+.confirmMultipleButtonWrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+
+#progressDialog {
+    font-size: 1.1em;
+    width: 25em
+}
+
+#progressDialog .progressBar {
+    width: 100%;
+    max-width: 75vw
+}
+
+#downloadDialog {
+    width: 450px
+}
+
+#downloadDialog>ui-dialog-caption {
+    font-size: 1.1em
+}
+
+#downloadDialog>ui-dialog-contents {
+    padding-bottom: .7em
+}
+
+.downloadProgressBar {
+    width: 100%;
+    margin: 0 auto 10px auto
+}
+
+#openPopupWindowDialog {
+    max-width: 550px
+}
+
+#openPopupWindowDialog>ui-dialog-contents {
+    padding: 1em 2em .8em 2em
+}
+
+#fontPickerDialog {
+    width: 500px;
+    height: 350px
+}
+
+.additionalFontSelect,.localFontSelect {
+    width: 100%;
+    margin-top: .3em;
+    font-size: 2em
+}
+
+.localFontSelect[hidden] {
+    display: none
+}
+
+#fontPreviewDialog {
+    width: 600px;
+    height: 500px
+}
+
+#fontPreviewDialog span.exampleText {
+    display: block
+}
+
+#inputDialog {
+    max-width: 500px
+}
+
+#inputDialog .inputRow {
+    display: flex;
+    align-items: center
+}
+
+#inputDialog .inputLabel {
+    padding-right: .5em
+}
+
+#inputDialog .input {
+    flex: 1
+}
+
+#inputDialog ui-dialog-footer {
+    padding-top: .5em
+}
+
+#inputCheckDialog {
+    max-width: 500px
+}
+
+#inputCheckDialog .inputRow {
+    display: flex;
+    align-items: center
+}
+
+#inputCheckDialog .inputLabel {
+    padding-right: .5em
+}
+
+#inputCheckDialog .input {
+    flex: 1
+}
+
+#inputCheckDialog ui-dialog-footer {
+    padding-top: .5em
+}
+
+#inputCheckDialog .inputCheckWrap {
+    margin-top: .5em;
+    display: inline-flex;
+    align-items: center
+}
+
+ui-pane {
+    display: grid;
+    height: 100%;
+    contain: content
+}
+
+[hide] {
+    display: none!important
+}
+
+[disablegridtemplates] {
+    grid-template-rows: none!important;
+    grid-template-columns: none!important
+}
+
+[disablegridstartandend] {
+    grid-row-start: auto!important;
+    grid-row-end: auto!important;
+    grid-column-start: auto!important;
+    grid-column-end: auto!important
+}
+
+[hgrid] {
+    grid-template-rows: 1fr
+}
+
+[vgrid] {
+    grid-template-columns: 1fr
+}
+
+[dockleft] {
+    border-right: var(--window-border-size) solid #ccc
+}
+
+[dockright] {
+    border-left: var(--window-border-size) solid #ccc
+}
+
+[docktop] {
+    border-bottom: var(--window-border-size) solid #ccc
+}
+
+[dockbottom] {
+    border-top: var(--window-border-size) solid #ccc
+}
+
+[floating] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: var(--window-border-size) solid #ccc;
+    border-radius: var(--window-border-size);
+    will-change: transform,width,height
+}
+
+[swipe-in-left],[swipe-in-right] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform
+}
+
+[swipe-in-left] {
+    border-right: 3px solid #ccc
+}
+
+[swipe-in-right] {
+    border-left: 3px solid #ccc
+}
+
+html[mobile] [dockbottom],html[mobile] [dockleft],html[mobile] [dockright],html[mobile] [docktop],html[mobile] [floating] {
+    border-width: 12px
+}
+
+[captioned] {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2em 1fr
+}
+
+[caption-hidden] {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0 1fr
+}
+
+[tabbed-bottom] {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content
+}
+
+[tabbed-top] {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr
+}
+
+ui-caption {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    color: #fff;
+    contain: strict;
+    grid-row-start: 1;
+    grid-row-end: auto
+}
+
+ui-caption[hidden] {
+    display: none
+}
+
+.pane-caption-text {
+    flex-grow: 1;
+    padding: .25em;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+ui-body {
+    contain: strict;
+    display: block;
+    background-color: #fff;
+    overflow-y: hidden;
+}
+
+.dockIndicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,100,255,.8);
+    z-index: 9999;
+    will-change: transform,opacity;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(63,100,127,.8);
+    border-radius: 5px
+}
+
+html[mobile] .dockIndicator {
+    width: 50px;
+    height: 50px
+}
+
+.dockGhost {
+    position: absolute;
+    background-color: #00f;
+    z-index: 9998;
+    will-change: transform,opacity,left,top,width,height
+}
+
+.dockGhost.originLeft {
+    border-right: var(--window-border-size) dashed pink
+}
+
+.dockGhost.originTop {
+    border-bottom: var(--window-border-size) dashed pink
+}
+
+.dockGhost.originRight {
+    border-left: var(--window-border-size) dashed pink
+}
+
+.dockGhost.originBottom {
+    border-top: var(--window-border-size) dashed pink
+}
+
+.dockGhost.originMiddle {
+    border: var(--window-border-size) dashed pink;
+    border-radius: var(--window-border-size)
+}
+
+html[mobile] .dockGhost {
+    border-width: 12px
+}
+
+ui-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    contain: strict
+}
+
+ui-icon[hidden] {
+    display: none
+}
+
+ui-proprow {
+    display: table-row
+}
+
+ui-proprow[collapsed] {
+    display: none
+}
+
+ui-propname {
+    display: table-cell;
+    height: 100%;
+    contain: content;
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    border-left: 0
+}
+
+div.propgroup-wrap[level1],ui-propname[level1] {
+    padding-left: 20px
+}
+
+div.propgroup-wrap[level2],ui-propname[level2] {
+    padding-left: 40px
+}
+
+div.propgroup-wrap[level3],ui-propname[level3] {
+    padding-left: 60px
+}
+
+div.propgroup-wrap[level4],ui-propname[level4] {
+    padding-left: 80px
+}
+
+div.propname-wrap {
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center
+}
+
+ui-propname[selected] div.propname-wrap {
+    background-color: #4281f4;
+    color: #fff
+}
+
+ui-propname[selected] .propname-label[disabled] {
+    color: #ccc
+}
+
+div.propname-wrap :first-child {
+    flex: 2
+}
+
+div.propname-wrap :last-child {
+    flex-shrink: 0
+}
+
+label.propname-label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .3em
+}
+
+ui-propvalue {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    contain: content;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-right: 0
+}
+
+ui-propvalue>input[type=email],ui-propvalue>input[type=number],ui-propvalue>input[type=password],ui-propvalue>input[type=tel],ui-propvalue>input[type=text],ui-propvalue>input[type=url] {
+    border: 0;
+    padding-left: 3px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%
+}
+
+input[type=text].longTextProperty {
+    border: 0;
+    padding-left: 3px;
+    width: 100%
+}
+
+button.iconProperty,button.longTextProperty {
+    flex-shrink: 0
+}
+
+ui-propvalue>input[type=checkbox] {
+    margin: 0;
+    margin-left: .4em;
+    padding: 0;
+    width: 100%;
+    max-width: 1.15em;
+    height: 100%;
+    max-height: 1.15em
+}
+
+input[type=color].colorProperty {
+    border: 0;
+    border-image: none;
+    padding: 0;
+    background-color: transparent;
+    flex-shrink: 0;
+    width: 3em;
+    height: 100%
+}
+
+input[type=text].colorProperty {
+    border: 0;
+    padding-left: 3px;
+    width: 100%
+}
+
+.iconPropertyWrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: .2em;
+    overflow: hidden
+}
+
+.iconPropertyLabel {
+    flex: 1;
+    margin-left: .3em;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+ui-propvalue>select {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff
+}
+
+ui-propvalue>select>option[hidden] {
+    display: none
+}
+
+ui-propvalue>select>option[selected][hidden] {
+    display: inherit!important
+}
+
+span.infoProperty {
+    padding-left: 3px;
+    outline: 0
+}
+
+ui-propvalue>a {
+    display: block;
+    padding-left: .3em
+}
+
+td[propgroup] {
+    background-color: #e6e6e6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: .3em;
+    padding-left: calc(20px + .3em);
+    outline: 0
+}
+
+td[propgroup][selected] {
+    background-color: #6281d4;
+    color: #fff
+}
+
+div.propgroup-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center
+}
+
+div.propgroup-wrap :first-child {
+    flex: 2
+}
+
+div.propgroup-wrap :last-child {
+    flex-shrink: 0;
+    opacity: .3
+}
+
+label.propgroup-label {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+ui-propertygrid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100%
+}
+
+ui-propertygrid-container {
+    flex-grow: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    contain: strict
+}
+
+ui-propertygrid-table {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+    height: 1px;
+    margin-bottom: 20px
+}
+
+ui-propertygrid-table td.firstRow {
+    height: 0;
+    padding: 0
+}
+
+ui-propertygrid-footer {
+    background-color: #eee;
+    border-top: 1px solid #bbb;
+    padding: .4em;
+    min-height: 2.7em
+}
+
+ui-propertygrid-footer[useBorderTop] {
+    border-top: 1px solid #bbb
+}
+
+ui-propertygrid-footer[useBorderLeft] {
+    border-left: 1px solid #bbb
+}
+
+ui-propertygrid-footer[useBorderRight] {
+    border-right: 1px solid #bbb
+}
+
+ui-propertygrid-footer[useBorderBottom] {
+    border-bottom: 1px solid #bbb
+}
+
+html[mobile] ui-propertygrid-footer {
+    font-size: .9em
+}
+
+span.property-footer-title {
+    font-weight: 700
+}
+
+#longTextPropertyDialog {
+    width: 550px;
+    height: 400px
+}
+
+#longTextArea {
+    resize: none
+}
+
+ui-tab {
+    border: 1px solid #555;
+    background-color: #bbb;
+    display: flex;
+    padding: .2em .6em;
+    margin-top: .15em;
+    margin-right: -1px;
+    cursor: default;
+    max-width: 20em;
+    overflow: hidden;
+    box-shadow: inset 0 6px 28px 0 rgba(0,0,0,.5)
+}
+
+ui-tab[hide] {
+    display: none!important
+}
+
+ui-tab[closebutton] {
+    padding-right: .2em
+}
+
+ui-tabbar[tabbed-bottom]>ui-tab {
+    border-top: none;
+    border-bottom-left-radius: .8em;
+    border-bottom-right-radius: .8em
+}
+
+ui-tabbar[tabbed-top]>ui-tab {
+    border-bottom: none;
+    border-top-left-radius: .8em;
+    border-top-right-radius: .8em
+}
+
+ui-tab[active] {
+    color: #000;
+    background-color: #fff;
+    box-shadow: inset 0 6px 8px 0 rgba(255,255,255,.7);
+    padding-top: .3em;
+    padding-bottom: .25em;
+    margin-top: 0
+}
+
+ui-tab>span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+ui-tab ui-close-button {
+    padding: 0;
+    width: 1.1em!important;
+    margin: .15em 0 0 .2em
+}
+
+ui-tab ui-close-button:hover {
+    border-radius: .55em
+}
+
+ui-tabbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    contain: content;
+    background-color: #f8f8f8
+}
+
+ui-tabbar[tabbed-top] {
+    align-items: flex-end;
+    align-content: flex-start
+}
+
+ui-tabbar[tabbed-bottom] {
+    align-items: flex-start;
+    align-content: flex-end
+}
+
+ui-tree {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 1px;
+    overflow-y: auto;
+    contain: strict;
+    box-sizing: border-box;
+    position: relative
+}
+
+ui-tree:focus {
+    outline: 0
+}
+
+ui-treeitem {
+    display: flex;
+    align-items: center;
+    contain: content;
+    width: 100%;
+    padding-top: .1em;
+    padding-bottom: .1em;
+    will-change: opacity;
+    transition: opacity .2s ease-in-out
+}
+
+ui-treeitem[disable] {
+    opacity: .5;
+    pointer-events: none
+}
+
+ui-treeitem[fade],ui-treeitem[fade]+ui-treeitem-children ui-treeitem {
+    opacity: .4
+}
+
+ui-treeitem+ui-treeitem-children ui-treeitem[fade]:hover,ui-treeitem[fade]:hover {
+    opacity: 1
+}
+
+.tree-item-wrap {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding-left: 1px
+}
+
+.tree-item-wrap[changed] {
+    font-style: italic
+}
+
+ui-treeitem.searchMatch .tree-item-wrap {
+    background-color: #fdfeb7
+}
+
+ui-treeitem.searchNoMatch {
+    display: none
+}
+
+div.treeNoSearchResults {
+    margin: 1em .5em 0 .5em;
+    text-align: center;
+    font-style: italic;
+    opacity: .5
+}
+
+ui-tree[fullrowselect] ui-treeitem:hover,ui-tree[itemselect] div.tree-item-wrap:hover {
+    outline: 1px solid #e8e8e8;
+    background-color: #fafafa
+}
+
+ui-tree[fullrowselect] ui-treeitem[selected],ui-tree[itemselect] div.tree-item-wrap[selected] {
+    outline: 1px solid #ddd;
+    background-color: #f0f0f0
+}
+
+ui-tree[fullrowselect]:focus ui-treeitem:hover,ui-tree[itemselect]:focus div.tree-item-wrap:hover {
+    outline: 1px solid #aaf;
+    background-color: #f8f8ff
+}
+
+ui-tree[fullrowselect]:focus ui-treeitem[selected],ui-tree[itemselect]:focus div.tree-item-wrap[selected] {
+    outline: 1px solid #66f;
+    background-color: #ddf
+}
+
+ui-tree[fullrowselect] ui-treeitem[pointerheld],ui-tree[itemselect] div.tree-item-wrap[pointerheld] {
+    outline: 1px solid #66f
+}
+
+div.tree-item-wrap[dragged],ui-treeitem[dragged] {
+    background-color: transparent
+}
+
+div.tree-item-wrap[insert-inside] {
+    outline: 1px solid #000;
+    background-color: #ddf
+}
+
+div.tree-insert-mark {
+    position: relative;
+    left: 13px;
+    width: calc(95% - 13px);
+    height: 0;
+    outline: 1px solid #000;
+    line-height: 0
+}
+
+div.tree-insert-mark::after,div.tree-insert-mark::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    border-style: solid;
+    line-height: 0
+}
+
+div.tree-insert-mark::before {
+    top: -5px;
+    left: -3px;
+    width: 0;
+    height: 0;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #000
+}
+
+div.tree-insert-mark::after {
+    top: -5px;
+    left: 3px;
+    width: calc(100% - 10px);
+    height: 0;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent #000 transparent transparent
+}
+
+div.tree-item-wrap[drag-thumbnail],span.tree-item-name[drag-thumbnail] {
+    position: absolute;
+    opacity: .66;
+    margin-left: 12px;
+    margin-top: 8px;
+    white-space: nowrap;
+    z-index: 10001;
+    will-change: left,top
+}
+
+span.tree-item-name {
+    display: block;
+    overflow: hidden;
+    padding: .15em .4em .15em .4em;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+ui-tree[wraplongitems] span.tree-item-name {
+    white-space: normal;
+    overflow-wrap: break-word
+}
+
+ui-treeitem-children {
+    display: block;
+    margin-left: 20px;
+    will-change: height
+}
+
+ui-treeitem-children[collapsed] {
+    display: none
+}
+
+input.tree-edit-text {
+    position: absolute;
+    padding: 0;
+    margin-left: calc(.4em - 2px);
+    margin-top: -2px
+}
+
+input.tree-checkbox {
+    margin: 0 2px 0 0;
+    padding: 0;
+    width: 1.15em;
+    height: 1.15em
+}
+
+ui-iconview {
+    display: block;
+    overflow-y: auto;
+    background-color: #fff;
+    contain: strict
+}
+
+ui-iconview[label-under] {
+    padding: 0 .25em
+}
+
+@media (max-width: 500px) {
+    ui-iconview[label-under] {
+        text-align:center
+    }
+}
+
+dialog ui-iconview {
+    border: 1px solid #ccc
+}
+
+ui-iconviewitem {
+    display: inline-block;
+    position: relative;
+    pointer-events: auto
+}
+
+ui-iconviewitem[hidden] {
+    display: none
+}
+
+ui-iconview[label-under] ui-iconviewitem {
+    width: 4em;
+    margin: .5em .25em .7em .25em;
+    padding: .5em 1.3em
+}
+
+ui-iconview[label-right] ui-iconviewitem {
+    margin: .5em 0 0 .5em;
+    padding: .5em .5em
+}
+
+html[desktop] ui-iconview[label-right] ui-iconviewitem {
+    min-width: 150px
+}
+
+@media (max-width: 500px) {
+    ui-iconview[label-right] ui-iconviewitem {
+        display:block;
+        padding-right: 0;
+        margin-right: .5em
+    }
+}
+
+ui-iconviewitem:hover {
+    outline: 1px solid #e8e8e8;
+    background-color: #fafafa
+}
+
+ui-iconviewitem[selected] {
+    outline: 1px solid #ddd;
+    background-color: #f0f0f0
+}
+
+ui-iconview:focus ui-iconviewitem:hover {
+    outline: 1px solid #aaf;
+    background-color: #f8f8ff
+}
+
+ui-iconview:focus ui-iconviewitem[selected] {
+    outline: 1px solid #66f;
+    background-color: #ddf
+}
+
+ui-iconviewitem[pointerheld] {
+    outline: 1px solid #66f
+}
+
+.iconViewItemWrap {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center
+}
+
+ui-iconview[label-under] .iconViewItemWrap {
+    flex-direction: column
+}
+
+ui-iconview[label-right] .iconViewItemWrap {
+    flex-direction: row
+}
+
+ui-iconview[label-under] .iconViewItemText {
+    text-align: center;
+    max-width: 6em;
+    word-wrap: break-word
+}
+
+ui-iconview[label-right] .iconViewItemText {
+    text-align: left;
+    margin-left: .5em
+}
+
+div.iconViewNoItems,div.iconViewNoSearchResults {
+    margin: 1em .5em 0 .5em;
+    text-align: center;
+    font-style: italic;
+    opacity: .5
+}
+
+ui-iconviewitem[ghost] {
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: .5;
+    margin: 0;
+    background-color: transparent;
+    outline: 1px solid transparent;
+    z-index: 9999
+}
+
+ui-iconviewitem[ghost][label-under] .iconViewItemWrap {
+    flex-direction: column
+}
+
+ui-iconviewitem[ghost][label-right] .iconViewItemWrap {
+    flex-direction: row-reverse
+}
+
+ui-iconviewitem[drop-target] {
+    outline: 1px solid #aaf;
+    background-color: #f8f8ff
+}
+
+ui-iconviewitem[drop-target][hit-side=left] .dropTargetDownArrow {
+    display: initial;
+    top: -1px;
+    left: -6px
+}
+
+ui-iconviewitem[drop-target][hit-side=left] .dropTargetUpArrow {
+    display: initial;
+    bottom: -1px;
+    left: -6px
+}
+
+ui-iconviewitem[drop-target][hit-side=left] .dropTargetBorder {
+    display: initial;
+    top: 0;
+    left: -1px
+}
+
+ui-iconviewitem[drop-target][hit-side=right] .dropTargetDownArrow {
+    display: initial;
+    top: -1px;
+    right: -5px
+}
+
+ui-iconviewitem[drop-target][hit-side=right] .dropTargetUpArrow {
+    display: initial;
+    bottom: -1px;
+    right: -5px
+}
+
+ui-iconviewitem[drop-target][hit-side=right] .dropTargetBorder {
+    display: initial;
+    top: 0;
+    right: -1px
+}
+
+.dropTargetDownArrow {
+    position: absolute;
+    outline: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    display: none
+}
+
+.dropTargetUpArrow {
+    position: absolute;
+    outline: 0;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #000;
+    display: none
+}
+
+.dropTargetBorder {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #000;
+    display: none
+}
+
+div.iconview-group {
+    pointer-events: none
+}
+
+div.iconview-grouptitle {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 0 10px
+}
+
+span.iconview-groupname {
+    flex-shrink: 0;
+    padding-right: 5px;
+    color: #00a
+}
+
+span.iconview-grouprule {
+    flex: 2;
+    border-top: 1px solid #ccf
+}
+
+ui-iconview[label-right] div.iconview-groupcontent {
+    margin-bottom: 1em
+}
+
+ui-toolbar-container {
+    display: flex;
+    flex: 1;
+    --parent-x-offset:0px;--parent-y-offset:0px}
+
+ui-toolbar-container[vertical] {
+    flex-flow: row
+}
+
+ui-toolbar-container:not([wrap])[vertical] {
+    position: absolute;
+    width: calc(100% - var(--parent-x-offset));
+    height: calc(100% - var(--parent-y-offset))
+}
+
+ui-toolbar-container[horizontal] {
+    flex-flow: column
+}
+
+ui-toolbar-container:not([wrap])[horizontal] {
+    position: absolute;
+    width: calc(100% - var(--parent-x-offset));
+    height: calc(100% - var(--parent-y-offset))
+}
+
+ui-toolbar-remaining-space {
+    flex: 1;
+    display: flex
+}
+
+ui-toolbar-layout-remaining-space {
+    display: flex;
+    position: relative;
+    overflow: auto;
+    width: 100%;
+    height: 100%
+}
+
+ui-toolbar-layout-remaining-space[wrap] {
+    flex: 1 1 auto
+}
+
+ui-toolbar-layout-remaining-space:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar {
+    display: flex;
+    flex: none;
+    align-items: center;
+    contain: content;
+    background-color: #f0f0f0;
+    padding: 1px;
+    position: relative
+}
+
+ui-toolbar[disable] {
+    pointer-events: none;
+    opacity: .5
+}
+
+ui-toolbar>[disable] {
+    pointer-events: none;
+    opacity: .5
+}
+
+ui-toolbar[vertical] {
+    flex-direction: column
+}
+
+ui-toolbar[horizontal] {
+    flex-direction: row
+}
+
+ui-toolbar:not([wrap])[vertical] {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+ui-toolbar:not([wrap])[horizontal] {
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+ui-toolbar[wrap] {
+    flex-wrap: wrap
+}
+
+ui-toolbar[transparent] {
+    background-color: transparent
+}
+
+ui-toolbar-color-picker {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent
+}
+
+ui-toolbar-color-picker:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-color-picker input[type=color] {
+    vertical-align: text-top;
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-color-picker span {
+    vertical-align: sub;
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-slider {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent
+}
+
+ui-toolbar-slider:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-slider input[type=number] {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 3.5em
+}
+
+ui-toolbar-slider input[type=range] {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 120px
+}
+
+ui-toolbar-slider span[side=right] {
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-slider span[side=left] {
+    margin-left: 1px;
+    margin-right: 3px
+}
+
+ui-toolbar-separator {
+    position: relative;
+    background: #a0a0a0
+}
+
+ui-toolbar-separator:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-separator[vertical] {
+    margin-top: 5px;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 5px;
+    height: 1px
+}
+
+ui-toolbar-separator[horizontal] {
+    margin-top: 1px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 1px;
+    width: 1px
+}
+
+ui-toolbar-button {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    --border-color:rgba(0, 0, 0, 0)}
+
+ui-toolbar-button[support=select] {
+    border: 1px solid var(--border-color)
+}
+
+ui-toolbar-button[support][corners=right] {
+    margin-left: -2px;
+    border-radius: 0 3px 3px 0
+}
+
+ui-toolbar-button[support][corners=left] {
+    margin-left: 2px;
+    border-radius: 3px 0 0 3px
+}
+
+ui-toolbar-button:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-button[mouse-over] {
+    border: 1px solid #ebca6a!important;
+    background: radial-gradient(#ebca6a,#fff)!important
+}
+
+ui-toolbar-button[mouse-down] {
+    border: 1px solid #c2762b!important;
+    background: radial-gradient(#ffe48a,#ebca6a)!important
+}
+
+ui-toolbar-button>ui-icon {
+    position: absolute;
+    pointer-events: none
+}
+
+ui-toolbar-checkbox {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box
+}
+
+ui-toolbar-checkbox:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-checkbox .checkboxWrapper {
+    position: relative;
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-checkbox span {
+    margin: 0;
+    margin-left: 2px;
+    margin-right: 1px;
+    margin-bottom: 2px
+}
+
+ui-toolbar-spinner {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent
+}
+
+ui-toolbar-spinner:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-spinner input {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 2px
+}
+
+ui-toolbar-spinner span {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-spinner input+span {
+    margin-left: 3px
+}
+
+ui-toolbar-spinner span+input {
+    margin-left: 6px
+}
+
+ui-toolbar-textbox {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent
+}
+
+ui-toolbar-textbox:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-textbox input {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 2px;
+    box-sizing: border-box
+}
+
+ui-toolbar-textbox span {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-textbox input+span {
+    margin-left: 3px
+}
+
+ui-toolbar-textbox span+input {
+    margin-left: 6px
+}
+
+ui-toolbar-dropdown {
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent
+}
+
+ui-toolbar-dropdown:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-dropdown select {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 2px
+}
+
+ui-toolbar-dropdown select[corners=default] {
+    border-radius: 0
+}
+
+ui-toolbar-dropdown select[corners=all] {
+    border-radius: 0
+}
+
+ui-toolbar-dropdown select[corners=left] {
+    border-radius: 0
+}
+
+ui-toolbar-dropdown select[corners=right] {
+    border-radius: 0
+}
+
+ui-toolbar-dropdown span {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px
+}
+
+ui-toolbar-dropdown select+span {
+    margin-left: 3px
+}
+
+ui-toolbar-dropdown span+select {
+    margin-left: 6px
+}
+
+ui-toolbar-editable-dropdown {
+    display: flex;
+    align-items: center;
+    margin: 1px;
+    position: relative;
+    border-radius: 3px;
+    border: 1px solid transparent
+}
+
+ui-toolbar-editable-dropdown:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-editable-dropdown .wrapper {
+    display: flex;
+    position: relative
+}
+
+ui-toolbar-editable-dropdown .textInput {
+    background-color: inherit;
+    position: absolute;
+    border: none;
+    width: 85%;
+    box-sizing: border-box
+}
+
+ui-toolbar-editable-dropdown .textInput:focus {
+    width: calc(100% - 2px);
+    left: 1px;
+    padding-left: 8px;
+    background-color: #fff;
+    border: 1px solid rgba(169,169,169,1);
+    border-radius: 2px;
+    outline: 0
+}
+
+ui-toolbar-editable-dropdown select {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 1px;
+    padding-left: 2px
+}
+
+ui-toolbar-editable-dropdown select[pointer-edit] {
+    outline: 0
+}
+
+ui-toolbar-editable-dropdown select[hide-drop-down] {
+    visibility: hidden
+}
+
+ui-toolbar-editable-dropdown select[corners=default] {
+    border-radius: 0
+}
+
+ui-toolbar-editable-dropdown select[corners=all] {
+    border-radius: 0
+}
+
+ui-toolbar-editable-dropdown select[corners=left] {
+    border-radius: 0
+}
+
+ui-toolbar-editable-dropdown select[corners=right] {
+    border-radius: 0
+}
+
+ui-toolbar-editable-dropdown span {
+    vertical-align: middle;
+    margin-left: 1px;
+    margin-right: 2px
+}
+
+ui-toolbar-editable-dropdown div+span {
+    margin-left: 3px
+}
+
+ui-toolbar-editable-dropdown span+div {
+    margin-left: 6px
+}
+
+ui-toolbar-split-button {
+    display: flex;
+    align-items: flex-end;
+    margin: 1px;
+    position: relative;
+    --arrow-size:10px;--arrow-color:black}
+
+ui-toolbar-split-button:not([wrap]) {
+    flex: 0 0 auto
+}
+
+ui-toolbar-split-button>[primary] {
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-radius: 3px;
+    flex: 2
+}
+
+ui-toolbar-split-button[type=split]>[primary] {
+    border-radius: 3px 0 0 3px
+}
+
+ui-toolbar-split-button[type=single]>[primary] {
+    width: 100%
+}
+
+ui-toolbar-split-button[mouse-over]>[primary][mouse-over] {
+    border: 1px solid #ebca6a;
+    background: radial-gradient(#ebca6a,#fff)!important
+}
+
+ui-toolbar-split-button[mouse-over]>[primary][mouse-over-light] {
+    border: 1px solid #ebca6a
+}
+
+ui-toolbar-split-button[mouse-down]>[primary][mouse-down] {
+    border: 1px solid #c2762b;
+    border-radius: 3px 0 0 3px;
+    background: radial-gradient(#ffe48a,#ebca6a)!important
+}
+
+ui-toolbar-split-button[type=single][mouse-down]>[primary][mouse-down] {
+    border-radius: 3px
+}
+
+ui-toolbar-split-button>[primary]>ui-icon {
+    pointer-events: none
+}
+
+ui-toolbar-split-button[type=split]>[primary]>ui-icon {
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+ui-toolbar-split-button[type=wide]>[primary] {
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+ui-toolbar-split-button[type=single]>[primary]>ui-icon {
+    margin-left: auto;
+    margin-right: auto
+}
+
+ui-toolbar-split-button>[secondary] {
+    border: 1px solid transparent;
+    border-radius: 0 3px 3px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1
+}
+
+ui-toolbar-split-button>[secondary][hide] {
+    display: none
+}
+
+ui-toolbar-split-button[mouse-over]>[secondary][mouse-over] {
+    border: 1px solid #ebca6a;
+    background: radial-gradient(#ebca6a,#fff)!important
+}
+
+ui-toolbar-split-button[mouse-over]>[secondary][mouse-over-light] {
+    border: 1px solid #ebca6a
+}
+
+ui-toolbar-split-button[mouse-down]>[secondary][mouse-down] {
+    border: 1px solid #c2762b;
+    border-radius: 0 3px 3px 0;
+    background: radial-gradient(#ffe48a,#ebca6a)!important
+}
+
+ui-toolbar-split-button>[secondary]>.arrow {
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: var(--arrow-size) calc(var(--arrow-size)/ 2) 0 calc(var(--arrow-size)/ 2);
+    border-color: var(--arrow-color) transparent transparent transparent;
+    transform: scale(.5)
+}
+
+ui-statusIndicator {
+    display: block;
+    position: fixed;
+    contain: content;
+    left: 0;
+    bottom: 0;
+    background-color: #eee;
+    border-top: 1px solid #888;
+    border-right: 1px solid #888;
+    border-top-right-radius: 10px;
+    padding: .2em .4em;
+    font-size: 1.1em;
+    line-height: 1.3
+}
+
+html[mobile] ui-statusIndicator {
+    font-size: .8em
+}
+
+ui-balloontip {
+    --balloontip-padding:15px;--balloontip-left:0px;--balloontip-top:0px;position: absolute;
+    background: 0 0;
+    padding: var(--balloontip-padding);
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    contain: layout;
+    z-index: 9999;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, .4))
+}
+
+ui-balloontip ui-balloontip-icon {
+    flex: none;
+    padding-right: 10px
+}
+
+ui-balloontip ui-balloontip-text {
+    flex: none
+}
+
+ui-balloontip ui-icon {
+    position: relative
+}
+
+ui-balloontip ui-balloontip-title {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #039;
+    word-wrap: break-word;
+    display: table
+}
+
+ui-balloontip ui-balloontip-body {
+    position: relative;
+    font-size: 1em;
+    padding-top: 3px;
+    word-wrap: break-word;
+    display: table
+}
+
+ui-balloontip svg {
+    position: absolute;
+    pointer-events: none;
+    left: var(--balloontip-left);
+    top: var(--balloontip-top)
+}
+
+ui-balloontip .balloontipPath {
+    fill: #fff;
+    stroke: #888;
+    stroke-width: 1.2;
+    transform: translate(.5px,.5px)
+}
+
+ui-table {
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: hidden;
+    height: 100%
+}
+
+ui-table[resizing-column] {
+    cursor: col-resize
+}
+
+ui-table[own-border] {
+    border-left: 1px solid rgba(0,0,0,.09);
+    border-right: 1px solid rgba(0,0,0,.09);
+    border-bottom: 1px solid rgba(0,0,0,.09)
+}
+
+.table-scroll-container {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: auto;
+    contain: strict
+}
+
+ui-table-row {
+    --width-offset:0px;display: flex;
+    width: calc(100% + var(--width-offset));
+    flex-shrink: 0;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.09);
+    margin-bottom: -1px;
+    outline: 0;
+    outline-offset: -1px;
+    position: relative
+}
+
+ui-table-row[topRow] {
+    background: #f2f2f2;
+    margin-bottom: 0
+}
+
+ui-table[own-border] ui-table-row[topRow] {
+    border-top: 1px solid rgba(0,0,0,.09)
+}
+
+ui-table-row[selected] {
+    background: #ddf;
+    outline: 1px solid #66f
+}
+
+ui-table-row:not([selected]):not([topRow]):not([filler]):hover {
+    outline: 1px solid rgba(102,102,255,.67);
+    background: rgba(221,221,255,.33)
+}
+
+ui-table-row[filler] {
+    flex-grow: 1;
+    border-bottom: 0;
+    margin-bottom: 0
+}
+
+ui-table-row[filler]:focus {
+    outline: 0
+}
+
+ui-table-row[filler]:hover {
+    outline: 0
+}
+
+ui-table-column {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 5px;
+    overflow: hidden
+}
+
+ui-table-column+ui-table-column {
+    border-left: 1px solid rgba(0,0,0,.09)
+}
+
+ui-table-column:last-child {
+    flex: 1;
+    overflow: visible
+}
+
+ui-table[own-border] ui-table-row>ui-table-column:last-child {
+    border-right: 0 solid rgba(0,0,0,.09)
+}
+
+ui-table-column[icon] {
+    justify-content: center
+}
+
+ui-table-row[selected]>ui-table-column+ui-table-column {
+    border-left: 1px solid #d0d0f0
+}
+
+.table-column-content {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    white-space: nowrap
+}
+
+.table-column-input {
+    pointer-events: all
+}
+
+.top-row-column>div {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.table-insert-mark {
+    position: relative;
+    left: 4px;
+    width: calc(100% - 16px);
+    height: 0;
+    outline: 1px solid #000;
+    line-height: 0
+}
+
+.table-insert-mark::before {
+    content: "";
+    position: relative;
+    top: -5px;
+    left: -3px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #000;
+    line-height: 0
+}
+
+.table-insert-mark::after {
+    content: "";
+    position: relative;
+    top: -5px;
+    left: 3px;
+    display: inline-block;
+    width: calc(100% - 10px);
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent #000 transparent transparent;
+    line-height: 0
+}
+
+.table-edit-text {
+    margin-left: -2px;
+    margin-top: -1px;
+    margin-bottom: -1px
+}
+
+.tableFooterElem {
+    position: absolute;
+    width: 100%
+}
+
+.tableFooterContent {
+    background-color: #fff;
+    box-shadow: 0 0 .3em .6em #fff
+}
+
+ui-close-button {
+    align-self: stretch;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .3em;
+    flex-shrink: 0;
+    border-top-right-radius: 0
+}
+
+html[desktop] dialog:not([resizable]) ui-close-button,html[mobile] dialog ui-close-button {
+    border-top-right-radius: var(--window-border-size)
+}
+
+html[desktop] ui-close-button {
+    width: 1.3em
+}
+
+html[mobile] ui-close-button {
+    width: 32px
+}
+
+ui-close-button svg {
+    width: 100%;
+    height: auto;
+    fill: #fff
+}
+
+ui-tab ui-close-button svg {
+    fill: #5f5f5e
+}
+
+ui-close-button:hover {
+    cursor: pointer;
+    background-color: rgba(255,0,0,.9)
+}
+
+ui-close-button:hover svg {
+    fill: #fff
+}
+
+ui-back-button {
+    align-self: stretch;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .3em;
+    flex-shrink: 0
+}
+
+html[desktop] ui-back-button {
+    width: 1.6em
+}
+
+html[mobile] ui-back-button {
+    width: 32px
+}
+
+ui-back-button svg {
+    width: 100%;
+    height: auto;
+    fill: #fff
+}
+
+ui-back-button:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,.2)
+}
+
+ui-back-button:hover svg {
+    fill: #fff
+}
+
+ui-menu {
+    display: block;
+    position: absolute;
+    border: 1px solid #bababa;
+    padding: .15em 0 .15em 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-width: 300px;
+    z-index: 9998;
+    transform-origin: 0 0;
+    will-change: transform,opacity,left,top;
+    contain: content
+}
+
+ui-menu[compact] {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    max-height: 90%;
+    z-index: 10000;
+    transform-origin: 50% 50%
+}
+
+html[highgfxmode] ui-menu {
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,.21)
+}
+
+ui-menu[visible=true] {
+    opacity: 1
+}
+
+ui-menu[visible=false] {
+    opacity: 0;
+    pointer-events: none
+}
+
+ui-menuitem {
+    display: flex;
+    align-items: center;
+    padding: .4em .2em .4em .5em;
+    position: relative;
+    overflow: visible
+}
+
+ui-menuitem[sub-menu=empty] {
+    background-color: #ccc;
+    opacity: .3;
+    cursor: not-allowed
+}
+
+ui-menuitem[bold] {
+    font-weight: 700
+}
+
+span.menu-item-text {
+    padding-left: .5em;
+    padding-right: 1.5em;
+    flex: 2;
+    margin: auto auto!important
+}
+
+html[desktop] ui-menuitem:hover,ui-menuitem[selected] {
+    color: #fff;
+    background-color: #4281f4
+}
+
+html[desktop] ui-menuitem:hover svg,ui-menuitem[selected] svg {
+    fill: #fff
+}
+
+.menuitemgroup {
+    display: flex
+}
+
+.menuitemgroup>ui-menuitem {
+    flex-grow: 1
+}
+
+.menuitemgroup .menu-item-text {
+    padding-left: .3em;
+    padding-right: .3em
+}
+
+.menuitemgroup ui-menuitem:not(:first-child) {
+    padding-left: .3em
+}
+
+.menuitemgroup ui-menuitem:last-child {
+    padding-right: .4em
+}
+
+ui-menuseparator {
+    display: block;
+    border-top: 1px solid #e9e9e9;
+    margin-top: .4em;
+    margin-bottom: .4em
+}
+
+ui-notification {
+    position: absolute;
+    padding: 3px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    contain: content;
+    background: #226aa5;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    will-change: transform,opacity,left,right,top,bottom;
+    z-index: 9999;
+    transition-property: transform,opacity,top,bottom;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
+    opacity: 0
+}
+
+ui-notification[no-transitions] {
+    transition: none
+}
+
+ui-notification[no-position-transitions] {
+    transition-property: transform,opacity
+}
+
+ui-notification[align=top-left] {
+    transform: translate(-100%,0)
+}
+
+ui-notification[align=top-right] {
+    transform: translate(100%,0)
+}
+
+ui-notification[align=bottom-left] {
+    transform: translate(-100%,0)
+}
+
+ui-notification[align=bottom-right] {
+    transform: translate(100%,0)
+}
+
+ui-notification[document-parent][align=top-left] {
+    left: 0;
+    top: 0
+}
+
+ui-notification[document-parent][align=top-right] {
+    right: 0;
+    top: 0
+}
+
+ui-notification[document-parent][align=bottom-left] {
+    left: 0;
+    bottom: 0
+}
+
+ui-notification[document-parent][align=bottom-right] {
+    right: 0;
+    bottom: 0
+}
+
+ui-notification[showing] {
+    transform: translate(0,0);
+    opacity: 1
+}
+
+ui-notification[hiding-left] {
+    transform: translate(-100%,0)!important;
+    opacity: 0!important
+}
+
+ui-notification[hiding-right] {
+    transform: translate(100%,0)!important;
+    opacity: 0!important
+}
+
+ui-notification ui-notification-icon {
+    flex: none;
+    padding-right: 5px
+}
+
+ui-notification ui-notification-text {
+    flex: none
+}
+
+ui-notification ui-icon {
+    position: relative
+}
+
+ui-notification ui-notification-title {
+    position: relative;
+    font-weight: 700;
+    font-size: 1em;
+    color: #fff;
+    word-wrap: break-word;
+    display: table;
+    max-width: 200px;
+    min-width: 200px
+}
+
+ui-notification ui-notification-body {
+    position: relative;
+    font-size: 1em;
+    padding-top: 3px;
+    color: #fff;
+    display: table;
+    max-width: 200px;
+    min-width: 200px;
+    word-wrap: break-word
+}
+
+ui-loader {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 8px
+}
+
+ui-loader>ui-loader-message {
+    height: 30px;
+    color: #eee;
+    font-size: 15pt;
+    font-family: "Segoe UI",Frutiger,"Frutiger Linotype","Dejavu Sans","Helvetica Neue",Arial,sans-serif;
+    text-transform: none
+}
+
+ui-loader>ui-loader-graphic {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 150px
+}
+
+ui-loader[hidden] {
+    display: none
+}
+
+ui-loader[pause]>ui-loader-graphic {
+    display: none
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle {
+    padding-bottom: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    animation: 3s orbit ease-in-out infinite;
+    top: 0;
+    left: 0;
+    position: absolute
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    content: "";
+    display: block
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(1) {
+    animation-delay: .1s
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(1):before {
+    background: #dae8f7
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(2) {
+    animation-delay: .2s
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(2):before {
+    background: #8ea0ac
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(3) {
+    animation-delay: .3s
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(3):before {
+    background: #02f6d3
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(4) {
+    animation-delay: .4s
+}
+
+ui-loader>ui-loader-graphic>ui-loader-circle:nth-child(4):before {
+    background: #2980cc
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0) scale(1)
+    }
+
+    50% {
+        transform: rotate(540deg) scale(.6)
+    }
+
+    100% {
+        transform: rotate(1080deg) scale(1)
+    }
+}
+
+#aboutDialog {
+    width: 600px;
+    height: 600px
+}
+
+#aboutDialog>ui-dialog-contents {
+    padding-top: .5em;
+    overflow-y: auto
+}
+
+.aboutDialogCopyright {
+    margin-top: 0
+}
+
+html[desktop] .aboutDialogC3logo {
+    width: 450px;
+    height: 450px
+}
+
+html[mobile] .aboutDialogC3logo {
+    width: 250px;
+    height: 250px
+}
+
+#aboutDialog .storagePersisted {
+    color: green
+}
+
+#aboutDialog .storageNotPersisted {
+    color: #ff4500
+}
+
+#addonConfirmInstallDialog {
+    width: 500px
+}
+
+#addonConfirmInstallDialog ui-dialog-contents {
+    overflow-y: auto
+}
+
+#addonConfirmInstallDialog .mainWrap {
+    display: flex
+}
+
+#addonConfirmInstallDialog .contentWrap {
+    flex: 1;
+    padding-left: 1em;
+    overflow: hidden
+}
+
+#addonConfirmInstallDialog .headerText {
+    padding-bottom: 1em
+}
+
+#addonConfirmInstallDialog .infoTable {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: .4em;
+    margin-bottom: 1.5em
+}
+
+#addonConfirmInstallDialog .infoTable a,#addonConfirmInstallDialog .infoTable div {
+    overflow: hidden;
+    word-wrap: break-word
+}
+
+#addonConfirmInstallDialog .addonName {
+    font-weight: 700
+}
+
+#addonConfirmInstallDialog .dontAskAgainWrap {
+    margin-bottom: 1em
+}
+
+#bundledContentLicenseDialog {
+    width: 500px;
+    height: 500px
+}
+
+#eulaDialog {
+    width: 500px;
+    height: 500px
+}
+
+#exportSelectPlatformDialog {
+    width: 550px;
+    height: 480px
+}
+
+#exportSelectPlatformDialog ui-iconviewitem {
+    width: 6em!important
+}
+
+#exportStandardOptionsDialog {
+    width: 40em;
+    height: 30em;
+    min-height: 18em
+}
+
+#exportStandardOptionsDialog .exportDesktopOptions {
+    display: flex
+}
+
+.exportDesktopOptions .exportDesktopPathLabel {
+    display: flex;
+    align-items: center;
+    margin-right: .4em
+}
+
+.exportDesktopOptions .exportDesktopPathInput {
+    flex: 1;
+    margin-right: .2em
+}
+
+.exportDesktopOptions .exportDesktopPathButton {
+    padding-left: .5em;
+    padding-right: .5em
+}
+
+#exportStandardOptionsDialog p {
+    margin-top: 1em
+}
+
+#exportStatsDialog {
+    width: 400px;
+    height: 400px
+}
+
+#fileListDialog {
+    width: 500px;
+    height: 400px;
+    min-width: 300px;
+    min-height: 200px
+}
+
+#fileListDialog[loading] {
+    background-color: #32373c
+}
+
+#fileListDialog ui-dialog-contents {
+    flex-direction: column;
+    display: block!important
+}
+
+#fileListDialog ui-toolbar-container {
+    height: 100%
+}
+
+#fileListDialog[loading] ui-dialog-contents {
+    flex-direction: row
+}
+
+#fileListDialog[loading] .tray {
+    display: none
+}
+
+#fileListDialog .tray {
+    background-color: #f2f2f2;
+    border-top: 1px solid #dcdcdc;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+#fileListDialog .tray span {
+    margin: 5px;
+    height: 20px;
+    line-height: 1.5em
+}
+
+#fileListDialog .tray input {
+    margin: 2px 5px;
+    flex: 1;
+    height: 30px;
+    padding: 5px;
+    box-sizing: border-box;
+    line-height: 1.5em
+}
+
+#fileListDialog .tray button {
+    margin: 5px;
+    height: 30px;
+    line-height: 1.3em;
+    padding: 5px;
+    box-sizing: border-box
+}
+
+#findDialog {
+    width: 350px;
+    height: 200px;
+    min-width: 300px;
+    min-height: 170px
+}
+
+#findDialog .findGrid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-row-gap: .5em
+}
+
+#findDialog .findTextLabel,#findDialog .lookInLabel,#findDialog .matchCaseCell {
+    display: flex;
+    align-items: center
+}
+
+#findDialog .findTextLabel,#findDialog .lookInLabel {
+    padding-right: .5em;
+    text-align: right
+}
+
+#findDialog .findSearchInput,#findDialog .lookInSelect {
+    width: 100%
+}
+
+#findDialog .matchCaseCell {
+    grid-column: 2
+}
+
+#iframeDialog {
+    width: 600px;
+    height: 500px
+}
+
+#iframeDialog ui-dialog-contents {
+    padding: 0
+}
+
+#iframeDialog iframe {
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    height: 1px;
+    max-height: 100%;
+    border: 0
+}
+
+#loginDialog {
+    width: 27em;
+    height: 15em
+}
+
+#loginDialog ui-dialog-contents {
+    flex: 1;
+    padding: 0
+}
+
+#loginDialog iframe {
+    flex: 1
+}
+
+#loginDialog .loginOverlayContent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 1em;
+    background-color: #fff
+}
+
+#loginDialog .loginOverlayContent progress {
+    width: 90%
+}
+
+#newProjectDialog {
+    width: 410px;
+    height: 325px;
+    min-width: 300px;
+    min-height: 200px
+}
+
+#newProjectDialog .pixelArtRow,#newProjectDialog .viewportSizeCell {
+    display: flex;
+    align-items: center
+}
+
+#newProjectDialog .viewportSizeCell input {
+    flex-grow: 1
+}
+
+#newProjectDialog .viewportSizeCell span {
+    display: flex;
+    align-items: center
+}
+
+#newProjectDialog .viewportSizeSeparator {
+    padding: 0 .5em;
+    flex-basis: 0
+}
+
+#newProjectDialog .viewportAspectRatio {
+    padding-left: .5em;
+    width: 12em;
+    justify-content: flex-end
+}
+
+#newProjectDialog .pixelArtRow label {
+    display: flex;
+    align-items: center;
+    padding-left: .5em
+}
+
+#welcomeDialog {
+    width: 45em
+}
+
+#welcomeDialog>ui-dialog-contents {
+    font-size: 1.2em
+}
+
+html[mobile] #welcomeDialog>ui-dialog-contents {
+    overflow-y: auto
+}
+
+#welcomeDialog>ui-dialog-footer .okButton {
+    font-size: 1.5em;
+    margin: 0 auto;
+    width: 50%
+}
+
+#welcomeDialog .topRow {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto .5em auto
+}
+
+#welcomeDialog .topRowLogo {
+    width: 4em;
+    height: 4em
+}
+
+#welcomeDialog .welcomeDialogC3logo {
+    width: 100%;
+    height: 100%
+}
+
+#welcomeDialog .topRowTitle {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-left: 1em
+}
+
+#welcomeDialog .welcomeMessage {
+    margin: 0;
+    font-size: 2.1rem
+}
+
+#accountInfoDialog {
+    width: 500px;
+    height: 500px
+}
+
+#accountInfoDialog>ui-dialog-contents {
+    padding-top: .5em;
+    overflow-y: auto
+}
+
+#accountInfoDialog .profilePictureWrap {
+    margin: 0 auto
+}
+
+#accountInfoDialog .profilePictureWrap img {
+    border-radius: 50%
+}
+
+#accountInfoDialog .usernameTitle {
+    margin-top: .8em
+}
+
+#accountInfoDialog .licenseBadge {
+    margin-top: 0;
+    margin-bottom: 1em;
+    display: inline-block;
+    font-weight: 700;
+    padding: .05em .5em;
+    border-radius: .5em
+}
+
+#accountInfoDialog .licenseBadgeFree {
+    border: 2px solid #555;
+    color: #555;
+    background-color: #ddd
+}
+
+#accountInfoDialog .licenseBadgeLicensed {
+    border: 2px solid #5a5;
+    color: #5a5;
+    background-color: #dfd
+}
+
+#accountInfoDialog .freeLimitHeader {
+    margin-bottom: 0
+}
+
+#accountInfoDialog .freeLimitsSection {
+    margin-top: 1em
+}
+
+#accountInfoDialog .licenseThankyou {
+    margin-top: 1em
+}
+
+#accountInfoDialog .freeLimitsList {
+    display: inline-block;
+    text-align: left
+}
+
+#accountInfoDialog .accessCodeSection {
+    margin-top: 1em
+}
+
+#archiveManagerDialog {
+    font-size: 1.1em
+}
+
+#cordovaExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#cordovaOptionsDialog {
+    width: 40em;
+    height: 43em;
+    min-height: 18em
+}
+
+#cordovaOptionsDialog h2 {
+    height: auto;
+    margin-top: 1em;
+    margin-bottom: 0
+}
+
+#cordovaOptionsDialog .keystore>label {
+    flex: 1;
+    padding-left: 0;
+    border: 1px solid #959595;
+    background: #e2e2e2;
+    padding: .3em 1.5em .3em 1.5em;
+    text-align: center
+}
+
+#cordovaOptionsDialog .keystore>label>input {
+    display: none
+}
+
+#cordovaOptionsDialog .keystore>:nth-child(3) {
+    margin: 0 1em;
+    font-weight: 700;
+    display: none
+}
+
+#cordovaOptionsDialog .keystore>:nth-child(4) {
+    width: 16px;
+    flex: none
+}
+
+#cordovaOptionsDialog .keystore>:nth-child(5) {
+    flex: 1;
+    border-radius: 0;
+    border: 1px solid #959595;
+    background: #e2e2e2;
+    -webkit-appearance: none;
+    -moz-appearance: none
+}
+
+#cordovaOptionsDialog .keystore>:nth-child(6) {
+    flex: 1;
+    border-radius: 0;
+    border: 1px solid #959595;
+    background: #e2e2e2;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: none
+}
+
+#cordovaOptionsDialog .keystore[keystore-selected]>:nth-child(6) {
+    display: initial
+}
+
+#cordovaOptionsDialog .keystore[keystore-selected]>:nth-child(3) {
+    display: initial
+}
+
+#cordovaOptionsDialog .keystore[keystore-selected]>:nth-child(5) {
+    display: none
+}
+
+#cordovaOptionsDialog .keystore[keystore-selected]>label {
+    display: none
+}
+
+#cordovaOptionsDialog section>label {
+    display: flex;
+    margin: 1em 0
+}
+
+#cordovaOptionsDialog section>label>span {
+    display: inline-block;
+    vertical-align: top;
+    flex: 1
+}
+
+#cordovaOptionsDialog section>label>input[type=number],#cordovaOptionsDialog section>label>input[type=password],#cordovaOptionsDialog section>label>input[type=text],#cordovaOptionsDialog section>label>select {
+    flex: 1
+}
+
+#cordovaOptionsDialog section>label>:nth-child(1) {
+    width: 9em;
+    display: inline-block;
+    margin-left: 16px;
+    flex: none
+}
+
+#audioPreviewDialog {
+    width: 500px
+}
+
+#audioPreviewDialog audio {
+    width: 100%
+}
+
+#chooseKeyDialog {
+    width: 350px
+}
+
+#chooseKeyDialog .chooseKeyDisplay {
+    border: 1px solid #ccc;
+    padding: .2em;
+    font-weight: 700;
+    font-size: 1.3em
+}
+
+#chooseKeyDialog .chooseKeyDropdown {
+    min-width: 10em;
+    margin-top: .2em
+}
+
+#crashReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#crashReportDialog .reportContent {
+    overflow-y: auto;
+    border: 1px solid #eee;
+    padding-left: 1em
+}
+
+#crashReportDialog .crashHeader {
+    margin-top: 0
+}
+
+#crashReportDialog .iconWrap ui-icon {
+    display: block;
+    margin: 0 auto
+}
+
+#createKeystoreDialog {
+    width: 40em;
+    height: 44em
+}
+
+#CreateKeystoreReportDialog {
+    width: 40em;
+    height: 47em
+}
+
+#fullscreenPromptDialog {
+    width: 400px
+}
+
+#fullscreenPromptDialog ui-dialog-contents {
+    padding-bottom: .5em
+}
+
+#legalInfoDialog {
+    width: 500px;
+    height: 500px
+}
+
+#memoryInfoDialog {
+    width: 500px;
+    height: 500px
+}
+
+#platformInfoDialog {
+    width: 500px;
+    height: 500px
+}
+
+#privacyPolicyDialog {
+    width: 500px;
+    height: 500px
+}
+
+#shellOutputDialog pre {
+    white-space: pre-line;
+    -webkit-touch-callout: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+    -ms-user-select: all;
+    user-select: all;
+    background-color: #e6e6e6;
+    padding: 8px
+}
+
+#storageCleanupDialog {
+    width: 500px;
+    height: 500px
+}
+
+#svgPreviewDialog {
+    width: 600px;
+    height: 500px
+}
+
+#svgPreviewDialog .headerWrap {
+    flex-shrink: 0;
+    margin-bottom: 1em
+}
+
+#svgPreviewDialog .svgPreviewTitle {
+    display: inline
+}
+
+#svgPreviewDialog img {
+    flex: 1;
+    object-fit: contain;
+    min-width: 1px;
+    min-height: 1px
+}
+
+#videoPreviewDialog {
+    width: 600px;
+    height: 500px
+}
+
+#videoPreviewDialog ui-dialog-contents {
+    contain: layout
+}
+
+#videoPreviewDialog h3 {
+    margin-top: 0
+}
+
+#videoPreviewDialog video {
+    flex: 1;
+    object-fit: contain;
+    min-height: 1px
+}
+
+#viewIconSheetsDialog {
+    width: 600px;
+    height: 500px
+}
+
+#viewIconSheetsDialog canvas {
+    border: 1px solid #000
+}
+
+#viewIconSheetsDialog .sizeWrap {
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: .5em;
+    padding: 0 1em 0 1em;
+    margin: .5em;
+    background-color: #f0f0f0
+}
+
+#viewIconSheetsDialog .sheetWrap {
+    display: inline-block;
+    padding: 0 1em 1em 1em
+}
+
+#viewSpritesheetsDialog {
+    width: 600px;
+    height: 500px
+}
+
+.viewSpritesheetsList img.spriteSheet {
+    border: 1px solid #000
+}
+
+.viewSpritesheetsList .objectWrap {
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: .5em;
+    padding: 0 1em 0 1em;
+    margin: .5em;
+    background-color: #f0f0f0
+}
+
+.viewSpritesheetsList .sheetWrap {
+    display: inline-block;
+    padding: 0 1em 1em 1em
+}
+
+#viewTileTexturesDialog {
+    width: 800px;
+    height: 680px
+}
+
+#viewTileTexturesDialog>ui-dialog-contents {
+    overflow-y: scroll
+}
+
+#viewTileTexturesDialog canvas {
+    border: 1px solid #000;
+    width: 512px;
+    height: 512px;
+    margin: .5em;
+    left: 0;
+    top: 0
+}
+
+#viewTileTexturesDialog .sizeWrap {
+    border: 3px solid #ccc;
+    border-radius: .5em;
+    padding: 0 1em 0 1em;
+    margin: .5em;
+    background-color: #f0f0f0;
+    overflow: hidden
+}
+
+.tileTexturesControls {
+    margin: .5em
+}
+
+.tileTexturesControls button {
+    display: inline-block
+}
+
+#viewUsedAddonsDialog {
+    width: 800px;
+    height: 500px
+}
+
+#viewUsedAddonsDialog ui-table {
+    flex: 1
+}
+
+#addonManagerDialog ui-table-column {
+    max-height: 6em
+}
+
+#viewUsedAddonsDialog ui-table-row>ui-table-column>div {
+    white-space: normal;
+    max-height: 100%
+}
+
+#addonManagerDialog {
+    width: 800px;
+    height: 500px
+}
+
+#addonManagerDialog .headerWrap {
+    margin-bottom: .4em
+}
+
+#addonManagerDialog ui-table {
+    flex: 1
+}
+
+#addonManagerDialog ui-table-column {
+    max-height: 6em
+}
+
+#addonManagerDialog ui-table-row>ui-table-column>div {
+    white-space: normal;
+    max-height: 100%
+}
+
+#addonManagerDialog .restartPendingMessage {
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: .4em
+}
+
+#addonManagerDialog .restartPendingMessage ui-icon {
+    margin-right: .5em
+}
+
+#transitionsEditorDialog {
+    width: 95vw;
+    height: 50vh;
+    --transitions-editor-main-color:"#000000";--transitions-editor-grid-color:"#777777";--transitions-editor-min-value-line-color:"#FF0000";--transitions-editor-max-value-line-color:"#0000FF";--transitions-editor-curve-color:"#00FF00";--transitions-editor-keyframe-fill-color:"#FFFF00";--transitions-editor-keyframe-border-color:"#000000";--transitions-editor-start-anchor-fill-color:"#00FF00";--transitions-editor-end-anchor-fill-color:"#FF0000";--transitions-editor-anchor-border-color:"#000000";--transitions-editor-anchor-line-color:"#777777"}
+
+#transitionsEditorDialog .transitionsEditorContents {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    contain: strict
+}
+
+#transitionsEditorDialog .transitionsEditorCanvasWrapper {
+    position: relative;
+    flex: 1;
+    margin: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--transitions-editor-main-color);
+    box-sizing: border-box;
+    contain: strict
+}
+
+#transitionsEditorDialog .transitionsEditorCanvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 solid transparent;
+    image-rendering: pixelated
+}
+
+.transitionsEditorScrollContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    touch-action: none;
+    z-index: 1
+}
+
+.transitionsEditorScroller {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border: 0 solid transparent;
+    pointer-events: none
+}
+
+#settingsDialog {
+    width: 600px;
+    height: 600px
+}
+
+#settingsDialog ui-dialog-contents button {
+    display: block
+}
+
+#settingsDialog input[type=color],#settingsDialog input[type=number],#settingsDialog select {
+    margin-top: .4em
+}
+
+#settingsDialog .iconColorLabel {
+    padding-right: .5em
+}
+
+#settingsDialog .iconColorLabel[disabled] {
+    opacity: .5
+}
+
+#settingsDialog h2 {
+    background-color: #f0f0f0;
+    padding: .1em .3em
+}
+
+#settingsDialog .settingsContent {
+    margin-left: 1.5em
+}
+
+#settingsDialog .settingsUIHeader {
+    margin-top: 0
+}
+
+#settingsDialog .buttonRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap
+}
+
+#settingsDialog .buttonRow button {
+    margin-top: .5em
+}
+
+#animationsEditorDialog {
+    width: 95vw;
+    height: 95vh
+}
+
+#animationsEditorDialog .blocker {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    pointer-events: none;
+    background: 0 0;
+    transition: background .5s ease .5s
+}
+
+#animationsEditorDialog .blocker[locked] {
+    visibility: visible;
+    background: rgba(0,0,0,.1);
+    cursor: progress;
+    pointer-events: all
+}
+
+#animationsEditorDialog .blocker[locked-transparent] {
+    visibility: visible;
+    pointer-events: all
+}
+
+#animationsEditorDialog>ui-dialog-contents {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: column;
+    contain: strict
+}
+
+ui-animation-editor-grid {
+    flex: 1;
+    display: flex;
+    flex-flow: row;
+    background: #ccc
+}
+
+ui-animation-editor-area {
+    background: #fff
+}
+
+ui-animation-editor-area[left] {
+    display: flex;
+    flex: 1;
+    max-width: 280px;
+    overflow: hidden;
+    flex-flow: column;
+    will-change: max-width
+}
+
+ui-animation-editor-area[middle] {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    will-change: max-width
+}
+
+ui-animation-editor-area[right] {
+    display: flex;
+    overflow: visible;
+    flex: 1;
+    max-width: 210px;
+    flex-flow: column;
+    will-change: max-width
+}
+
+ui-animation-editor-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column
+}
+
+ui-animation-editor-panel-title {
+    color: #fff;
+    background: var(--window-caption-inactive-color);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    cursor: default;
+    transition: background .3s ease
+}
+
+ui-animation-editor-panel[hasFocus] ui-animation-editor-panel-title {
+    background: var(--window-caption-active-color)
+}
+
+ui-animation-editor-panel-content {
+    display: flex;
+    flex: 1;
+    background: #fff;
+    position: relative
+}
+
+.animationsEditorTools {
+    flex: 1;
+    z-index: 100;
+    contain: strict
+}
+
+.animationsEditorMain {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    contain: strict;
+    will-change: max-height
+}
+
+.animationsEditorMain ui-animation-editor-panel-content {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.animationsEditorFrames {
+    flex: 1;
+    max-height: 160px;
+    overflow: hidden;
+    contain: strict;
+    will-change: max-height
+}
+
+.animationsEditorFrames ui-animation-editor-panel-content {
+    overflow: auto;
+    flex-flow: column
+}
+
+.animationsEditorProperties {
+    flex: 1;
+    contain: strict
+}
+
+.animationsEditorAnimations {
+    flex: 1;
+    contain: strict
+}
+
+.animationsEditorAnimations ui-animation-editor-panel-content {
+    overflow: auto;
+    flex: 1 1 auto;
+    height: 0
+}
+
+div[overlay] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 solid transparent;
+    background: #00f;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    pointer-events: none
+}
+
+div[overlay][valid-drops] {
+    opacity: .1
+}
+
+html[mobile] ui-animation-editor-panel-title {
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+html[mobile] #animationsEditorDialog ui-animation-editor-area[left] {
+    display: none
+}
+
+html[mobile] #animationsEditorDialog ui-animation-editor-area[right] {
+    display: none
+}
+
+html[mobile] ui-animation-editor-gutter {
+    display: none
+}
+
+html[mobile] #animationsEditorDialog>[mobile-panel] {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    max-height: initial;
+    width: 300px;
+    z-index: 1000;
+    will-change: transform
+}
+
+html[mobile] #animationsEditorDialog>[mobile-panel][front] {
+    z-index: 1001
+}
+
+ui-animation-editor-panel-title.panelTitle {
+    display: flex;
+    flex-flow: row;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between
+}
+
+ui-animation-editor-panel-title.panelTitle .titleText {
+    pointer-events: none
+}
+
+ui-animation-editor-panel-title.panelTitle svg {
+    width: 100%;
+    height: 100%;
+    fill: #fff
+}
+
+ui-animations-editor-prev-button {
+    flex-shrink: 0;
+    margin-left: 3px
+}
+
+ui-animations-editor-prev-button:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,.2)
+}
+
+ui-animations-editor-next-button {
+    flex-shrink: 0;
+    margin-right: 3px
+}
+
+ui-animations-editor-next-button:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,.2)
+}
+
+.animationsEditorProperties ui-propertygrid {
+    text-align: left!important;
+    width: 100%
+}
+
+.animationsEditorProperties ui-propertygrid-table {
+    width: 100%
+}
+
+.animationsEditorProperties ui-propvalue>input[type=checkbox] {
+    margin: 4px;
+    margin-left: .4em
+}
+
+ui-palette {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+ui-palette-top {
+    display: flex;
+    flex: 1;
+    flex-direction: column-reverse;
+    contain: strict
+}
+
+ui-palette-bottom {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden
+}
+
+ui-palette-bottom-columns {
+    display: flex;
+    flex-direction: column;
+    flex: 1
+}
+
+ui-palette-color-picker {
+    position: relative;
+    flex: 1;
+    cursor: crosshair;
+    contain: strict;
+    --color-marker-size:20px;margin: 3px
+}
+
+ui-palette-color-picker #selectedColor {
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    width: var(--color-marker-size);
+    height: var(--color-marker-size)
+}
+
+ui-palette-color-slider {
+    display: flex;
+    position: relative;
+    flex: 1;
+    max-height: 15px;
+    min-height: 15px;
+    background: #000;
+    margin-top: 6px;
+    margin-bottom: 14px;
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+ui-palette-color-slider>input[type=range] {
+    width: calc(100% + 16px);
+    margin: 0;
+    position: absolute;
+    top: 17px;
+    left: -8px
+}
+
+ui-palette-color-slider>input[type=range] {
+    -webkit-appearance: none;
+    background: 0 0
+}
+
+ui-palette-color-slider>input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none
+}
+
+ui-palette-color-slider>input[type=range]:focus {
+    outline: 0
+}
+
+ui-palette-color-slider>input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: 0 0;
+    border-color: transparent;
+    color: transparent
+}
+
+ui-palette-color-slider>input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: 0 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #000
+}
+
+ui-palette-color-slider>input[type=range]::-moz-range-thumb {
+    background: 0 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #000
+}
+
+ui-palette-color-slider>input[type=range]::-ms-thumb {
+    background: 0 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #000
+}
+
+ui-palette-color-slider.colorSliderTrack {
+    cursor: pointer;
+    border: 1px solid #c8c8c8
+}
+
+ui-palette-color-picks {
+    position: relative;
+    display: flex;
+    flex: none;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 136px;
+    margin: 3px
+}
+
+ui-palette-color-picks-swatches {
+    display: grid;
+    flex: 1;
+    padding-left: 2px;
+    padding-right: 2px;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit,30px);
+    grid-template-rows: repeat(auto-fit,30px);
+    grid-gap: 4px
+}
+
+ui-palette-color-picks-swatch-wrapper {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    border: 2px solid #c8c8c8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    pointer-events: none
+}
+
+ui-palette-color-picks-swatch-wrapper[selected] {
+    border-style: inset
+}
+
+ui-palette-color-picks-swatch-wrapper:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to left,rgba(255,255,255,.9),rgba(255,255,255,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%);
+    background-blend-mode: normal,difference,normal;
+    background-size: 10px 10px;
+    background-position: 0 0 5px 5px
+}
+
+ui-palette-color-picks-swatch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    pointer-events: all
+}
+
+ui-palette-color-spinners {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 3px
+}
+
+ui-palette-color-spinner-wrapper {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    margin: 2px;
+    margin-right: 0;
+    overflow: hidden;
+    min-height: 100px
+}
+
+ui-palette-color-input-wrapper {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    margin: 2px;
+    margin-right: 0;
+    overflow: hidden;
+    min-height: 100px
+}
+
+ui-palette-color-spinner {
+    margin: 1px;
+    width: 100%;
+    display: flex
+}
+
+ui-palette-color-input {
+    margin: 1px;
+    width: 100%;
+    display: flex
+}
+
+ui-palette-color-spinner>input[type=number] {
+    flex: 1;
+    margin-right: 1px;
+    margin-left: 10px;
+    border: 1px solid #c8c8c8;
+    padding: 2px
+}
+
+ui-palette-color-input>input[type=text] {
+    flex: 1;
+    margin-right: 1px;
+    margin-left: 10px;
+    border: 1px solid #c8c8c8;
+    padding: 2px
+}
+
+ui-palette-color-spinner>span {
+    flex: 1;
+    text-align: right;
+    align-self: center
+}
+
+ui-palette-color-input>span {
+    flex: 1;
+    text-align: right;
+    align-self: center
+}
+
+ui-palette-color-spaces {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    overflow: hidden
+}
+
+ui-palette-color-spaces>a {
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #6066d2;
+    text-decoration-line: underline;
+    cursor: pointer
+}
+
+ui-palette-color-spaces>span {
+    margin: 0
+}
+
+ui-palette-color-swatches {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to left,rgba(255,255,255,.9),rgba(255,255,255,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%);
+    background-blend-mode: normal,difference,normal;
+    background-size: 30px 30px;
+    background-position: 0 0 15px 15px;
+    border: 1px solid #c8c8c8;
+    min-height: 110px;
+    overflow: hidden;
+    margin: 3px
+}
+
+ui-palette-color-swatches-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    max-width: fit-content;
+    position: relative
+}
+
+ui-palette-color-swatches-wrapper .swatch {
+    flex: 1;
+    min-width: 60px;
+    min-height: 60px;
+    border-color: #c8c8c8;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 3px
+}
+
+ui-palette-color-primary {
+    transform: translateX(25%) translateY(-25%);
+    z-index: 1
+}
+
+ui-palette-color-secondary {
+    transform: translateX(-25%) translateY(25%)
+}
+
+ui-image-points {
+    width: 100%
+}
+
+ui-image-points ui-toolbar {
+    border-bottom: 1px solid #ccc
+}
+
+ui-image-points .table-scroll-container {
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+.animationsEditorMain ui-toolbar-layout-remaining-space {
+    background-image: linear-gradient(to left,rgba(255,255,255,.9),rgba(255,255,255,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%);
+    background-blend-mode: normal,difference,normal;
+    background-size: 30px 30px;
+    background-position: 0 0 15px 15px;
+    position: relative;
+    overflow: hidden;
+    border: 0 solid transparent;
+    outline: 0
+}
+
+.animationsEditorMain[mode=full] ui-toolbar-layout-remaining-space {
+    border-top: 1px solid #c8c8c8;
+    border-left: 1px solid #c8c8c8
+}
+
+.animationsEditorMain[mode=tile] ui-toolbar-layout-remaining-space {
+    border-top: 1px solid #c8c8c8;
+    border-left: 1px solid #c8c8c8
+}
+
+.animationsEditorMain ui-toolbar-layout-remaining-space[dark-background] {
+    background-image: linear-gradient(to left,rgba(100,100,100,.9),rgba(100,100,100,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%)
+}
+
+.animationsEditorMain .scrollingContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    border: 0 solid transparent
+}
+
+html[mobile] .animationsEditorMain .scrollingContainer {
+    overflow: hidden;
+    pointer-events: none
+}
+
+.animationsEditorMain .scroller {
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    border: 0 solid transparent
+}
+
+.animationsEditorMain ui-toolbar-layout-remaining-space>canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 solid transparent;
+    image-rendering: pixelated
+}
+
+.animationsEditorMain .handlesContainer {
+    position: absolute;
+    border: 0 solid transparent;
+    overflow: visible;
+    pointer-events: none
+}
+
+.animationsEditorMain ui-polygon-vertex-handle {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #c80000;
+    border: 1px solid #000;
+    pointer-events: all!important
+}
+
+.animationsEditorMain ui-polygon-vertex-handle:hover {
+    background-color: #ff0
+}
+
+.animationsEditorMain ui-polygon-vertex-handle[selected] {
+    background-color: #ff0
+}
+
+.animationsEditorMain .polygonContainer {
+    position: absolute;
+    border: 1px solid transparent;
+    pointer-events: none;
+    overflow: visible
+}
+
+.animationsEditorMain .polygonContainer[enable=true] polygon {
+    fill: #4949ff;
+    fill-opacity: .1;
+    stroke: #4949ff;
+    stroke-width: 2
+}
+
+.animationsEditorMain .polygonContainer[enable=false] polygon {
+    fill: #ff4949;
+    fill-opacity: .1;
+    stroke: #ff4949;
+    stroke-width: 2
+}
+
+.animationsEditorMain .point-container {
+    position: absolute;
+    border: 1px solid transparent;
+    pointer-events: none
+}
+
+.animationsEditorMain ui-image-point-handle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    cursor: crosshair;
+    mix-blend-mode: difference;
+    background: #000
+}
+
+#animationsEditorDialog ui-tree {
+    padding-top: 5px;
+    text-align: left;
+    height: auto
+}
+
+#animationsEditorDialog ui-tree span {
+    margin: auto!important;
+    min-width: 100px
+}
+
+.animationsEditorFrames ui-iconview {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex: 1;
+    background-color: transparent;
+    border: 0 solid transparent;
+    overflow: auto
+}
+
+.animationsEditorFrames ui-iconview {
+    border: 0 solid transparent
+}
+
+.animationsEditorFrames .iconViewItemWrap {
+    position: relative
+}
+
+.animationsEditorFrames ui-iconview[iconsize=small] ui-iconviewitem {
+    padding: .2em 3.2em;
+    padding-bottom: 2em;
+    margin: -3.9em -3em .7em -3em;
+    width: 2em;
+    transform: scale(.25)
+}
+
+.animationsEditorFrames ui-iconview[iconsize=small] .iconViewItemText {
+    margin-top: 1.7em;
+    transform: scale(4)
+}
+
+.animationsEditorFrames ui-iconview[iconsize=medium] ui-iconviewitem {
+    padding: .2em 1.7em;
+    margin: -1.8em -1em .7em -1.5em;
+    width: 3em;
+    transform: scale(.5)
+}
+
+.animationsEditorFrames ui-iconview[iconsize=medium] .iconViewItemText {
+    margin-top: .7em;
+    transform: scale(2)
+}
+
+html[mobile] ui-animations-editor-status {
+    display: none
+}
+
+ui-animations-editor-status {
+    --status-bar-size:20px;display: flex;
+    flex: 1;
+    max-height: var(--status-bar-size);
+    min-height: var(--status-bar-size);
+    height: var(--status-bar-size);
+    border-top: 1px solid #ccc;
+    padding: 2px;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+status-field {
+    text-align: left;
+    margin-left: 5px;
+    margin-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default
+}
+
+status-field[zoom] {
+    border-right: 1px solid #ccc;
+    padding-right: 10px
+}
+
+status-field[pointer] {
+    flex: 2;
+    border-right: 1px solid #ccc
+}
+
+status-field[format] {
+    flex: 2;
+    border-right: 1px solid #ccc;
+    text-transform: capitalize
+}
+
+status-field[current-tool] {
+    flex: 2
+}
+
+#animationFromSpriteStripDialog {
+    width: 400px
+}
+
+#animationFromSpriteStripDialog ui-dialog-contents {
+    padding: 5px;
+    margin: 0;
+    background: #f0f0f0
+}
+
+#animationFromSpriteStripDialog ui-dialog-footer {
+    background: #f0f0f0;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+#animationFromSpriteStripDialog ui-dialog-footer button {
+    min-width: 85px
+}
+
+#animationFromSpriteStripDialog .dimensionsWrapper {
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    position: relative
+}
+
+#animationFromSpriteStripDialog .dimensionsWrapper .header {
+    position: absolute;
+    left: 10px;
+    background: #f0f0f0;
+    text-align: left;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+#animationFromSpriteStripDialog .horizontalCells {
+    flex: 1;
+    display: flex;
+    margin: 5px
+}
+
+#animationFromSpriteStripDialog .verticalCells {
+    flex: 1;
+    display: flex;
+    margin: 5px
+}
+
+#animationFromSpriteStripDialog .sliceMode {
+    flex: 1;
+    display: flex;
+    margin: 5px
+}
+
+#animationFromSpriteStripDialog .replaceAnimation {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+    justify-content: flex-start;
+    padding-top: 5px
+}
+
+#animationFromSpriteStripDialog .horizontalCells label {
+    flex: 1;
+    text-align: left
+}
+
+#animationFromSpriteStripDialog .verticalCells label {
+    flex: 1;
+    text-align: left
+}
+
+#animationFromSpriteStripDialog .sliceMode span {
+    flex: 1;
+    text-align: left
+}
+
+#animationFromSpriteStripDialog .replaceAnimation label {
+    margin: 0;
+    padding-bottom: 2px
+}
+
+#animationFromSpriteStripDialog .horizontalCells input {
+    flex: 1;
+    max-width: 100px;
+    min-width: 100px
+}
+
+#animationFromSpriteStripDialog .verticalCells input {
+    flex: 1;
+    max-width: 100px;
+    min-width: 100px
+}
+
+#animationFromSpriteStripDialog .sliceMode select {
+    flex: 1;
+    max-width: 104px;
+    min-width: 104px
+}
+
+#animationFromSpriteStripDialog .replaceAnimation input {
+    width: 16px;
+    height: 16px
+}
+
+#animationFromSpriteStripDialog .dimensionsWrapper>input[type=checkbox] {
+    flex: none
+}
+
+#previewAnimationDialog canvas {
+    background-image: linear-gradient(to left,rgba(255,255,255,.9),rgba(255,255,255,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%);
+    background-blend-mode: normal,difference,normal;
+    background-size: 16px 16px;
+    background-position: 0 0,8px 8px;
+    border: 1px solid #000;
+    image-rendering: pixelated
+}
+
+#previewAnimationDialog[dark-background] canvas {
+    background-image: linear-gradient(to left,rgba(100,100,100,.9),rgba(100,100,100,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%)
+}
+
+#imageFormatDialog {
+    width: 400px;
+    display: flex
+}
+
+#imageFormatDialog ui-dialog-contents {
+    padding: 5px;
+    margin: 0;
+    background: #f0f0f0;
+    flex: 1
+}
+
+#imageFormatDialog ui-dialog-footer {
+    background: #f0f0f0;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+#imageFormatDialog ui-dialog-footer button {
+    min-width: 85px
+}
+
+#imageFormatDialog .settings {
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    position: relative
+}
+
+#imageFormatDialog .settings .header {
+    position: absolute;
+    left: 10px;
+    background: #f0f0f0;
+    text-align: left;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+#imageFormatDialog .format {
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    align-items: flex-end
+}
+
+#imageFormatDialog .quality {
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    align-items: center
+}
+
+#imageFormatDialog .quality[disable] {
+    pointer-events: none;
+    opacity: .5
+}
+
+#imageFormatDialog .applyToAll {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 8px
+}
+
+#imageFormatDialog .applyToAll div {
+    text-align: left;
+    margin-bottom: 8px;
+    padding-left: 5px
+}
+
+#imageFormatDialog .applyToAll select {
+    width: 100%
+}
+
+#imageFormatDialog .applyToAll select[hidden] {
+    display: none
+}
+
+#imageFormatDialog .format span {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px
+}
+
+#imageFormatDialog .quality input {
+    flex: 1;
+    min-width: 100px
+}
+
+#imageFormatDialog .quality span {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px
+}
+
+#imageFormatDialog .quality .sliderValue {
+    flex: none;
+    background: #fff;
+    border: 1px solid #ddd;
+    color: #bbb;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 0;
+    min-width: 60px
+}
+
+#imageFormatDialog .format input {
+    flex: 1
+}
+
+#imageFormatDialog .format select {
+    flex: 1
+}
+
+#imageFormatDialog .quality input {
+    flex: 1
+}
+
+#resizeImageDialog {
+    width: 400px
+}
+
+#resizeImageDialog ui-dialog-contents {
+    padding: 5px;
+    margin: 0;
+    background: #f0f0f0
+}
+
+#resizeImageDialog ui-dialog-footer {
+    background: #f0f0f0;
+    justify-content: flex-end;
+    padding-right: 10px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+#resizeImageDialog ui-dialog-footer button {
+    min-width: 85px
+}
+
+#resizeImageDialog .settings {
+    display: flex;
+    flex-flow: column;
+    padding: 10px;
+    margin-top: 18px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    position: relative
+}
+
+#resizeImageDialog .settings .header {
+    position: absolute;
+    left: 10px;
+    background: #f0f0f0;
+    text-align: left;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+#resizeImageDialog .width {
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    align-items: flex-end
+}
+
+#resizeImageDialog .width>* {
+    flex: 1
+}
+
+#resizeImageDialog .width>label {
+    text-align: right;
+    margin-right: 10px
+}
+
+#resizeImageDialog .height {
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    align-items: flex-end
+}
+
+#resizeImageDialog .height>* {
+    flex: 1
+}
+
+#resizeImageDialog .height>label {
+    text-align: right;
+    margin-right: 10px
+}
+
+#resizeImageDialog .image {
+    flex: 1;
+    display: flex;
+    margin: 5px;
+    align-items: flex-end
+}
+
+#resizeImageDialog .image>* {
+    flex: 1
+}
+
+#resizeImageDialog .image>span {
+    text-align: right;
+    margin-right: 10px
+}
+
+#resizeImageDialog .checkbox {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px
+}
+
+#resizeImageDialog .checkbox>* {
+    flex: 1
+}
+
+#resizeImageDialog .checkbox>.inputWrapper {
+    display: flex
+}
+
+#resizeImageDialog .checkbox input {
+    width: 16px;
+    height: 16px;
+    margin-top: 6px;
+    margin-left: -2.5px
+}
+
+#resizeImageDialog .checkbox label {
+    text-align: right;
+    margin-right: 10px
+}
+
+#resizeImageDialog .applyToWholeAnimation {
+    flex: 1;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+    justify-content: flex-start;
+    padding-top: 5px
+}
+
+#resizeImageDialog .applyToWholeAnimation input {
+    width: 16px;
+    height: 16px
+}
+
+#resizeImageDialog .applyToWholeAnimation label {
+    margin: 0;
+    padding-bottom: 2px
+}
+
+#fileImportModeDialog {
+    width: 400px
+}
+
+#fileImportModeDialog ui-dialog-contents {
+    padding: 10px;
+    margin: 0;
+    background: #f0f0f0;
+    font-size: larger
+}
+
+#fileImportModeDialog ui-dialog-footer {
+    background: #f0f0f0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+#fileImportModeDialog ui-dialog-footer button {
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+#fileImportModeDialog ui-dialog-footer .cancelButton {
+    margin-top: 10px
+}
+
+#missingExternalSoftwareDialog {
+    width: 500px
+}
+
+#missingExternalSoftwareDialog .externalEditorPicker {
+    margin-top: 5px;
+    display: flex;
+    flex-flow: column
+}
+
+#missingExternalSoftwareDialog .externalEditorItem {
+    margin-top: 5px;
+    display: flex
+}
+
+#missingExternalSoftwareDialog .externalEditorButton {
+    flex: none;
+    padding: 4px 16px;
+    text-decoration: none;
+    color: #000;
+    appearance: button;
+    -moz-appearance: button;
+    -webkit-appearance: button
+}
+
+#missingExternalSoftwareDialog .externalEditorFilePath {
+    flex: 1;
+    border: 1px solid grey;
+    margin-left: 4px;
+    padding: 4px;
+    text-align: left;
+    pointer-events: none
+}
+
+#missingExternalSoftwareDialog .defaultExternalEditor {
+    flex: none;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0;
+    margin-left: 7px;
+    margin-top: 7px
+}
+
+#edittingExternalSoftwareDialog {
+    width: 600px
+}
+
+#edittingExternalSoftwareDialog ui-dialog-contents {
+    display: flex;
+    flex-flow: column;
+    align-items: left
+}
+
+#edittingExternalSoftwareDialog ui-dialog-footer {
+    justify-content: flex-end
+}
+
+#edittingExternalSoftwareDialog .blurb {
+    padding-top: 5px
+}
+
+#configureAnimationsEditorGridDialog {
+    width: 270px
+}
+
+#configureAnimationsEditorGridDialog label {
+    text-align: left
+}
+
+#pasteImageDialog {
+    width: 400px
+}
+
+#pasteImageDialog ui-dialog-contents {
+    padding: 10px;
+    margin: 0;
+    background: #f0f0f0;
+    font-size: larger
+}
+
+#pasteImageDialog ui-dialog-footer {
+    background: #f0f0f0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px
+}
+
+#pasteImageDialog ui-dialog-footer button {
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px
+}
+
+ui-animation-editor-gutter {
+    z-index: 999
+}
+
+ui-animation-editor-gutter[horizontal] {
+    flex: 1;
+    max-height: 8px;
+    min-height: 8px;
+    background: #ccc
+}
+
+ui-animation-editor-gutter[horizontal]:hover {
+    cursor: ns-resize
+}
+
+ui-animation-editor-gutter[vertical] {
+    flex: 1;
+    max-width: 8px;
+    min-width: 8px;
+    background: #ccc
+}
+
+ui-animation-editor-gutter[vertical]:hover {
+    cursor: ew-resize
+}
+
+#addBehaviorDialog {
+    width: 600px;
+    height: 500px
+}
+
+#addBehaviorDialog .topRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: .5em
+}
+
+#addBehaviorDialog .search {
+    width: 9em
+}
+
+#addBehaviorDialog .addBehaviorHeaderText {
+    flex-grow: 1
+}
+
+#addEffectDialog {
+    width: 600px;
+    height: 500px
+}
+
+#addEffectDialog .topRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: .5em
+}
+
+#addEffectDialog .search {
+    width: 9em
+}
+
+#addEffectDialog .addEffectHeaderText {
+    flex-grow: 1
+}
+
+#behaviorsDialog {
+    width: 400px;
+    height: 300px
+}
+
+#behaviorsDialog .behaviorsListFooter {
+    padding-top: 1em;
+    padding-bottom: .5em
+}
+
+#createNewObjectTypeDialog {
+    width: 600px;
+    height: 500px;
+    min-height: 300px
+}
+
+#createNewObjectTypeDialog .topRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: .5em
+}
+
+#createNewObjectTypeDialog .search {
+    width: 9em
+}
+
+#createNewObjectTypeDialog .createObjectHeaderText {
+    flex-grow: 1
+}
+
+#createNewObjectTypeDialog .footer {
+    display: flex;
+    flex-direction: column
+}
+
+#createNewObjectTypeDialog .nameRow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: .5em
+}
+
+#createNewObjectTypeDialog .nameLabel {
+    margin-right: .5em
+}
+
+#createNewObjectTypeDialog #crObjectTypeNameInput {
+    flex-grow: 1
+}
+
+#editEventGroupDialog {
+    width: 450px;
+    height: 250px;
+    min-width: 300px;
+    min-height: 220px
+}
+
+#editEventGroupDialog .inputGrid {
+    height: 100%
+}
+
+#editEventGroupDialog #eventGroupDescriptionInput {
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    resize: none
+}
+
+#editEventVariableDialog {
+    width: 420px;
+    height: 350px;
+    min-height: 310px;
+    max-height: 350px
+}
+
+#editFamilyDialog {
+    width: 750px;
+    height: 500px;
+    min-width: 520px;
+    min-height: 350px
+}
+
+#editFamilyDialog .leftSection {
+    flex: 3
+}
+
+#editFamilyDialog .leftHeader {
+    flex-shrink: 0
+}
+
+#editFamilyDialog .midSection {
+    width: 80px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center
+}
+
+#editFamilyDialog .rightSection {
+    flex: 2;
+    min-width: 170px
+}
+
+#editFamilyDialog .rightHeader {
+    flex-shrink: 0
+}
+
+#editFamilyDialog ui-iconview {
+    height: 100%
+}
+
+#editFunctionBlockDialog {
+    width: 32em;
+    height: 23em;
+    min-height: 20em;
+    max-height: 27em
+}
+
+#editFunctionParameterDialog {
+    width: 32em;
+    height: 21em;
+    min-height: 20em;
+    max-height: 25em
+}
+
+#editInstanceVariableDialog {
+    width: 420px;
+    height: 270px;
+    min-height: 240px;
+    max-height: 280px
+}
+
+#effectsDialog {
+    width: 400px;
+    height: 300px
+}
+
+#effectsDialog .effectsListFooter {
+    padding-top: 1em;
+    padding-bottom: .5em
+}
+
+#eventSheetPickerDialog {
+    width: 500px;
+    height: 400px;
+    min-width: 400px;
+    min-height: 200px
+}
+
+#eventSheetPickerDialog .eventSheetPickerSelect {
+    font-size: 1.5em
+}
+
+#expressionsDictionaryDialog {
+    --max-expression-name-width:99999px;width: 40em;
+    height: 15em
+}
+
+html[desktop] #expressionsDictionaryDialog {
+    opacity: .2
+}
+
+html[desktop] #expressionsDictionaryDialog:hover,html[desktop] #expressionsDictionaryDialog[active],html[mobile] #expressionsDictionaryDialog {
+    opacity: 1
+}
+
+#expressionsDictionaryDialog .expressionDictionaryTopRow {
+    align-items: center;
+    margin: .3em .5em
+}
+
+#expressionsDictionaryDialog .expressionDictionaryHeader {
+    flex-grow: 1;
+    margin: 0
+}
+
+#expressionsDictionaryDialog .expressionDictionarySearch {
+    width: 9em
+}
+
+#expressionsDictionaryDialog ui-iconview {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0
+}
+
+#expressionsDictionaryDialog[showing=expressions] .iconview-groupcontent {
+    display: flex;
+    flex-flow: column
+}
+
+#expressionsDictionaryDialog[showing=expressions] ui-iconviewitem {
+    margin: .1em .5em .15em .1em;
+    padding: .05em .1em;
+    display: flex
+}
+
+#expressionsDictionaryDialog[showing=expressions] .iconViewItemWrap {
+    max-width: var(--max-expression-name-width);
+    width: var(--max-expression-name-width);
+    flex: none
+}
+
+#expressionsDictionaryDialog[showing=expressions] .expressionDescription {
+    flex: 1;
+    margin-left: .7em
+}
+
+#expressionsDictionaryDialog[showing=expressions] .expressionDescription[default] {
+    font-style: italic
+}
+
+#expressionsDictionaryDialog[showing] ui-iconviewitem[hidden] {
+    display: none
+}
+
+#freeEditionLimitDialog {
+    width: 35em
+}
+
+#freeEditionLimitDialog .headerWrap {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1em
+}
+
+#freeEditionLimitDialog .iconWrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center
+}
+
+#freeEditionLimitDialog .header {
+    margin: 0 0 0 1em;
+    flex-grow: 1
+}
+
+#freeEditionLimitDialog .okButton {
+    font-weight: 700
+}
+
+#importAudioDialog {
+    width: 600px;
+    height: 500px
+}
+
+#importAudioDialog .headerWrap {
+    flex-shrink: 0;
+    margin-bottom: 1em
+}
+
+#importAudioDialog .headerImportRowWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+html[desktop] #importAudioDrop {
+    border: 6px dashed #ccc;
+    background-color: #eee;
+    font-size: 2em;
+    color: #ccc;
+    height: 4em;
+    margin-top: .1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+html[desktop] #importAudioDrop.hover {
+    border-color: #000;
+    color: #000;
+    background-color: #ffe
+}
+
+#importAudioDialog ui-table {
+    flex: 1
+}
+
+#importFilesDialog {
+    width: 600px;
+    height: 500px
+}
+
+#importFilesDialog .headerWrap {
+    flex-shrink: 0;
+    margin-bottom: 1em
+}
+
+html[desktop] #importFilesDialog .importFilesDrop {
+    border: 6px dashed #ccc;
+    background-color: #eee;
+    font-size: 2em;
+    color: #ccc;
+    height: 4em;
+    margin-top: .1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+html[desktop] #importFilesDialog .importFilesDrop.hover {
+    border-color: #000;
+    color: #000;
+    background-color: #ffe
+}
+
+#importFilesDialog ui-table {
+    flex: 1
+}
+
+#instanceVariablesDialog {
+    width: 400px;
+    height: 300px
+}
+
+#instanceVariablesDialog .instVarsListFooter {
+    padding-top: 1em;
+    padding-bottom: .5em
+}
+
+#invalidExpressionsDialog {
+    width: 500px;
+    height: 500px
+}
+
+#invalidExpressionsDialog .reportArea {
+    overflow-y: auto;
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: .5em
+}
+
+#loadTilemapDialog {
+    width: 400px;
+    height: 300px
+}
+
+#loadTilemapDialog .overlay {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+    background: #00f;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    z-index: 9999;
+    pointer-events: none
+}
+
+#loadTilemapDialog[valid-drops] .overlay {
+    opacity: .1
+}
+
+#loadTilemapDialog ui-dialog-contents {
+    flex: 1
+}
+
+#loadTilemapDialog ui-dialog-contents div {
+    display: flex;
+    height: 30px
+}
+
+#loadTilemapDialog ui-dialog-contents div span {
+    flex: 1;
+    margin: 0;
+    margin-left: 2px;
+    padding: 4px;
+    border: 1px solid #949494;
+    border-radius: 1px;
+    font-style: italic;
+    color: #949494
+}
+
+#loadTilemapDialog ui-dialog-contents div select {
+    flex: 1
+}
+
+#missingAddonsDialog {
+    width: 500px;
+    height: 300px
+}
+
+#objectPickerDialog {
+    width: 500px;
+    height: 400px;
+    min-width: 300px;
+    min-height: 200px
+}
+
+#objectPickerDialog .pickObjectbjectTopRow {
+    align-items: center;
+    margin-bottom: .5em
+}
+
+#objectPickerDialog .objectPickerHeader {
+    flex-grow: 1;
+    margin: 0
+}
+
+#objectPickerDialog .search {
+    width: 9em
+}
+
+.autoCompleteWrap {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 12em
+}
+
+.autoCompleteWrap>ui-iconview {
+    contain: content;
+    height: 100%
+}
+
+.autoCompleteWrap ui-iconviewitem {
+    display: block!important;
+    padding: 1px!important;
+    margin: 3px 2px!important;
+    min-width: 0!important
+}
+
+.expressionInputControl {
+    white-space: pre-wrap;
+    overflow-x: hidden
+}
+
+.expressionInputControl::selection {
+    color: #fff;
+    background-color: #3390ff
+}
+
+.sh-string-literal {
+    color: #a31515
+}
+
+.sh-number-literal {
+    color: #a000a0
+}
+
+.sh-operator {
+    color: #00f
+}
+
+.sh-object-class {
+    color: green
+}
+
+.sh-behavior {
+    color: #a86700
+}
+
+.sh-object-expression {
+    color: #600000
+}
+
+.sh-system-expression {
+    color: #000060
+}
+
+.sh-error {
+    color: #c00000;
+    background-color: #ffe0e0
+}
+
+.sh-bracket-highlight {
+    background-color: silver
+}
+
+.sh-bracket-highlight::selection {
+    color: #fff;
+    background-color: #3390ff
+}
+
+.expressionParameterControl {
+    box-sizing: border-box;
+    width: 100%;
+    padding: .2em .3em;
+    cursor: text;
+    border: 1px solid #aaa;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word
+}
+
+.booleanParameterControl {
+    width: 1.3em;
+    height: 1.3em;
+    margin-left: 0
+}
+
+.comboParameterControl {
+    width: 100%
+}
+
+.comparisonParameterControl {
+    width: 100%
+}
+
+.instanceVariableParameterControl {
+    width: 100%
+}
+
+.objectInstanceVariableParameterControl {
+    width: 100%
+}
+
+.eventVariableParameterControl {
+    width: 100%
+}
+
+.audioFileParameterControl {
+    flex: 1
+}
+
+.audioParamPlayButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    margin-left: .5em;
+    padding: 0
+}
+
+.audioParamPlayButton svg {
+    width: 1.4em;
+    height: 1.4em;
+    fill: #000
+}
+
+.audioParamPlayButton[disabled] svg {
+    fill: #8d8d8d
+}
+
+.projectFileParameterControl {
+    width: 100%
+}
+
+.layoutParameterControl {
+    width: 100%
+}
+
+.objectParameterControl {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center
+}
+
+.objectParameterControl ui-icon {
+    margin-right: .3em
+}
+
+.keyParameterControl {
+    width: 100%
+}
+
+.variadicLinkWrap {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-between
+}
+
+.timelineParameterControl {
+    width: 100%
+}
+
+.functionParameterControl {
+    width: 100%
+}
+
+.easeParameterControl {
+    width: 100%
+}
+
+#parametersDialog {
+    width: 500px;
+    height: 300px
+}
+
+html[desktop] #parametersDialog {
+    min-width: 350px;
+    min-height: 200px
+}
+
+.parametersHeaderText {
+    margin: 1em 2em .5em 2em;
+    min-height: 2.7em;
+    flex-shrink: 0
+}
+
+#parametersDialog .parametersWrap {
+    overflow-y: auto;
+    padding: .2em 2em 0 2em;
+    flex-grow: 1
+}
+
+.parameterRowTable {
+    display: grid;
+    grid-template-columns: minmax(0,max-content) minmax(75%,1fr)
+}
+
+.parametersCallTip {
+    position: absolute;
+    left: 0;
+    top: 0;
+    will-change: transform;
+    max-width: 30em;
+    background: #fff;
+    border: 1px solid #555;
+    padding: .3em
+}
+
+.parameterLabelWrap {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    padding-right: .4em
+}
+
+.parameterLabel {
+    text-align: right;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.parameterControl {
+    display: flex;
+    align-items: stretch;
+    overflow: hidden
+}
+
+.parameterControl,.parameterLabelWrap {
+    margin-bottom: .7em
+}
+
+#pickACObjectDialog {
+    width: 600px;
+    height: 500px
+}
+
+.pickACObjectHeaderText {
+    flex-grow: 1;
+    margin: 0
+}
+
+.pickACObjectTopRow {
+    align-items: center;
+    margin-bottom: .5em
+}
+
+.pickACObjectSearch {
+    width: 9em
+}
+
+#pickActionConditionDialog {
+    width: 600px;
+    height: 500px
+}
+
+html[desktop] #pickActionConditionDialog {
+    min-width: 380px;
+    min-height: 250px
+}
+
+.pickActionConditionHeaderText {
+    flex-grow: 1;
+    margin: 0
+}
+
+.pickActionConditionTopRow {
+    margin-bottom: .5em;
+    min-height: 2.8em
+}
+
+.pickActionConditionSearch {
+    float: right;
+    width: 9em;
+    margin-left: .4em
+}
+
+.pickActionConditionIconView[label-right] ui-iconviewitem {
+    padding: 0 0 0 .3em;
+    margin: .3em .3em 0 .2em
+}
+
+@media (max-width: 500px) {
+    .pickActionConditionIconView[label-right] ui-iconviewitem {
+        margin-right:1em
+    }
+}
+
+@media (min-width: 500px) {
+    .pickActionConditionIconView[label-right] ui-iconviewitem {
+        min-width:15em!important
+    }
+}
+
+.pickActionConditionIconView[label-right] .iconview-groupcontent {
+    margin-left: 1.5em
+}
+
+ui-iconviewitem.highlightedACE:not([selected]) .iconViewItemText {
+    background-color: #ffb
+}
+
+#projectStatsDialog {
+    width: 500px;
+    height: 500px
+}
+
+#remotePreviewDialog {
+    width: 40em;
+    height: 40em;
+    min-height: 20em
+}
+
+#remotePreviewDialog .settingsRow {
+    margin-top: .3em;
+    margin-bottom: .6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+#remotePreviewDialog .statusError {
+    color: #8b0000;
+    font-weight: 700
+}
+
+#remotePreviewDialog .urlRow {
+    display: flex;
+    margin-top: .3em
+}
+
+#remotePreviewDialog .remotePreviewUrlText {
+    margin-right: .3em;
+    font-size: 1.4em;
+    flex: 1
+}
+
+#remotePreviewDialog .remotePreviewUrlCopy {
+    font-size: 1.4em
+}
+
+#remotePreviewDialog .statusRow {
+    margin-bottom: 0
+}
+
+#remotePreviewDialog .stats {
+    margin-top: 0
+}
+
+#remotePreviewDialog .clientListItem {
+    margin-bottom: .5em
+}
+
+#remotePreviewDialog .clientStatus {
+    border: 1px solid #ddd;
+    background-color: #eee;
+    padding: .1em .2em;
+    border-radius: .2em
+}
+
+#remotePreviewDialog .clientRequestVideo {
+    padding-left: 1em
+}
+
+#remotePreviewDialog .qrcodeheader {
+    margin-top: 1em;
+    margin-bottom: .1em;
+    text-align: center
+}
+
+#remotePreviewDialog .qrcodewrap {
+    display: flex;
+    justify-content: center
+}
+
+#remotePreviewDialog .qrcode {
+    margin: 0 auto;
+    border: 1em solid #fff
+}
+
+#remoteVideoDialog {
+    width: 600px;
+    height: 500px
+}
+
+#remoteVideoDialog video {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    min-width: 1px;
+    min-height: 1px
+}
+
+#remoteVideoDialog ui-dialog-contents {
+    overflow-y: hidden
+}
+
+#scriptingFeatureLimitDialog {
+    width: 35em
+}
+
+#scriptingFeatureLimitDialog .headerWrap {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 1em
+}
+
+#scriptingFeatureLimitDialog .iconWrap {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center
+}
+
+#scriptingFeatureLimitDialog .header {
+    margin: 0 0 0 1em;
+    flex-grow: 1
+}
+
+#scriptingFeatureLimitDialog .okButton {
+    font-weight: 700
+}
+
+#switchRuntimeDialog {
+    width: 500px;
+    height: 300px
+}
+
+html[printmode] {
+    overflow: visible
+}
+
+html[printmode] body {
+    overflow: visible
+}
+
+html[printmode] ui-body {
+    overflow: visible;
+    contain: none;
+    height: auto
+}
+
+html[printmode] .eventSheetView {
+    background-color: #fff
+}
+
+html[printmode] .eventSheetPrintWrapper {
+    display: flex
+}
+
+.eventSheetPrintWrapper {
+    display: none;
+    padding: 32px;
+    align-items: center;
+    justify-content: center
+}
+
+.eventSheetPrintWrapper button {
+    margin: 0 16px;
+    font-size: 1.5em;
+    border-radius: 3px;
+    padding: 8px 32px;
+    border: 1px solid grey
+}
+
+.eventSheetPrintWrapper .eventSheetPrintCancel {
+    background-color: #ededed;
+    box-shadow: inset 0 0 2px 1px #fff;
+    color: #000
+}
+
+.eventSheetPrintWrapper .eventSheetPrint {
+    font-weight: 700;
+    background-color: #4a8bf5;
+    box-shadow: inset 0 0 2px 1px #77a7f6;
+    color: #fff
+}
+
+.eventSheetView {
+    --event-sheet-background-color:#F5F6FC;background-color: var(--event-sheet-background-color)
+}
+
+@media print {
+    html[printmode] .eventSheetPrintWrapper {
+        display: none
+    }
+
+    html[printmode] .actionDescCell,html[printmode] .addActionRow,html[printmode] .conditionBlockWrap,html[printmode] event-comment,html[printmode] event-group,html[printmode] event-variable {
+        page-break-inside: avoid
+    }
+}
+
+.eventSheetLoading {
+    padding-top: 1em;
+    font-size: 3em;
+    text-align: center;
+    animation: loadingTextFadeIn .5s
+}
+
+@keyframes loadingTextFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.eventInsertMark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 3px;
+    will-change: transform;
+    pointer-events: none;
+    contain: layout size;
+    background-color: #000;
+    z-index: 10000
+}
+
+.eventInsertMark::before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    border-style: solid;
+    line-height: 0;
+    top: -7.5px;
+    left: -3px;
+    width: 0;
+    height: 0;
+    border-width: 5px 0 5px 5px;
+    border-color: transparent transparent transparent #000
+}
+
+.eventNumber {
+    grid-column: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    contain: strict;
+    padding: .2em 0 0 0;
+    color: #bfcce0
+}
+
+.eventNumber[hidden] {
+    display: none
+}
+
+@media (max-width: 750px) {
+    .eventNumber {
+        display:none
+    }
+}
+
+.eventNumberTextSpan {
+    width: 0;
+    direction: rtl
+}
+
+.eventBookmark,.eventBreakpoint {
+    margin-top: .1em;
+    margin-right: auto
+}
+
+[indents] {
+    --nest-level:0}
+
+[evnestmargin] {
+    margin-left: calc(1.7em + (1.5em * var(--nest-level)))
+}
+
+[evnestpadding] {
+    padding-left: calc(1.7em + (1.5em * var(--nest-level)))
+}
+
+@media (max-width: 750px) {
+    [evnestmargin] {
+        margin-left:calc(1.5em * var(--nest-level))
+    }
+
+    [evnestpadding] {
+        padding-left: calc(1.5em * var(--nest-level))
+    }
+}
+
+.eventChildrenWrap {
+    grid-column: 1/span 3;
+    contain: content
+}
+
+.eventChildrenWrap[collapsed],.eventChildrenWrap[hidden] {
+    display: none
+}
+
+.eventChildrenContainer {
+    display: grid;
+    grid-template-columns: 3em var(--conditions-column-size) 1fr;
+    contain: content;
+    background-image: repeating-linear-gradient(to right,#d6dcec,#d6dcec 1px,transparent 1px,transparent 1.5em);
+    background-size: calc(var(--conditions-column-size) - 1.7em) 100%;
+    background-position: 4.7em 0;
+    background-repeat: no-repeat
+}
+
+@media (max-width: 750px) {
+    .eventChildrenContainer {
+        grid-template-columns:0 300px 1fr;
+        background: 0 0
+    }
+}
+
+.eventChildrenContainer[collapsed],.eventChildrenContainer[hidden] {
+    display: none
+}
+
+.eventSheetRootView[showing-breakpoint] .eventChildrenContainer {
+    contain: layout
+}
+
+.eventSheetRootView[showing-breakpoint] .eventChildrenWrap {
+    contain: layout
+}
+
+.eventSheetRootView {
+    padding: .4em 2px .4em 2px;
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 3em var(--conditions-column-size) 1fr
+}
+
+@media (max-width: 750px) {
+    .eventSheetRootView {
+        grid-template-columns:0 300px 1fr
+    }
+}
+
+[disabledevent] {
+    text-decoration: line-through
+}
+
+.addEventBlock {
+    margin-left: 3em;
+    margin-bottom: 5em;
+    padding: .15em .2em .15em .5em;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    color: #bfcce0;
+    contain: content
+}
+
+.eventSheetRootView:empty~.addEventBlock {
+    color: #00f
+}
+
+.addOtherLink {
+    padding-right: .3em;
+    margin-right: 0
+}
+
+@media (max-width: 750px) {
+    .addOtherLink {
+        margin-right:3em
+    }
+}
+
+@media (max-width: 600px) {
+    .addOtherLink {
+        margin-right:1.2em
+    }
+}
+
+.addEventLink:hover,.addOtherLink:hover {
+    cursor: pointer;
+    color: #000
+}
+
+.eventSheetMiniTutorial {
+    display: none;
+    height: 0;
+    position: relative;
+    top: 8em;
+    text-align: center
+}
+
+.eventSheetRootView:empty+.eventSheetMiniTutorial {
+    display: block
+}
+
+.eventSheetRootView:empty~.remainingEventsWrap {
+    display: none
+}
+
+.miniTutorialContainer {
+    width: 75%;
+    margin: 0 auto;
+    --conditions-column-size:300px;--condition-name-cell-size:90px;--action-name-cell-size:90px;text-align: left;
+    overflow: hidden
+}
+
+.miniTutorialTextWrap {
+    width: 60%;
+    margin: 0 auto
+}
+
+.tutorialLabelWrap {
+    display: flex;
+    width: 75%;
+    margin: 2em auto 0 auto;
+    padding-left: 3em;
+    padding-bottom: .2em;
+    text-align: center
+}
+
+.tutorialMarginConditionLabelWrap {
+    display: flex;
+    width: 300px
+}
+
+.tutorialConditionLabel {
+    flex-grow: 1
+}
+
+.tutorialActionLabel {
+    flex-grow: 1
+}
+
+.tutorialDiagramWrap {
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    padding-left: 3em;
+    padding-bottom: .2em;
+    text-align: left
+}
+
+.tutorialActionDiagram,.tutorialConditionDiagram,.tutorialMarginDiagram {
+    height: .5em;
+    border: .2em solid #000;
+    border-bottom: none;
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em
+}
+
+.tutorialMarginDiagram {
+    width: 16px
+}
+
+.tutorialConditionDiagram {
+    margin-left: .2em;
+    width: calc(284px - .4em)
+}
+
+.tutorialActionDiagram {
+    margin-left: .2em;
+    flex-grow: 1
+}
+
+.tutorialIcon {
+    display: inline-block;
+    vertical-align: text-bottom;
+    width: 16px;
+    height: 16px;
+    pointer-events: none
+}
+
+.remainingEventsWrap {
+    margin: 0 auto 2em auto;
+    width: 30em;
+    max-width: 100%
+}
+
+.remainingEventsBlockInner {
+    margin: 0 1em;
+    border: 1px solid #777;
+    padding: .5em 1em;
+    background-color: #e4eeff;
+    border-radius: .5em;
+    display: flex
+}
+
+.remainingEventsIcon {
+    display: flex;
+    align-items: center
+}
+
+.remainingEventsBody {
+    flex-grow: 1;
+    padding-left: 1em
+}
+
+.remainingEventsHeader {
+    margin-top: .5em
+}
+
+event-comment {
+    grid-column: 2/span 2;
+    display: block;
+    background-color: var(--event-sheet-background-color)
+}
+
+event-comment[hidden] {
+    display: none
+}
+
+.eventCommentWrap {
+    min-height: 1.9em;
+    box-sizing: border-box;
+    color: #000;
+    border: 1px solid #dddd48;
+    background-color: #fdfeb7;
+    padding: .25em .25em .25em .5em;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: break-word
+}
+
+event-comment>.eventCommentWrap {
+    border-top-left-radius: 5px;
+    border-bottom: none
+}
+
+.eventCommentWrap[selected] {
+    border-color: #f5c61f;
+    color: #000!important;
+    background-color: #fff2bf!important
+}
+
+.eventCommentWrap[editing] {
+    padding: 0;
+    border-width: 0;
+    display: flex;
+    align-items: stretch
+}
+
+.editCommentInput {
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: calc(.25em - 1px) .25em calc(.25em - 1px) .5em;
+    font-family: inherit;
+    font-size: inherit;
+    overflow-y: auto;
+    resize: none
+}
+
+event-script {
+    grid-column: 2/span 2;
+    display: block;
+    font-family: Consolas,Menlo,monospace;
+    background-color: var(--event-sheet-background-color)
+}
+
+event-script[hidden] {
+    display: none
+}
+
+html[desktop] event-script {
+    border-bottom: 3px solid var(--event-sheet-background-color)
+}
+
+.eventScriptWrap {
+    min-height: 1.9em;
+    box-sizing: border-box;
+    color: #000;
+    border: 1px solid #afafff;
+    background-color: #f1f1ff;
+    padding: 4px;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    tab-size: 4
+}
+
+.eventScriptWrap .CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+    min-height: 30px;
+    font-family: Consolas,Menlo,monospace
+}
+
+.eventScriptWrap .CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: auto
+}
+
+.eventScriptWrap[selected] {
+    border-color: #f5c61f
+}
+
+.eventScriptWrap[editing] {
+    padding: 0;
+    border-width: 0
+}
+
+.editScriptInput {
+    flex-grow: 1;
+    box-sizing: border-box;
+    padding: calc(.25em - 1px) .25em calc(.25em - 1px) .5em;
+    font-family: inherit;
+    font-size: inherit;
+    overflow-y: auto;
+    resize: none;
+    tab-size: 4
+}
+
+event-script[breakpoint-highlight] .eventScriptWrap {
+    outline: 1px dashed red;
+    outline-offset: -1px
+}
+
+event-variable {
+    grid-column: 2/span 2;
+    display: flex;
+    align-items: center;
+    color: #282828;
+    border: 1px solid #b1d0a6;
+    border-bottom: none;
+    background-color: #dbf2c3;
+    padding: .25em .25em .25em .5em
+}
+
+@media (max-width: 750px) {
+    event-variable {
+        flex-wrap:wrap
+    }
+}
+
+event-variable[hidden] {
+    display: none
+}
+
+event-variable[selected] {
+    background-color: #ffe495;
+    border-color: #f5c61f
+}
+
+.eventVariableDescription {
+    flex-grow: 1;
+    padding-left: .3em
+}
+
+.eventVariableComment {
+    font-style: italic;
+    padding-right: .2em
+}
+
+event-include {
+    grid-column: 2/span 2;
+    display: flex;
+    align-items: center;
+    color: #f5f8ff;
+    border: 1px solid #3c3c3c;
+    border-bottom: none;
+    background-color: #505050;
+    padding: .25em .25em .25em .5em
+}
+
+event-include[hidden] {
+    display: none
+}
+
+event-include[selected] {
+    background-color: #ffe495;
+    border-color: #ffc61f;
+    color: #3c3c3c
+}
+
+.eventIncludeDescription {
+    padding-left: .3em
+}
+
+event-group {
+    grid-column: 2/span 2;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    margin-bottom: 2px;
+    background-color: #dbe7f5;
+    border: 1px solid #b6cde6;
+    border-radius: 2px;
+    padding: .2em .3em .3em .1em;
+    color: #282828;
+    outline: 2px solid var(--event-sheet-background-color)
+}
+
+event-group[inactiveonstart] {
+    color: #9eadc0!important
+}
+
+event-group[hidden] {
+    display: none
+}
+
+event-group[selected] {
+    border-color: #f5c61f;
+    color: #282828!important;
+    background-color: #ffda6a!important
+}
+
+event-group[selected][inactiveonstart] {
+    color: #b89d72!important
+}
+
+event-group[breakpoint-highlight] {
+    outline: 2px dashed red;
+    z-index: 1
+}
+
+.eventGroupMargin {
+    grid-column: 1;
+    grid-row: 1/span 2;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end
+}
+
+.eventGroupTitle {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.5em;
+    font-weight: 700;
+    display: block
+}
+
+.eventGroupDescription {
+    grid-column: 2;
+    grid-row: 2;
+    display: block
+}
+
+.addGroupEventRow {
+    grid-column: 2/span 2;
+    padding-right: .2em;
+    padding-bottom: .5em;
+    border: 1px solid var(--event-sheet-background-color);
+    color: #bfcce0;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--event-sheet-background-color);
+    contain: content
+}
+
+.addGroupEventLink:hover {
+    cursor: pointer;
+    color: #000
+}
+
+.conditionBlockWrap {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--event-sheet-background-color);
+    background-clip: content-box;
+    contain: layout paint
+}
+
+html[desktop] .conditionBlockWrap {
+    border-bottom: 2px solid var(--event-sheet-background-color)
+}
+
+.conditionBlockWrap[breakpoint-highlight] {
+    outline: 2px dashed red;
+    contain: layout;
+    z-index: 1
+}
+
+@media (max-width: 750px) {
+    .conditionBlockWrap {
+        grid-column:2/span 2;
+        margin-bottom: 0
+    }
+}
+
+.conditionBlockWrap[hidden] {
+    display: none
+}
+
+.conditionBlock {
+    flex-shrink: 0;
+    display: grid;
+    grid-template-columns: minmax(20px,min-content) var(--condition-name-cell-size) 1fr;
+    min-height: 16px;
+    background-color: #e5eef9;
+    border: 1px solid #bfcce0;
+    border-left-width: 3px;
+    border-bottom-left-radius: 5px;
+    contain: content;
+    position: relative
+}
+
+.conditionFiller {
+    flex-grow: 1;
+    background-color: #bfcce0;
+    margin-left: 19px;
+    border-bottom-left-radius: 4px
+}
+
+.conditionBlock[selected] {
+    background-color: #ffe495;
+    border-color: #ffd246
+}
+
+.conditionFiller[selected] {
+    background-color: #ffd246
+}
+
+.actionBlockWrap {
+    grid-column: 3;
+    align-self: start;
+    border-top: 1px solid #d4dded;
+    border-bottom: 1px solid #d4dded;
+    margin-bottom: 2px;
+    contain: layout;
+    position: relative
+}
+
+.actionBlock {
+    display: grid;
+    grid-template-columns: var(--action-name-cell-size) 1fr;
+    contain: content
+}
+
+@media (max-width: 750px) {
+    .actionBlockWrap {
+        grid-column:2/span 2;
+        border-left: 1px solid #bfcce0;
+        border-right: 1px solid #bfcce0;
+        border-top: 0;
+        margin-bottom: 3px
+    }
+}
+
+.actionBlock[hidden] {
+    display: none
+}
+
+.conditionBlockWrap [expandBlockIcon] {
+    position: absolute;
+    left: calc(.4em + (1.5em * var(--nest-level)))
+}
+
+.conditionExpandIconWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.actionBlockWrap [expandBlockIcon] {
+    position: absolute;
+    left: -1.4em;
+    top: 0
+}
+
+.functionBlockHeader {
+    grid-column: 2/4;
+    padding-left: .4em
+}
+
+.functionBlockIcon {
+    grid-column: 1;
+    align-self: flex-start;
+    margin-top: .25em;
+    margin-bottom: .25em
+}
+
+.functionBlockHeaderTitle {
+    padding: .2em 0
+}
+
+event-function-parameter {
+    display: flex;
+    align-items: center;
+    color: #282828;
+    border: 1px solid #b1d0a6;
+    background-color: #dbf2c3;
+    padding: .1em .25em
+}
+
+event-function-parameter[hidden] {
+    display: none
+}
+
+event-function-parameter[selected] {
+    background-color: #ffe495;
+    border-color: #f5c61f
+}
+
+.behaviorPlaceholderWrap {
+    display: inline
+}
+
+.behaviorPlaceholderIcon {
+    vertical-align: text-bottom
+}
+
+.behaviorPlaceholderName {
+    vertical-align: text-bottom;
+    padding-left: 2px
+}
+
+.acBreakpoint {
+    position: absolute;
+    right: 0;
+    margin-right: .1em
+}
+
+.conditionNameCell {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: .15em .2em;
+    border: 1px solid transparent;
+    border-right-color: #bfcce0;
+    margin-bottom: 1px;
+    contain: strict
+}
+
+.conditionNameCell[hidden] {
+    display: none
+}
+
+.conditionBlock[selected] .conditionNameCell,.conditionNameCell[selected] {
+    background-color: #ffe495;
+    border-right-color: transparent;
+    outline: 1px solid #ffd246;
+    outline-offset: -2px
+}
+
+.conditionNameCell:nth-last-child(2) {
+    margin-bottom: 0
+}
+
+.conditionObjectNameSpan {
+    padding-left: .2em;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.conditionDescCell {
+    grid-column: 3;
+    display: block;
+    overflow: hidden;
+    word-wrap: break-word;
+    padding: .15em .2em .15em .4em;
+    border: 1px solid transparent;
+    background-color: #f5f8ff;
+    margin-bottom: 1px;
+    contain: content
+}
+
+.conditionDescCell[hidden] {
+    display: none
+}
+
+.conditionBlock[selected] .conditionDescCell,.conditionDescCell[selected] {
+    background-color: #fff2bf;
+    outline: 1px solid #ffd246;
+    outline-offset: -2px
+}
+
+.conditionDescCell:last-child {
+    margin-bottom: 0
+}
+
+.conditionIcon {
+    grid-column: 1;
+    align-self: center
+}
+
+.invertIcon {
+    vertical-align: text-bottom;
+    margin-right: .2em
+}
+
+.conditionBlock[orblock] .conditionDescCell:not(:nth-child(2)):not(:nth-child(3))::before {
+    content: "OR ";
+    color: #00b;
+    font-weight: 700;
+    font-style: italic
+}
+
+[invalid-condition] {
+    color: red
+}
+
+.conditionNameCell[breakpoint-highlight] {
+    border: 1px dashed red;
+    border-right: 1px solid #bfcce0
+}
+
+.conditionDescCell[breakpoint-highlight] {
+    border: 1px dashed red;
+    border-left: 1px solid transparent
+}
+
+.conditionDescCell[breakpoint-highlight],.conditionNameCell[breakpoint-highlight] {
+    background-color: #ffceca
+}
+
+.actionNameCell {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 1px;
+    margin-bottom: 1px;
+    padding: .15em .2em;
+    border: 1px solid transparent;
+    border-right-color: #bfcce0;
+    contain: strict
+}
+
+.actionNameCell[hidden] {
+    display: none
+}
+
+.actionNameCell:nth-last-child(2) {
+    margin-bottom: 0
+}
+
+.actionObjectNameSpan {
+    padding-left: .2em;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.actionDescCell {
+    grid-column: 2;
+    display: block;
+    overflow: hidden;
+    border: 1px solid transparent;
+    padding: .15em .2em .15em .4em;
+    margin-bottom: 1px;
+    contain: content
+}
+
+.actionDescCell[hidden] {
+    display: none
+}
+
+.actionDescCell,.actionNameCell {
+    background-color: #e9effb
+}
+
+.actionBlock[selected] .actionDescCell,.actionBlock[selected] .actionNameCell,.actionDescCell[selected],.actionNameCell[selected] {
+    background-color: #fff2bf;
+    border-color: #f5c61f
+}
+
+.actionBlock[selected] .actionDescCell,.actionDescCell[selected] {
+    border-left-color: transparent
+}
+
+.actionDescCell:last-child {
+    margin-bottom: 0
+}
+
+.actionNameCell[breakpoint-highlight] {
+    border: 1px dashed red;
+    border-right: 1px solid #bfcce0
+}
+
+.actionDescCell[breakpoint-highlight] {
+    border: 1px dashed red;
+    border-left: 1px solid transparent
+}
+
+.actionDescCell[breakpoint-highlight],.actionNameCell[breakpoint-highlight] {
+    background-color: #ffceca
+}
+
+@media (max-width: 750px) {
+    [actnest0] {
+        margin-left:0
+    }
+
+    [actnest1] {
+        margin-left: 1.5em
+    }
+
+    [actnest2] {
+        margin-left: 3em
+    }
+
+    [actnest3] {
+        margin-left: 4.5em
+    }
+
+    [actnest4] {
+        margin-left: 6em
+    }
+
+    [actnest5] {
+        margin-left: 7.5em
+    }
+
+    [actnest6] {
+        margin-left: 9em
+    }
+
+    [actnest7] {
+        margin-left: 10.5em
+    }
+
+    [actnest8] {
+        margin-left: 12em
+    }
+}
+
+.hideAddActionRows .actionBlock[hasactions] .addActionRow {
+    display: none
+}
+
+.addActionRow {
+    grid-column: 1/span 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    color: #bfcce0;
+    padding: .15em .2em .15em .5em;
+    border: 1px solid transparent;
+    background-color: #e9effb;
+    contain: content
+}
+
+.addActionLink:hover {
+    cursor: pointer;
+    color: #000
+}
+
+.asyncActionIcon {
+    position: absolute;
+    right: 0;
+    margin-right: .1em
+}
+
+event-action-comment {
+    grid-column: span 2;
+    display: block
+}
+
+event-action-comment[hidden] {
+    display: none
+}
+
+event-action-comment>.eventCommentWrap {
+    border-bottom-color: #d4dded
+}
+
+event-action-script {
+    grid-column: span 2;
+    display: block;
+    font-family: Consolas,Menlo,monospace
+}
+
+event-action-script[hidden] {
+    display: none
+}
+
+event-action-script[breakpoint-highlight] .eventScriptWrap {
+    outline: 1px dashed red;
+    outline-offset: -1px
+}
+
+event-parameter {
+    display: inline
+}
+
+.layoutParameterIcon,.objectParameterIcon,.timelineParameterIcon {
+    vertical-align: text-bottom;
+    margin-right: .2em
+}
+
+.layoutParameterLayoutName,.objectParameterObjectName,.timelineParameterTimelineName {
+    vertical-align: text-bottom
+}
+
+.objectParameterObjectName {
+    font-weight: 700
+}
+
+.eventKeybParameter {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0 .3em
+}
+
+.eventGroupParameter {
+    border: 1px solid #b6cde6;
+    background-color: #dbe7f5;
+    border-radius: 2px;
+    padding: 0 .2em
+}
+
+#timelineBar ui-toolbar-layout-remaining-space {
+    flex-flow: column;
+    --options-width:110px;--track-width:300px;--track-height:25px;--scrollbar-offset:-18px;--main-border-color:black;--options-grid-color:white;--instance-grid-color:white;--tracks-grid-color:white;--track-expand-button-width:var(--track-height);--keyframe-size:10px;--keyframe-padding:50px;--keyframe-halfsize:calc(var(--keyframe-size) / 2);--property-keyframe-multiplier:1;--property-keyframe-size:calc(var(--keyframe-size) * var(--property-keyframe-multiplier));--property-keyframe-halfsize:calc(var(--property-keyframe-size) / 2);--keyframe-color:black;--keyframe-invalid-time-color:red;--master-keyframe-disable-opacity:0.7;--keyframe-highlight-color:#CA9239;--keyframe-highlight-border-color:#CA9239;--property-keyframe-color:#397ACA;--drag-keyframe-ghost-color:black;--option-line-height:2px;--track-option-line-color:black;--property-track-option-line-color:#397ACA;--track-folder-option-line-color:#CBCBCB;--property-track-folder-option-line-color:#CBCBCB;--totaltime-padding:50px;--play-head-color:red;--totaltime-color:lightgreen;--highlight-color:rgba(0, 0, 255, 0.3);--hover-highlight-color:rgba(0, 0, 255, 0.2);--close-sibling-highlight-color:rgba(0, 255, 0, 0.2);--highlight-child-color:rgba(0, 0, 255, 0.1);--locked-color:rgba(125, 125, 125, 0.2);--other-layout-highlight-color:rgba(255, 0, 0, 0.3);--no-properties-highlight-color:rgba(255, 0, 0, 0.3);--inset-mark-thickness:4px;--top-inset-mark-color:black;--bottom-inset-mark-color:black;contain: strict;
+    overflow: hidden;
+    z-index: 0
+}
+
+#timelineBar .topContainer {
+    display: grid;
+    flex: none;
+    grid-template-columns: [start] var(--options-width) [middle] var(--track-width) [end] 0;
+    height: var(--track-height);
+    border-bottom: 1px solid var(--main-border-color);
+    z-index: 999
+}
+
+#timelineBar .optionsTop {
+    position: relative;
+    grid-column-start: start;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    border-right: 1px solid var(--main-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + var(--scrollbar-offset) + 1px)
+}
+
+#timelineBar .instancesTop {
+    display: flex;
+    position: relative;
+    grid-column-start: middle;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    line-height: 1.75em;
+    left: calc(var(--scrollbar-offset));
+    padding-left: 4px
+}
+
+#timelineBar .instancesTop .iconWrapper {
+    flex: none
+}
+
+#timelineBar .instancesTop .timelineName {
+    flex: none;
+    padding-left: 5px
+}
+
+#timelineBar .timeline {
+    position: relative;
+    grid-column-start: end;
+    grid-column-end: span end;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    border-left: 1px solid var(--main-border-color);
+    margin-left: var(--scrollbar-offset)
+}
+
+#timelineBar .timelineCanvas {
+    position: absolute;
+    cursor: pointer;
+    margin-left: -1px
+}
+
+#timelineBar .bottomContainer {
+    flex: 1;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: [start] var(--options-width) [middle] var(--track-width) [end] 0;
+    grid-template-rows: [start] var(--track-height) [middle] auto [end] 0;
+}
+
+#timelineBar .optionsGrid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: [start] var(--options-width) [end] 0;
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: start;
+    grid-row-end: span end;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    background: var(--options-grid-color);
+    contain: strict
+}
+
+#timelineBar .instancesGrid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: [start] var(--track-expand-button-width) [middle] auto [end] 0;
+    grid-template-rows: [start] var(--track-height) [middle] auto [end] 0;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    grid-row-start: start;
+    grid-row-end: span end;
+    position: relative;
+    overflow-x: scroll;
+    /* overflow-y:scroll; */
+    background: var(--instance-grid-color);
+    border-left: 1px solid var(--main-border-color);
+    margin-left: var(--scrollbar-offset);
+    contain: strict;
+}
+
+#timelineBar .tracksGrid {
+    display: grid;
+    height: 100%;
+    background: var(--tracks-grid-color);
+    margin-left: var(--scrollbar-offset);
+    border-left: 1px solid var(--main-border-color);
+    grid-template-columns: [start] auto [end] 0;
+    grid-template-rows: [start] var(--track-height) [middle] auto [end] 0;
+    grid-column-start: 3;
+    grid-column-end: span end;
+    grid-row-start: start;
+    grid-row-end: span end;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: -webkit-paged-x;
+    contain: strict;
+}
+
+#timelineBar .optionsBlockElement {
+    display: flex;
+    align-items: center;
+    width: calc(100% + var(--scrollbar-offset))
+}
+
+#timelineBar .track {
+    position: relative
+}
+
+#timelineBar .instanceBlockElement {
+    display: flex;
+    align-items: center
+}
+
+#timelineBar .instanceBlockName {
+    flex: none;
+    text-align: left;
+    font-style: italic;
+    padding-left: .5em;
+    padding-right: .5em;
+    font-size: .9em
+}
+
+#timelineBar .expandIconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 999
+}
+
+#timelineBar .expandIconContainer ui-icon {
+    pointer-events: all;
+    z-index: 999
+}
+
+#timelineBar .instanceBlockIcon {
+    flex: none
+}
+
+#timelineBar .trackBlockBottomBorder {
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid var(--main-border-color);
+    z-index: 999
+}
+
+#timelineBar .trackBlockBottomBorder[no-border] {
+    border-bottom: 1px solid transparent
+}
+
+#timelineBar .trackBlockBottomBorder[locked] {
+    background-color: var(--locked-color);
+    pointer-events: all
+}
+
+#timelineBar .propertiesBottomBorder {
+    border-bottom: 1px solid var(--main-border-color)
+}
+
+#timelineBar .instanceBlockBottomBorder {
+    position: absolute;
+    left: 0;
+    top: 0;
+    top: calc((var(--track-height) * -1));
+    width: 100%;
+    height: var(--track-height);
+    border-bottom: 1px solid var(--main-border-color);
+    z-index: 999
+}
+
+#timelineBar .instanceBlockBottomBorder[locked] {
+    background-color: var(--locked-color)
+}
+
+#timelineBar .optionsBlockBottomBorder {
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid var(--main-border-color);
+    width: calc(100% + var(--scrollbar-offset));
+    z-index: 999;
+    pointer-events: none
+}
+
+#timelineBar .optionsBlockBottomBorder[locked] {
+    background-color: var(--locked-color)
+}
+
+#timelineBar .handle {
+    position: relative;
+    cursor: grab;
+    cursor: -webkit-grab;
+    pointer-events: all!important
+}
+
+#timelineBar .handle[pointer-down] {
+    cursor: grabbing;
+    cursor: -webkit-grabbing
+}
+
+#timelineBar .playHeadHandle {
+    width: 0;
+    height: 100%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent;
+    transform: translate(calc(-50% - .5px))
+}
+
+#timelineBar .totalTimeHandle {
+    width: 0;
+    height: 100%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: transparent;
+    transform: translate(calc(-50% - .5px))
+}
+
+#timelineBar .marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0,0);
+    height: 100%;
+    margin-left: -1px;
+    z-index: 1000;
+    pointer-events: none
+}
+
+#timelineBar .playHead {
+    width: 1px;
+    border-left: 1px solid var(--play-head-color)
+}
+
+#timelineBar .totalTime {
+    width: var(--totaltime-padding);
+    border-left: 1px solid var(--totaltime-color)
+}
+
+#timelineBar .overlay {
+    position: absolute;
+    display: none;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background: 0 0
+}
+
+#timelineBar .overlay[lock] {
+    display: block;
+    pointer-events: all;
+    cursor: not-allowed
+}
+
+#timelineBar ui-toolbar-spinner input {
+    max-width: 70px;
+    min-width: 70px
+}
+
+#timelineBar .rectangleSelection {
+    position: absolute;
+    border: 1px solid #000;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    will-change: left,top,width,height
+}
+
+#timelineBar .tracksGrid[selection]:hover {
+    cursor: crosshair
+}
+
+#timelineBar [highlight] {
+    background-color: var(--highlight-color)!important
+}
+
+#timelineBar [highlight-child] {
+    background-color: var(--highlight-child-color)
+}
+
+#timelineBar [hover-highlight] {
+    background-color: var(--hover-highlight-color)
+}
+
+#timelineBar [close-sibling-highlight] {
+    background-color: var(--close-sibling-highlight-color)!important
+}
+
+#timelineBar [invalid-drop-target] {
+    cursor: not-allowed
+}
+
+#timelineBar [valid-folder-drop-target] {
+    cursor: alias
+}
+
+[timeline-drag-ghost] {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .66;
+    margin-left: 12px;
+    margin-top: 8px;
+    white-space: nowrap;
+    z-index: 10001;
+    will-change: left,top;
+    pointer-events: none
+}
+
+#timelineBar [has-inset-mark]:before {
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-top: var(--inset-mark-thickness) solid var(--top-inset-mark-color);
+    pointer-events: none;
+    z-index: 1000
+}
+
+#timelineBar [has-inset-mark]:after {
+    position: absolute;
+    display: none;
+    box-sizing: border-box;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-bottom: var(--inset-mark-thickness) solid var(--bottom-inset-mark-color);
+    pointer-events: none;
+    z-index: 1000
+}
+
+#timelineBar [force-inset-mark]:after {
+    display: block
+}
+
+#timelineBar [top-inset-mark]:before {
+    display: block
+}
+
+#timelineBar [bottom-inset-mark]:after {
+    display: block
+}
+
+#timelineBar .trackBlockBottomBorder.trackProperties {
+    --option-element-display:none}
+
+#timelineBar .trackBlockBottomBorder.trackProperties .secondaryDisplayBack {
+    position: absolute;
+    left: -1px;
+    top: calc(50% + 1px);
+    width: 100%;
+    height: var(--option-line-height);
+    border-radius: 25%;
+    background: var(--track-option-line-color);
+    display: var(--option-element-display);
+    transform: translateY(calc(-50% - .5px))
+}
+
+#timelineBar .trackBlockBottomBorder.trackProperties .secondaryDisplayFront {
+    position: absolute;
+    padding-left: 3px;
+    padding-right: 3px;
+    left: calc(50% - 1px);
+    top: calc(50% - .05em);
+    background: var(--tracks-grid-color);
+    display: var(--option-element-display);
+    transform: translate(calc(-50% - .5px),calc(-50% - .5px));
+    white-space: nowrap
+}
+
+#timelineBar [other-layout] {
+    background: var(--other-layout-highlight-color)
+}
+
+#timelineBar [no-properties] {
+    background: var(--no-properties-highlight-color)
+}
+
+#timelineBar .trackBlockBottomBorder.propertyTrackProperties .secondaryDisplayBack {
+    background: var(--property-track-option-line-color)
+}
+
+#timelineBar .keyframe {
+    --option-element-display:none;--option-element-visibility:visible;--option-element-size:0px;position: absolute;
+    left: calc(var(--keyframe-halfsize) * -1);
+    top: calc(var(--keyframe-halfsize) * -1);
+    width: var(--keyframe-size);
+    height: var(--keyframe-size);
+    border-radius: 50%;
+    margin-left: -.5px;
+    z-index: 1001;
+    background: 0 0;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer
+}
+
+#timelineBar .keyframe[tags] {
+    visibility: hidden
+}
+
+#timelineBar .keyframe svg {
+    position: relative;
+    box-sizing: border-box;
+    visibility: visible;
+    width: calc(var(--keyframe-size) * 2);
+    height: calc(var(--keyframe-size) * 2);
+    left: calc(var(--keyframe-halfsize) * -1);
+    top: calc(var(--keyframe-halfsize) * -1);
+    margin-left: -.5px;
+    margin-top: -.5px;
+    pointer-events: all
+}
+
+#timelineBar .keyframe .secondaryDisplayBack {
+    position: absolute;
+    left: calc(var(--keyframe-size) - 1px);
+    top: calc(var(--keyframe-halfsize) - 1px);
+    width: var(--option-element-size);
+    height: var(--option-line-height);
+    background: inherit;
+    border-color: inherit;
+    border-width: inherit;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-style: inherit;
+    opacity: inherit;
+    display: var(--option-element-display);
+    visibility: var(--option-element-visibility);
+    transform: translateY(calc(-50%));
+    cursor: pointer
+}
+
+#timelineBar .keyframe .secondaryDisplayFront {
+    position: absolute;
+    padding-left: 3px;
+    padding-right: 3px;
+    left: calc(var(--option-element-size)/ 2 + var(--keyframe-size) - 1px);
+    top: calc(var(--keyframe-halfsize) - .05em);
+    background: var(--tracks-grid-color);
+    display: var(--option-element-display);
+    visibility: var(--option-element-visibility);
+    transform: translate(calc(-50%),calc(-50% - .5px));
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: line-through
+}
+
+#timelineBar .mainKeyframe.enable .secondaryDisplayFront {
+    text-decoration: none
+}
+
+#timelineBar .mainKeyframe {
+    opacity: 1;
+    border-color: var(--keyframe-color)
+}
+
+#timelineBar .mainKeyframe.enable {
+    background: var(--keyframe-color)
+}
+
+#timelineBar .mainKeyframe.enable svg [main=true] {
+    fill: var(--keyframe-color)
+}
+
+#timelineBar .mainKeyframe.invalidTime {
+    background: var(--keyframe-invalid-time-color);
+    border-color: var(--keyframe-invalid-time-color);
+    opacity: 1
+}
+
+#timelineBar .mainKeyframe.invalidTime svg [main=true] {
+    fill: var(--keyframe-invalid-time-color)
+}
+
+#timelineBar .mainKeyframe.invalidTime:not(.enable) {
+    background: 0 0
+}
+
+#timelineBar .mainKeyframe.invalidTime:not(.enable) svg [main=true] {
+    fill: transparent
+}
+
+#timelineBar .keyframe[keyframe-highlight] {
+    border-color: var(--keyframe-highlight-border-color)!important;
+    background-color: var(--keyframe-highlight-color)!important
+}
+
+#timelineBar .keyframe[keyframe-highlight] svg [main=true] {
+    fill: var(--keyframe-highlight-color)!important
+}
+
+#timelineBar .keyframe[keyframe-highlight]:not(.enable) {
+    background-color: transparent!important
+}
+
+#timelineBar .keyframe[keyframe-highlight]:not(.enable) svg [main=true] {
+    stroke: var(--keyframe-highlight-border-color)!important;
+    fill: transparent!important
+}
+
+#timelineBar .dragKeyframeGhost {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    border-left: 1px solid var(--drag-keyframe-ghost-color);
+    z-index: 2000
+}
+
+#timelineBar .dragKeyframeGhost .dragKeyframeTime {
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 2px;
+    margin: 2px;
+    min-width: 8em;
+    background: grey;
+    border-radius: 5px
+}
+
+#timelineBar [hide-keyframes] .keyframe {
+    visibility: hidden
+}
+
+#timelineBar .propertyKeyframe {
+    left: calc(var(--property-keyframe-halfsize) * -1);
+    top: calc(var(--property-keyframe-halfsize) * -1);
+    width: calc(var(--property-keyframe-size));
+    height: calc(var(--property-keyframe-size));
+    opacity: var(--master-keyframe-disable-opacity);
+    border-color: var(--property-keyframe-color);
+    border-radius: 0
+}
+
+#timelineBar .propertyKeyframe .secondaryDisplayBack {
+    left: calc(var(--property-keyframe-size) - 1px);
+    top: calc(var(--property-keyframe-halfsize) - 1px)
+}
+
+#timelineBar .propertyKeyframe .secondaryDisplayFront {
+    left: calc(var(--option-element-size)/ 2 + var(--property-keyframe-size) - 1px);
+    top: calc(var(--property-keyframe-halfsize) - .05em)
+}
+
+#timelineBar .propertyKeyframe.masterEnable .secondaryDisplayFront {
+    text-decoration: none
+}
+
+#timelineBar .propertyKeyframe.masterEnable:not(.enable) .secondaryDisplayFront {
+    text-decoration: line-through
+}
+
+#timelineBar .propertyKeyframe.enable {
+    background: var(--property-keyframe-color)
+}
+
+#timelineBar .propertyKeyframe.masterEnable {
+    opacity: 1
+}
+
+#timelineBar .propertyKeyframe.masterInvalidTime {
+    background: var(--keyframe-invalid-time-color);
+    border-color: var(--keyframe-invalid-time-color);
+    opacity: 1
+}
+
+#timelineBar .propertyKeyframe.masterInvalidTime:not(.enable) {
+    background: 0 0;
+    opacity: var(--master-keyframe-disable-opacity)
+}
+
+#timelineBar .trackBlockBottomBorder.folderProperties .secondaryDisplayBack {
+    background: var(--track-folder-option-line-color)
+}
+
+#timelineBar .trackBlockBottomBorder.propertyFolderProperties .secondaryDisplayBack {
+    background: var(--property-track-folder-option-line-color)
+}
+
+#timelineBar .iconWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#timelineBar .optionCheckboxWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#timelineBar .optionSelectWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#timelineBar .tutorial {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+#timelineBar .message {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+#timelineBar .tutorialTitle {
+    text-align: center;
+    margin-top: 0
+}
+
+#timelineBar .messageTitle {
+    text-align: center;
+    margin-top: 0
+}
+
+#timelineBar .tutorialBlurbWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+#timelineBar .messageBlurbWrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+#timelineBar .tutorialBlurb {
+    text-align: center;
+    vertical-align: middle
+}
+
+#timelineBar .messageBlurb {
+    text-align: center;
+    vertical-align: middle
+}
+
+#pickTimelinePropertyDialog {
+    width: 600px;
+    height: 500px
+}
+
+html[desktop] #pickTimelinePropertyDialog {
+    min-width: 380px;
+    min-height: 250px
+}
+
+.pickTimelinePropertyHeaderText {
+    flex-grow: 1;
+    margin: 0
+}
+
+.pickTimelinePropertyTopRow {
+    margin-bottom: .5em;
+    min-height: 2.8em
+}
+
+.pickTimelinePropertySearch {
+    float: right;
+    width: 9em;
+    margin-left: .4em
+}
+
+.pickTimelinePropertyIconView[label-right] ui-iconviewitem {
+    padding: 0 0 0 .3em;
+    margin: .3em .3em 0 .2em
+}
+
+@media (max-width: 500px) {
+    .pickTimelinePropertyIconView[label-right] ui-iconviewitem {
+        margin-right:1em
+    }
+}
+
+@media (min-width: 500px) {
+    .pickTimelinePropertyIconView[label-right] ui-iconviewitem {
+        min-width:15em!important
+    }
+}
+
+.pickTimelinePropertyIconView[label-right] .iconview-groupcontent {
+    margin-left: 1.5em
+}
+
+ui-iconviewitem.highlightedACE:not([selected]) .iconViewItemText {
+    background-color: #ffb
+}
+
+#pickTimelineInstancesDialog {
+    width: 750px;
+    height: 500px;
+    min-width: 520px;
+    min-height: 350px
+}
+
+#pickTimelineInstancesDialog ui-iconview[label-under] ui-iconviewitem {
+    width: 7em
+}
+
+.startPagePaneBody {
+    background-color: #e6e6e6
+}
+
+#startPageWrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
+    height: 100%;
+    padding: 3.5em 8% 0 8%;
+    color: #444
+}
+
+#startPageWrap[w720] {
+    grid-template-columns: minmax(17em,30%) 1fr;
+    grid-template-rows: min-content min-content minmax(30em,1fr) min-content
+}
+
+#startPageWrap .spLogo {
+    width: 100%;
+    height: 100%
+}
+
+#startPageWrap .leftCol {
+    margin: 0
+}
+
+#startPageWrap[w720] .leftCol {
+    margin: 0 12% 0 0
+}
+
+#startPageWrap[w1600] .leftCol {
+    margin: 0 33% 0 0
+}
+
+#startPageWrap .topRow {
+    height: 7em
+}
+
+#startPageWrap[w720] .topRow {
+    height: 8em
+}
+
+#startPageWrap .projectNav {
+    margin-top: 1em
+}
+
+#startPageWrap[w720] .projectNav {
+    grid-column: 1;
+    grid-row: 2/span 2
+}
+
+#startPageWrap[w320] .projectNav {
+    margin-top: 0
+}
+
+#startPageWrap .spLogoWrap {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em
+}
+
+#startPageWrap[w720] .spLogoWrap {
+    height: 5em;
+    padding-bottom: 0
+}
+
+#startPageWrap .headerButtons {
+    display: flex;
+    flex-direction: column
+}
+
+#startPageWrap[w320] .headerButtons {
+    flex-direction: row
+}
+
+#startPageWrap .spNewProjectButton {
+    white-space: pre
+}
+
+#startPageWrap .spNewProjectButton,#startPageWrap .spOpenMenuButton {
+    display: flex;
+    flex-grow: 1
+}
+
+#startPageWrap .spOpenBrowserButton,#startPageWrap .spOpenCloudButton,#startPageWrap .spOpenFileButton {
+    display: none
+}
+
+#startPageWrap .spacer {
+    width: 1em
+}
+
+#startPageWrap .spacer.from1360 {
+    display: none
+}
+
+#startPageWrap[w1240] .spacer.from1360 {
+    display: block
+}
+
+#startPageWrap .headerButtons .button {
+    flex-basis: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: .5em;
+    height: 3.3em;
+    border-radius: .3em;
+    cursor: pointer;
+    background-color: #999;
+    color: #f2f2f2;
+    font-size: 1.15em;
+    font-weight: 500;
+    text-transform: uppercase
+}
+
+#startPageWrap .headerButtons .button:hover {
+    background-color: #555
+}
+
+#startPageWrap .spOpenIcon {
+    width: 2em;
+    margin-right: .4em;
+    align-self: stretch
+}
+
+#startPageWrap[w1240] .spOpenMenuButton {
+    display: none
+}
+
+#startPageWrap[w1240] .spNewProjectButton {
+    flex-grow: 1.5
+}
+
+#startPageWrap[w1240] .spOpenBrowserButton,#startPageWrap[w1240] .spOpenCloudButton,#startPageWrap[w1240] .spOpenFileButton {
+    display: flex;
+    flex-grow: 1
+}
+
+#startPageWrap[w1240] .spacer.widening {
+    width: 8em
+}
+
+#startPageWrap .projectSearch {
+    width: 100%;
+    height: 2em;
+    outline: 0;
+    border: none;
+    border-radius: 1em;
+    color: #333;
+    font-size: 1.3em;
+    background-color: #d9d9d9;
+    background-position: .4em center;
+    background-size: 1.4em 1.4em;
+    padding-left: 2em;
+    padding-right: .5em
+}
+
+#startPageWrap .projectSearch::placeholder {
+    opacity: .7
+}
+
+#startPageWrap .projectNavSelect {
+    width: 100%;
+    margin: 1em 0;
+    font-size: 1.3em;
+    padding: .3em 1em;
+    border-radius: .5em;
+    outline: 0;
+    color: #fff;
+    background-color: grey
+}
+
+#startPageWrap .projectNavSelect option {
+    color: #fff
+}
+
+#startPageWrap[w720] .projectNavSelect {
+    display: none
+}
+
+#startPageWrap .projectNavLinksWrap {
+    display: none
+}
+
+#startPageWrap[w720] .projectNavLinksWrap {
+    display: block;
+    margin: 1em 1.4em 0 1.4em
+}
+
+#startPageWrap .projectNavLinksWrap input[type=radio] {
+    display: none
+}
+
+#startPageWrap .projectNavLink,#startPageWrap .usefulLink {
+    display: block;
+    padding: .3em 1em;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: grey
+}
+
+#startPageWrap .projectNavLink:hover,#startPageWrap .usefulLink:hover {
+    background-color: #d9d9d9
+}
+
+#startPageWrap[w720] .projectNavLink {
+    margin-bottom: .3em
+}
+
+#startPageWrap input:checked+.projectNavLink {
+    color: #fff;
+    background-color: grey
+}
+
+#startPageWrap .projectList {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 40em
+}
+
+#startPageWrap[w720] .projectList {
+    grid-column: 2;
+    grid-row: 3;
+    max-height: none
+}
+
+#startPageWrap .projectItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+    border-bottom: 1px solid #d0d0d0
+}
+
+#startPageWrap[w940] .projectItem {
+    flex-direction: row;
+    align-items: stretch;
+    border-bottom: none
+}
+
+#startPageWrap .projectItem:hover {
+    background-color: #d9d9d9
+}
+
+#startPageWrap .projectMainWrap {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center
+}
+
+#startPageWrap[w940] .projectMainWrap {
+    align-items: flex-end
+}
+
+#startPageWrap[w1240] .projectMainWrap {
+    flex-direction: row;
+    align-items: center
+}
+
+#startPageWrap .thumbnail {
+    flex-shrink: 0
+}
+
+#startPageWrap .projectDescWrap {
+    flex-grow: 1;
+    align-self: stretch;
+    padding: 0;
+    text-align: center
+}
+
+#startPageWrap[w940] .projectDescWrap {
+    padding-left: 2em;
+    text-align: left
+}
+
+#startPageWrap[w1240] .projectDescWrap {
+    padding-right: 2em
+}
+
+#startPageWrap .projectTitle {
+    margin-top: .5em;
+    margin-bottom: .8em
+}
+
+#startPageWrap[w940] .projectTitle {
+    margin-top: 0
+}
+
+#startPageWrap .projectActions {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    margin-top: 1em;
+    width: 100%
+}
+
+#startPageWrap[w940] .projectActions {
+    justify-content: flex-end
+}
+
+#startPageWrap[w1240] .projectActions {
+    width: 12em;
+    flex-direction: column;
+    margin-top: 0
+}
+
+#startPageWrap .projectActionButton {
+    padding: .5em 0;
+    width: 100%;
+    max-width: 12em;
+    color: #fff;
+    background-color: #b3b3b3;
+    border: none;
+    border-radius: .2em;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+#startPageWrap[w1240] .projectActionButton {
+    width: auto
+}
+
+#startPageWrap .projectActionButton:hover {
+    background-color: #555
+}
+
+#startPageWrap .projectOpenButton {
+    margin-left: 1em;
+    margin-right: 1em
+}
+
+#startPageWrap[w1240] .projectOpenButton {
+    margin-left: 0;
+    margin-right: 0
+}
+
+#startPageWrap[w1240] .projectPreviewButton {
+    margin-top: 1em
+}
+
+#startPageWrap .recentProjectsEmptyMessage {
+    font-style: italic;
+    margin-top: 2em;
+    text-align: center;
+    color: #777
+}
+
+#startPageWrap .thumbnailWrap {
+    position: relative
+}
+
+#startPageWrap .thumbnailWrap:before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    z-index: 1;
+    width: 2em;
+    height: 2em;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: .3em
+}
+
+#startPageWrap .thumbnailWrap.availableOffline:before {
+    background: var(--sp-file-url) center/80% no-repeat,rgba(0,0,0,.55)
+}
+
+#startPageWrap .thumbnailWrap:not(.availableOffline):before {
+    background: var(--sp-cloud-url) center/80% no-repeat,rgba(0,0,0,.55)
+}
+
+#startPageWrap .thumbnailWrap .javascriptBadge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4em;
+    height: 4em;
+    background: var(--sp-js-badge) center/100% no-repeat;
+    opacity: .8
+}
+
+#startPageWrap .linkListWrap {
+    padding: 3em 1.4em 0 1.4em
+}
+
+#startPageWrap .usefulLink {
+    text-decoration: none
+}
+
+#startPageWrap .linksHeader {
+    display: block;
+    margin-top: 0;
+    padding: .3em 1em;
+    font-size: 1.3em;
+    color: #555
+}
+
+#startPageWrap .socialWrap {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 3em
+}
+
+#startPageWrap[w720] .socialWrap {
+    padding: 0 1em
+}
+
+#startPageWrap .socialIcon {
+    width: 3em;
+    height: 3em;
+    fill: #999
+}
+
+#startPageWrap[w720] .socialIcon {
+    width: 3.5em;
+    height: 3.5em
+}
+
+#startPageWrap .socialIcon:hover {
+    fill: #555
+}
+
+#startPageWrap .linkContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    margin-top: 3em
+}
+
+#startPageWrap[w1240] .linkContent {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 3em
+}
+
+#startPageWrap .linkBox,#startPageWrap .motdBox {
+    display: block;
+    background-color: #999;
+    color: #fff;
+    padding: 1.5em;
+    text-decoration: none
+}
+
+#startPageWrap .linkBox.highlight {
+    background-color: #f85753
+}
+
+#startPageWrap .linkBox a,#startPageWrap .motdBox a {
+    color: #fff
+}
+
+#startPageWrap .linkBox:hover {
+    background-color: #ccc;
+    color: #333;
+    cursor: pointer
+}
+
+#startPageWrap .linkBox1,#startPageWrap .linkBox4 {
+    grid-column: 1/span 2
+}
+
+#startPageWrap .linkBox2,#startPageWrap .linkBox5 {
+    grid-column: 1/span 2
+}
+
+#startPageWrap[w1240] .linkBox2,#startPageWrap[w1240] .linkBox5 {
+    grid-column: 3/span 2
+}
+
+#startPageWrap .linkBox3,#startPageWrap .linkBox6 {
+    grid-column: 1/span 2
+}
+
+#startPageWrap[w1240] .linkBox3,#startPageWrap[w1240] .linkBox6 {
+    grid-column: 5/span 2
+}
+
+#startPageWrap .linkBoxHeader,#startPageWrap .motdHeader {
+    margin-top: 0;
+    text-transform: uppercase
+}
+
+#startPageWrap .bottomRow {
+    margin-bottom: 3em
+}
+
+#startPageWrap[w720] .motdRow {
+    grid-column: 2;
+    grid-row: 2
+}
+
+#startPageWrap .motdBox {
+    display: flex;
+    margin: .5em auto 1em auto;
+    max-width: 60em;
+    background-color: #f85753
+}
+
+#startPageWrap .motdIcon {
+    display: none
+}
+
+#startPageWrap[w480] .motdIcon {
+    display: block;
+    flex-shrink: 0
+}
+
+#startPageWrap .motdIcon svg {
+    fill: #fff
+}
+
+#startPageWrap .motdClose {
+    flex-shrink: 1
+}
+
+#startPageWrap .motdContent {
+    flex-grow: 1;
+    padding-left: 1em
+}
+
+#startPageWrap .motdText {
+    margin: 0;
+    font-size: 1.2em
+}
+
+#startPageWrap .spIframeWrapper {
+    display: block;
+    position: relative;
+    height: 10em;
+    margin-bottom: 1em
+}
+
+#startPageWrap .spMessageIframe {
+    border: none;
+    width: 100%;
+    height: 100%
+}
+
+#startPageWrap .spIframeCloseButton {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+#startPageWrap .spIframeCloseButton:not(:hover) svg {
+    fill: currentColor
+}
+
+.CodeMirror {
+    font-family: monospace;
+    height: 300px;
+    color: #000;
+    direction: ltr
+}
+
+.CodeMirror-lines {
+    padding: 4px 0
+}
+
+.CodeMirror pre {
+    padding: 0 4px
+}
+
+.CodeMirror-gutter-filler,.CodeMirror-scrollbar-filler {
+    background-color: #fff
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+    background-color: #f7f7f7;
+    white-space: nowrap
+}
+
+.CodeMirror-linenumber {
+    padding: 0 3px 0 5px;
+    min-width: 20px;
+    text-align: right;
+    color: #999;
+    white-space: nowrap
+}
+
+.CodeMirror-guttermarker {
+    color: #000
+}
+
+.CodeMirror-guttermarker-subtle {
+    color: #999
+}
+
+.CodeMirror-cursor {
+    border-left: 1px solid #000;
+    border-right: none;
+    width: 0
+}
+
+.CodeMirror div.CodeMirror-secondarycursor {
+    border-left: 1px solid silver
+}
+
+.cm-fat-cursor .CodeMirror-cursor {
+    width: auto;
+    border: 0!important;
+    background: #7e7
+}
+
+.cm-fat-cursor div.CodeMirror-cursors {
+    z-index: 1
+}
+
+.cm-fat-cursor-mark {
+    background-color: rgba(20,255,20,.5);
+    -webkit-animation: blink 1.06s steps(1) infinite;
+    -moz-animation: blink 1.06s steps(1) infinite;
+    animation: blink 1.06s steps(1) infinite
+}
+
+.cm-animate-fat-cursor {
+    width: auto;
+    border: 0;
+    -webkit-animation: blink 1.06s steps(1) infinite;
+    -moz-animation: blink 1.06s steps(1) infinite;
+    animation: blink 1.06s steps(1) infinite;
+    background-color: #7e7
+}
+
+@-moz-keyframes blink {
+    50% {
+        background-color: transparent
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        background-color: transparent
+    }
+}
+
+@keyframes blink {
+    50% {
+        background-color: transparent
+    }
+}
+
+.cm-tab {
+    display: inline-block;
+    text-decoration: inherit
+}
+
+.CodeMirror-rulers {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -50px;
+    bottom: -20px;
+    overflow: hidden
+}
+
+.CodeMirror-ruler {
+    border-left: 1px solid #ccc;
+    top: 0;
+    bottom: 0;
+    position: absolute
+}
+
+.cm-s-default .cm-header {
+    color: #00f
+}
+
+.cm-s-default .cm-quote {
+    color: #090
+}
+
+.cm-negative {
+    color: #d44
+}
+
+.cm-positive {
+    color: #292
+}
+
+.cm-header,.cm-strong {
+    font-weight: 700
+}
+
+.cm-em {
+    font-style: italic
+}
+
+.cm-link {
+    text-decoration: underline
+}
+
+.cm-strikethrough {
+    text-decoration: line-through
+}
+
+.cm-s-default .cm-keyword {
+    color: #708
+}
+
+.cm-s-default .cm-atom {
+    color: #219
+}
+
+.cm-s-default .cm-number {
+    color: #164
+}
+
+.cm-s-default .cm-def {
+    color: #00f
+}
+
+.cm-s-default .cm-variable-2 {
+    color: #05a
+}
+
+.cm-s-default .cm-type,.cm-s-default .cm-variable-3 {
+    color: #085
+}
+
+.cm-s-default .cm-comment {
+    color: #a50
+}
+
+.cm-s-default .cm-string {
+    color: #a11
+}
+
+.cm-s-default .cm-string-2 {
+    color: #f50
+}
+
+.cm-s-default .cm-meta {
+    color: #555
+}
+
+.cm-s-default .cm-qualifier {
+    color: #555
+}
+
+.cm-s-default .cm-builtin {
+    color: #30a
+}
+
+.cm-s-default .cm-bracket {
+    color: #997
+}
+
+.cm-s-default .cm-tag {
+    color: #170
+}
+
+.cm-s-default .cm-attribute {
+    color: #00c
+}
+
+.cm-s-default .cm-hr {
+    color: #999
+}
+
+.cm-s-default .cm-link {
+    color: #00c
+}
+
+.cm-s-default .cm-error {
+    color: red
+}
+
+.cm-invalidchar {
+    color: red
+}
+
+.CodeMirror-composing {
+    border-bottom: 2px solid
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #0b0
+}
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+    color: #a22
+}
+
+.CodeMirror-matchingtag {
+    background: rgba(255,150,0,.3)
+}
+
+.CodeMirror-activeline-background {
+    background: #e8f2ff
+}
+
+.CodeMirror {
+    position: relative;
+    overflow: hidden;
+    background: #fff
+}
+
+.CodeMirror-scroll {
+    overflow: scroll!important;
+    margin-bottom: -30px;
+    margin-right: -30px;
+    padding-bottom: 30px;
+    height: 100%;
+    outline: 0;
+    position: relative
+}
+
+.CodeMirror-sizer {
+    position: relative;
+    border-right: 30px solid transparent
+}
+
+.CodeMirror-gutter-filler,.CodeMirror-hscrollbar,.CodeMirror-scrollbar-filler,.CodeMirror-vscrollbar {
+    position: absolute;
+    z-index: 6;
+    display: none
+}
+
+.CodeMirror-vscrollbar {
+    right: 0;
+    top: 0;
+    overflow-x: hidden;
+    overflow-y: scroll
+}
+
+.CodeMirror-hscrollbar {
+    bottom: 0;
+    left: 0;
+    overflow-y: hidden;
+    overflow-x: scroll
+}
+
+.CodeMirror-scrollbar-filler {
+    right: 0;
+    bottom: 0
+}
+
+.CodeMirror-gutter-filler {
+    left: 0;
+    bottom: 0
+}
+
+.CodeMirror-gutters {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    z-index: 3
+}
+
+.CodeMirror-gutter {
+    white-space: normal;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: -30px
+}
+
+.CodeMirror-gutter-wrapper {
+    position: absolute;
+    z-index: 4;
+    background: 0 0!important;
+    border: none!important
+}
+
+.CodeMirror-gutter-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 4
+}
+
+.CodeMirror-gutter-elt {
+    position: absolute;
+    cursor: default;
+    z-index: 4
+}
+
+.CodeMirror-gutter-wrapper ::selection {
+    background-color: transparent
+}
+
+.CodeMirror-gutter-wrapper ::-moz-selection {
+    background-color: transparent
+}
+
+.CodeMirror-lines {
+    cursor: text;
+    min-height: 1px
+}
+
+.CodeMirror pre {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border-width: 0;
+    background: 0 0;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    white-space: pre;
+    word-wrap: normal;
+    line-height: inherit;
+    color: inherit;
+    z-index: 2;
+    position: relative;
+    overflow: visible;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-variant-ligatures: contextual;
+    font-variant-ligatures: contextual
+}
+
+.CodeMirror-wrap pre {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    word-break: normal
+}
+
+.CodeMirror-linebackground {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0
+}
+
+.CodeMirror-linewidget {
+    position: relative;
+    z-index: 2;
+    padding: .1px
+}
+
+.CodeMirror-rtl pre {
+    direction: rtl
+}
+
+.CodeMirror-code {
+    outline: 0
+}
+
+.CodeMirror-gutter,.CodeMirror-gutters,.CodeMirror-linenumber,.CodeMirror-scroll,.CodeMirror-sizer {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.CodeMirror-measure {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden
+}
+
+.CodeMirror-cursor {
+    position: absolute;
+    pointer-events: none
+}
+
+.CodeMirror-measure pre {
+    position: static
+}
+
+div.CodeMirror-cursors {
+    visibility: hidden;
+    position: relative;
+    z-index: 3
+}
+
+div.CodeMirror-dragcursors {
+    visibility: visible
+}
+
+.CodeMirror-focused div.CodeMirror-cursors {
+    visibility: visible
+}
+
+.CodeMirror-selected {
+    background: #d9d9d9
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+    background: #d7d4f0
+}
+
+.CodeMirror-crosshair {
+    cursor: crosshair
+}
+
+.CodeMirror-line::selection,.CodeMirror-line>span::selection,.CodeMirror-line>span>span::selection {
+    background: #d7d4f0
+}
+
+.CodeMirror-line::-moz-selection,.CodeMirror-line>span::-moz-selection,.CodeMirror-line>span>span::-moz-selection {
+    background: #d7d4f0
+}
+
+.cm-searching {
+    background-color: #ffa;
+    background-color: rgba(255,255,0,.4)
+}
+
+.cm-force-border {
+    padding-right: .1px
+}
+
+@media print {
+    .CodeMirror div.CodeMirror-cursors {
+        visibility: hidden
+    }
+}
+
+.cm-tab-wrap-hack:after {
+    content: ''
+}
+
+span.CodeMirror-selectedtext {
+    background: 0 0
+}
+
+.CodeMirror-foldmarker {
+    color: #00f;
+    text-shadow: #b9f 1px 1px 2px,#b9f -1px -1px 2px,#b9f 1px -1px 2px,#b9f -1px 1px 2px;
+    font-family: arial;
+    line-height: .3;
+    cursor: pointer
+}
+
+.CodeMirror-foldgutter {
+    width: .7em
+}
+
+.CodeMirror-foldgutter-folded,.CodeMirror-foldgutter-open {
+    cursor: pointer
+}
+
+.CodeMirror-foldgutter-open:after {
+    content: "\25BE"
+}
+
+.CodeMirror-foldgutter-folded:after {
+    content: "\25B8"
+}
+
+.CodeMirror-hints {
+    position: absolute;
+    z-index: 10;
+    overflow: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-family: monospace;
+    max-height: 20em;
+    overflow-y: auto;
+    contain: paint layout
+}
+
+.CodeMirror-hint {
+    margin: 0;
+    padding: 2px 4px;
+    white-space: pre;
+    color: #000;
+    cursor: pointer
+}
+
+li.CodeMirror-hint-active {
+    background: #08f;
+    color: #fff
+}
+
+.CodeMirror-hint .text-match {
+    color: #009de6
+}
+
+li.CodeMirror-hint-active .text-match {
+    color: #e2f6ff
+}
+
+#tilemapBar ui-body {
+    flex-direction: column
+}
+
+#tilemapBar[middle-mouse-scrolling] {
+    cursor: move
+}
+
+#tilemapBarRootContainer ui-toolbar-layout-remaining-space {
+    display: block;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(to left,rgba(255,255,255,.9),rgba(255,255,255,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%);
+    background-blend-mode: normal,difference,normal;
+    background-size: 30px 30px;
+    background-position: 0 0 15px 15px
+}
+
+#tilemapBarRootContainer ui-toolbar-layout-remaining-space[dark-background] {
+    background-image: linear-gradient(to left,rgba(100,100,100,.9),rgba(100,100,100,.9)),linear-gradient(to bottom,#fff 50%,#000 50%),linear-gradient(to left,#fff 50%,#000 50%)
+}
+
+#tilemapBarScrollingContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    overflow-scrolling: touch;
+    border: 0 solid transparent
+}
+
+#tilemapBarScroller {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 0 solid transparent;
+    pointer-events: none
+}
+
+#tilemapBarCanvasStatus {
+    flex: none;
+    display: flex;
+    contain: content;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #eee;
+    border-top: 1px solid #888;
+    padding: .2em .4em;
+    font-size: 1.1em;
+    line-height: 1.3
+}
+
+#tilemapBarCanvasStatus[icon=visible] #tilemapBarCanvasStatusMessage {
+    padding-left: 5px
+}
+
+#tilemapBarCanvasStatus[icon=hidden] ui-icon {
+    display: none
+}
+
+#tilemapBarRootContainer ui-toolbar-layout-remaining-space>canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 0 solid transparent;
+    image-rendering: pixelated
+}
+
+#tilemapBarCanvasOverlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 0 solid transparent;
+    background: #00f;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    pointer-events: none
+}
+
+#tilemapBarCanvasOverlay[valid-drops] {
+    opacity: .1
+}
+
+#tilemapBrushEditorDialog {
+    width: 750px;
+    height: 500px;
+    min-width: 520px;
+    min-height: 350px
+}
+
+#tilemapBrushEditor {
+    display: flex;
+    height: 100%
+}
+
+#tilemapBrushEditor .main {
+    display: flex;
+    width: 100%;
+    flex-direction: column
+}
+
+#tilemapBrushEditor .top {
+    display: flex;
+    flex: 1
+}
+
+#tilemapBrushEditor .bottom {
+    display: flex;
+    flex: 1;
+    max-height: 150px
+}
+
+#tilemapBrushEditor .section {
+    display: flex;
+    flex: 1
+}
+
+#tilemapBrushEditor .bottom .left {
+    display: block;
+    max-width: 150px;
+    image-rendering: pixelated
+}
+
+#tilemapBrushEditor .bottom .left img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated
+}
+
+#tilemapBrushEditor .bottom .right {
+    max-width: 300px;
+    overflow: auto
+}
+
+#tilemapBrushEditor .gutter {
+    flex: none;
+    background-color: #ccc
+}
+
+#tilemapBrushEditor .gutter.vertical {
+    width: 8px
+}
+
+#tilemapBrushEditor .gutter.horizontal {
+    height: 8px
+}
+
+#tilemapBrushEditor ui-body {
+    flex-direction: column;
+    flex: 1
+}
+
+#tilemapBrushEditor ui-iconview {
+    display: flex;
+    flex: 1;
+    align-items: stretch
+}
+
+#tilemapBrushEditor ui-propertygrid {
+    flex: 1
+}
+
+#tilemapBrushEditor[middle-mouse-scrolling] {
+    cursor: move
+}
+
+@media (max-width: 500px) {
+    html[mobile] #tilemapBrushEditorDialog {
+        width:95vw;
+        height: 95vh;
+        min-width: initial!important;
+        min-height: initial!important
+    }
+
+    html[mobile] #tilemapBrushEditor .bottom .left {
+        display: none
+    }
+
+    html[mobile] #tilemapBrushEditor .bottom .gutter.first {
+        display: none
+    }
+}
+
+@media (max-height: 500px) {
+    html[mobile] #tilemapBrushEditorDialog {
+        width:95vw;
+        height: 95vh;
+        min-width: initial!important;
+        min-height: initial!important
+    }
+
+    html[mobile] #tilemapBrushEditor .bottom .left {
+        display: none
+    }
+
+    html[mobile] #tilemapBrushEditor .bottom .gutter.first {
+        display: none
+    }
+}
+
+canvas.layoutView {
+    pointer-events: none;
+    touch-action: none;
+    --layoutview-border-color:rgba(0, 0, 0, 1);--layoutview-margin-color:rgba(230, 230, 230, 1);--layoutview-margin-edges-color:rgba(0, 0, 0, 0.25);--layoutview-select-box-fill-color:rgba(128, 128, 255, 0.25);--layoutview-select-box-outline-color:rgba(0, 0, 255, 1);--layoutview-container-box-fill-color:rgba(255, 255, 0, 0.15);--layoutview-container-box-outline-color:rgba(154, 154, 0, 1);--layoutview-wrap-fill-color:rgba(255, 128, 255, 0.25);--layoutview-wrap-outline-color:rgba(255, 0, 255, 1);--layoutview-resize-handle-fill-color:rgba(255, 255, 255, 1);--layoutview-resize-handle-outline-color:rgba(0, 0, 128, 1);--layoutview-timeline-select-box-fill-color:rgba(224, 224, 0, 0.25);--layoutview-timeline-select-box-outline-color:rgba(236, 159, 5, 1);--layoutview-timeline-locked-select-box-fill-color:rgba(0, 0, 0, 0.25);--layoutview-timeline-locked-select-box-outline-color:rgba(100, 100, 100, 1);--layoutview-keyframe-handle-fill-color:rgba(57, 122, 202, 1);--layoutview-keyframe-handle-outline-color:rgba(4, 139, 236, 1);--layoutview-keyframe-handle-connection-color:rgba(190, 190, 190, 1);--layoutview-animation-path-color:rgba(4, 139, 236, 1);--layoutview-add-keyframe-color:rgba(255, 0, 0, 1);--layoutview-update-keyframe-color:rgba(0, 255, 0, 1);--layoutview-start-anchor-fill-color:rgba(0, 255, 0, 1);--layoutview-end-anchor-fill-color:rgba(255, 0, 0, 1);--layoutview-anchor-outline-color:rgba(0, 0, 0, 1);--layoutview-anchor-connection-color:rgba(0, 0, 0, 1);--layoutview-viewport-dash-size:16px;--layoutview-collisionpoly-color:rgba(255, 0, 0, 1);--layoutview-collisionpoly-width:1px}
+
+canvas.layoutView.shared {
+    position: relative
+}
+
+.layoutViewCanvasWrap {
+    position: relative;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    pointer-events: none;
+    touch-action: none
+}
+
+div.layoutScrollContainer {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    touch-action: none
+}
+
+div.layoutScrollContainer[noscroll] {
+    overflow: hidden
+}
+
+ui-pane.layoutViewPane[noscroll] {
+    height: 100%
+}
+
+ui-body[layoutview-pane] {
+    overflow: hidden
+}
+
+div.layoutViewStatus {
+    display: inline-block;
+    position: relative;
+    contain: layout;
+    margin: 0;
+    padding: .3em .5em;
+    background-color: rgba(235,235,235,.85);
+    border-left: 1px solid #999;
+    border-top: 1px solid #999;
+    border-top-left-radius: 3px
+}
+
+html[mobile] div.layoutViewStatus {
+    font-size: .8em
+}
+
+@supports (-webkit-backdrop-filter:blur(10px)) {
+    html[highgfxmode] div.layoutViewStatus {
+        background-color: rgba(235,235,235,.75);
+        -webkit-backdrop-filter: blur(10px)
+    }
+}
+
+@supports (backdrop-filter:blur(10px)) {
+    html[highgfxmode] div.layoutViewStatus {
+        background-color: rgba(235,235,235,.75);
+        backdrop-filter: blur(10px)
+    }
+}
+
+span.layoutViewStatusMouse {
+    margin-right: 1.3em;
+    display: inline-block
+}
+
+span.layoutViewStatusActiveLayer {
+    margin-right: 1.3em
+}
+
+.textEditor {
+    min-height: 100%
+}
+
+.textEditor[floating] {
+    min-height: auto
+}
+
+.textEditor ui-body {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.textEditorWrap .CodeMirror {
+    height: 100%;
+    z-index: 0
+}
+
+.textEditorWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    background: #1e1e1e;
+    overflow: auto;
+    font-size: 1.11rem
+}
+
+.textEditorWrap button {
+    padding: 4px 8px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: none;
+    margin-top: 4px
+}
+
+.textEditor .searchBar {
+    position: relative;
+    border-top: 1px solid #ddd;
+    display: grid;
+    background: #f7f7f7;
+    grid-template-rows: 1em .5em 2em .5em 2em;
+    grid-template-columns: 1fr .5em 8em .5em 4em 4em;
+    padding: 8px
+}
+
+.textEditor .searchBar[hidden] {
+    display: none
+}
+
+.searchBar .close {
+    grid-column-start: 6;
+    grid-row-start: 1;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    text-align: right
+}
+
+.searchBar .close:before {
+    content: "\00D7";
+    font-size: 1.5em;
+    line-height: 0;
+    display: block
+}
+
+.searchBar .statusLabel {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-size: .8em
+}
+
+.searchBar .searchInput {
+    grid-column-start: 1;
+    grid-row-start: 3
+}
+
+.searchBar .replaceInput {
+    grid-column-start: 1;
+    grid-row-start: 5
+}
+
+.searchBar .replaceInput,.searchBar .searchInput {
+    box-sizing: border-box;
+    padding: 4px;
+    border: 1px solid #ddd;
+    line-height: 1.5em
+}
+
+.searchBar .findButton {
+    grid-column-start: 3;
+    grid-row-start: 3
+}
+
+.searchBar .replaceButton {
+    grid-column-start: 3;
+    grid-row-start: 5
+}
+
+.searchBar .replaceAllButton {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 5
+}
+
+.searchBar .findButton,.searchBar .replaceAllButton,.searchBar .replaceButton {
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 1em;
+    vertical-align: top;
+    border-radius: 3px;
+    font-weight: 700;
+    background: #f0f0f0;
+    color: #444;
+    border: 1px solid #ddd
+}
+
+.searchBar .findButton:hover,.searchBar .replaceAllButton:hover,.searchBar .replaceButton:hover {
+    color: #f0f0f0;
+    background: #444
+}
+
+.searchBar .regexCheckbox {
+    grid-column-start: 5;
+    border: 1px solid #ddd;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px
+}
+
+.searchBar .caseCheckbox {
+    grid-column-start: 6;
+    border: 1px solid #ddd;
+    border-left: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px
+}
+
+.searchBar .caseCheckbox,.searchBar .regexCheckbox {
+    grid-row-start: 3;
+    line-height: 2em;
+    font-size: 1em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-weight: 700;
+    background-color: #fff;
+    color: #2d2e33;
+    text-align: center;
+    font-weight: 700;
+    margin: 0
+}
+
+.searchBar .caseCheckbox:before,.searchBar .regexCheckbox:before {
+    content: attr(data-title)
+}
+
+.searchBar .caseCheckbox:checked,.searchBar .regexCheckbox:checked {
+    background-color: #226aa5;
+    color: #fff
+}
+
+#mainMenuWrap {
+    display: inline-flex!important;
+    padding-right: .28em;
+    margin-right: .47em;
+    border-right: 1px solid rgba(0,0,0,.1)
+}
+
+#mainMenuWrap ui-toolbar-container {
+    justify-content: center
+}
+
+#mainMenuWrap ui-toolbar-layout-remaining-space {
+    max-height: 0
+}
+
+#mainMenuWrap ui-toolbar-separator {
+    background: rgba(0,0,0,.1)
+}
+
+#mainMenuButton {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 1px;
+    margin-right: .2em;
+    padding: .2em .5em;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #444
+}
+
+#mainMenuButton:hover {
+    background-color: #444;
+    color: #f0f0f0
+}
+
+#mainMenuButton[menu-open] {
+    background-color: #444;
+    color: #f0f0f0;
+    pointer-events: none
+}
+
+#viewMenuButton {
+    display: inline-block;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 1px;
+    margin-right: .2em;
+    padding: .2em .5em;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #444
+}
+
+#viewMenuButton:hover,#viewMenuButton[menu-open] {
+    background-color: #444;
+    color: #f0f0f0
+}
+
+ui-tabbar.main-tabs {
+    display: block
+}
+
+ui-tabbar.main-tabs ui-tab {
+    display: inline-flex;
+    vertical-align: bottom
+}
+
+.dataEditor {
+    overflow: hidden;
+    display: block!important
+}
+
+.dataEditor ui-toolbar-container {
+    height: 100%
+}
+
+.dataEditor ui-toolbar-spinner input {
+    width: 40px
+}
+
+.dataEditor ui-toolbar-layout-remaining-space {
+    overflow: hidden;
+    display: block
+}
+
+.spreadsheetview {
+    height: 100%;
+    position: relative;
+    contain: strict;
+    overflow: hidden;
+    --spreadsheetview-font-style:12px sans-serif;--spreadsheetview-font-color:#222222;--spreadsheetview-border-color:#A6A6A6;--spreadsheetview-grid-color:#E6E6E6;--spreadsheetview-focused-color:#FFFFFF;--spreadsheetview-cell-color:#FFFFFF;--spreadsheetview-background-color:#E6E6E6;--spreadsheetview-header-color:#E6E6E6}
+
+.spreadsheetview canvas {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.spreadsheetview div[contenteditable] {
+    font: var(--spreadsheetview-font-style);
+    color: var(--spreadsheetview-font-color);
+    background: var(--spreadsheetview-focused-color);
+    border: 2px solid #5292f7;
+    box-shadow: 0 0 16px rgba(0,0,0,.28);
+    position: absolute;
+    padding: 3px;
+    box-sizing: border-box;
+    line-height: 20px!important;
+    overflow: hidden
+}
+
+.spreadsheetview .scrollContainer {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+#dataEditorResizeDialog {
+    color: initial
+}
+
+#nwjsPlatformManagerDialog {
+    width: 40em;
+    height: 30em
+}
+
+#nwjsPlatformManagerDialog .tableWrap {
+    flex: 1
+}
+
+#nwjsVersionManagerDialog {
+    width: 50em;
+    height: 35em
+}
+
+#nwjsVersionManagerDialog .tableWrap {
+    flex: 1
+}
+
+#nwjsOptionsDialog {
+    width: 40em;
+    height: 33em;
+    min-height: 18em
+}
+
+#nwjsOptionsDialog .nwjsManageVersions {
+    margin-left: .3em
+}
+
+#nwjsOptionsDialog .checkboxRow {
+    display: flex
+}
+
+#nwjsOptionsDialog .checkboxRow .checkboxCell {
+    flex: 1
+}
+
+#nwjsOptionsDialog .separatorCell {
+    border-top: 1px solid #e8e8e8
+}
+
+#nwjsExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#midPaneEmptyNoProject {
+    text-align: center;
+    max-width: 35em;
+    margin: 3em auto
+}
+
+#midPaneEmptyWithProject {
+    text-align: center;
+    max-width: 35em;
+    margin: 1em auto
+}
+
+#midPaneAlertBar {
+    position: fixed;
+    left: 5%;
+    right: 5%;
+    z-index: 9997;
+    display: flex;
+    align-items: center;
+    background-color: #fdfeb7;
+    padding: .5em;
+    border: 1px solid #dddd48
+}
+
+#midPaneAlertBar ui-close-button svg {
+    fill: #5f5f5f
+}
+
+#midPaneAlertBar ui-close-button:hover svg {
+    fill: #fff
+}
+
+html[desktop] #midPaneAlertBar {
+    font-size: 1.3em
+}
+
+#alertBarIconWrap {
+    display: flex;
+    align-items: center
+}
+
+#alertBarMessage {
+    flex: 1;
+    padding: 0 .5em
+}
+
+#userAccountWrap {
+    margin: .4em .5em 0 .5em;
+    padding-bottom: 1px;
+    display: inline-flex;
+    align-items: center;
+    float: right;
+    contain: content;
+    opacity: .5
+}
+
+#userAccountWrap:hover {
+    opacity: 1;
+    cursor: pointer
+}
+
+#userLicenseType {
+    border: 2px solid #555;
+    margin-right: .3em;
+    color: #555;
+    font-weight: 700;
+    padding: 0 .3em;
+    border-radius: .5em;
+    background-color: #ddd
+}
+
+#userAccountName {
+    padding-right: .3em
+}
+
+@media (max-width: 500px) {
+    #userAccountName {
+        display:none
+    }
+}
+
+#findReferencesBarTable ui-icon[invertIcon] {
+    vertical-align: sub;
+    margin-right: 3px
+}
+
+#findReferencesBarTable ui-icon[conditionIcon] {
+    vertical-align: sub;
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+#findReferencesBarTable [tableRow] {
+    padding-top: 1px;
+    padding-bottom: 1px
+}
+
+#findReferencesBarTable [objectTypeName] {
+    font-weight: 700
+}
+
+#findReferencesBarTable [keyCode] {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0 .3em;
+    overflow: visible
+}
+
+#findReferencesBarTable .disabledEventMatch {
+    text-decoration: line-through
+}
+
+#bookmarksBar {
+    outline: 0
+}
+
+#bookmarksBarTable ui-icon[invertIcon] {
+    vertical-align: sub;
+    margin-right: 3px
+}
+
+#bookmarksBarTable ui-icon[conditionIcon] {
+    vertical-align: sub;
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+#bookmarksBarTable [tableRow] {
+    padding-top: 1px;
+    padding-bottom: 1px
+}
+
+#bookmarksBarTable [objectTypeName] {
+    font-weight: 700
+}
+
+#bookmarksBarTable [keyCode] {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0 .3em;
+    overflow: visible
+}
+
+#findResultsBarTable ui-icon[invertIcon] {
+    vertical-align: sub;
+    margin-right: 3px
+}
+
+#findResultsBarTable ui-icon[conditionIcon] {
+    vertical-align: sub;
+    margin-left: 3px;
+    margin-right: 3px
+}
+
+#findResultsBarTable [tableRow] {
+    padding-top: 1px;
+    padding-bottom: 1px
+}
+
+#findResultsBarTable [objectTypeName] {
+    font-weight: 700
+}
+
+#findResultsBarTable [keyCode] {
+    border: 1px solid #aaa;
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0 .3em;
+    overflow: visible
+}
+
+#buyNowPageIframe {
+    border: none;
+    width: 100%;
+    height: 100%
+}
+
+.buyNowPagePaneBody {
+    overflow: hidden
+}
+
+ui-tab.buyNowTab:not([active]) {
+    box-shadow: none
+}
+
+ui-tab.buyNowTab,ui-tab.buyNowTab[active] {
+    background-color: #f85753;
+    color: #fff
+}
+
+#projectBar ui-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: hidden
+}
+
+#projectBar input[type=search] {
+    border-top: none;
+    border-right: none;
+    border-left: none
+}
+
+#propertiesBar {
+    --timeline-property-background:rgba(255, 255, 0, 0.25)}
+
+#propertiesBar [timeline-prop] {
+    background: var(--timeline-property-background)
+}
+
+#layersBar .layersBarIndexLabel {
+    flex-grow: 1;
+    text-align: right;
+    padding-right: .8em;
+    color: #888
+}
+
+#instantGamesExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#scirraArcadeExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#playableAdExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#windowsUwpExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#cordovaExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#kongExportReportDialog {
+    width: 500px;
+    height: 500px
+}
+
+#webExportReportDialog {
+    width: 500px;
+    height: 500px
+}

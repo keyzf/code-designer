@@ -1,0 +1,50 @@
+
+.ui-overlay.timeline-project {
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ui-overlay.timeline-project.center>.content {
+    top: auto;
+    left: auto;
+    width: 750px;
+    height: 500px;
+    min-width: 520px;
+    min-height: 350px;
+    border: 1px solid #232e30;
+}
+
+
+
+#timelineBar [highlight] {
+    background-color: var(--highlight-color)!important;
+}
+#timelineBar [highlight-child] {
+    background-color: var(--highlight-child-color);
+}
+
+.testdom2 {
+    width:100px;
+    height: 100px;
+    background: #232e30;
+}
+
+#layout-viewport {
+    justify-content: center;
+    display:flex;
+}
+
+.timeline-thumbnail {
+    width:120px;
+    height:120px; 
+    display: inline-block;
+    margin:4px;
+    background-size:contain;
+    background-repeat: no-repeat!important;
+}
+
+.iframe-src-input {
+    width:400px;
+    display: block!important;
+}
